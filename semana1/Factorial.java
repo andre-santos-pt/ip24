@@ -1,4 +1,6 @@
 class Factorial {
-sdas
+    static int fact(int n) {
+        
+    }
 
 }
