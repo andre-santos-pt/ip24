@@ -1,6 +1,7 @@
 class Factorial {
 
     static int f(int n) {
-        return 100;
+        println("asdsa");
+        return 1;
     }
 }
