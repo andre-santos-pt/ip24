@@ -1,0 +1,36 @@
+{
+  "id": "semana1",
+  "title": "Funções Independentes",
+  "exercises": [
+    {
+      "key": "factorial",
+      "description": "Escreva uma função para calcular o factorial de um número inteiro.",
+      "startCode": "class Factorial {\\n\\n}",
+      "isSignature": true,
+      "solutions": [
+        "int factorial(int n) { return 0; }"
+      ],
+      "tests": [
+        {"args":[1], "expected": 1},
+        {"args":[5], "expected": 120}
+      ]
+    },
+    {
+      "key": "sum",
+      "description": "This is a test2 description",
+      "startCode": "class Test2 {\\n static sum(int a, int b) {\\n\\n }\\n}",
+      "tests": [
+        {"args": [1, 2], "expected": 3}
+      ]
+    },
+    {
+      "key": "Round",
+      "description": "Write a function that rounds a real number to integer.",
+      "qlc": ["PARAMS", "VARS"],
+      "tests": [
+        {"args": [5.4], "expected": 5},
+        {"args": [5.6], "expected": 6}
+      ]
+    }
+  ]
+}
