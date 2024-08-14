@@ -1,5 +1,6 @@
-class t {
-static int sum(int a, int b) {
-    return a+b;
-}
+class sum {
+    
+    static int sum(int a, int b) {
+        return 0;
+    }
 }
