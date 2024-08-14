@@ -3,7 +3,7 @@
   "title": "Funções Independentes",
   "exercises": [
     {
-      "key": "factorial",
+      "id": "factorial",
       "description": "Escreva uma função para calcular o factorial de um número inteiro.",
       "startCode": "class Factorial {\\n\\n}",
       "isSignature": true,
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "key": "sum",
+      "id": "sum",
       "description": "This is a test2 description",
       "startCode": "class Test2 {\\n static sum(int a, int b) {\\n\\n }\\n}",
       "tests": [
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "key": "Round",
+      "id": "round",
       "description": "Write a function that rounds a real number to integer.",
       "qlc": ["PARAMS", "VARS"],
       "tests": [
