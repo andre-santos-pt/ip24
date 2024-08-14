@@ -3,17 +3,17 @@
   "title": "Semana 2",
   "exercises": [
     {
-     "key": "Test4",
+     "id": "Test4",
       "description": "This is a test description",
       "startCode": "class Test5{ }"
     },
     {
-      "key": "Test5",
+      "id": "Test5",
       "description": "This is a test2 description",
       "startCode": "class Test2 { }"
     },
     {
-      "key": "Test6",
+      "id": "Test6",
       "description": "This is a test2 description",
       "startCode": "class Test2 { }"
     }
