@@ -1,7 +1,7 @@
 {
   "id": "ip24",
   "modules": [
-    "week1.json",
-    "week2.json"
+    {"id":"week1", "requires":[]},
+    {"id":"week2", "requires":["week1"]}
   ]
 }
