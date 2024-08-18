@@ -3,6 +3,24 @@
   "description": "O objectivo deste módulo é experimentar a definição de funções simples sem algoritmo, adquirindo a noção de <i>parâmetro</i>.",
   "exercises": [
     {
+      "id": "double",
+      "description": "Obter o dobro de um número.",
+      "startCode": "int doubleOf(int x) {\n\t//...\n}",
+      "isSignature": true,
+      "tests":[
+      {"args":[2], "expected":4},
+        {"args":[3], "expected":6}
+      ]
+    },
+    {
+      "id": "square",
+      "description": "Obter o quadrado de um número.",
+      "tests":[
+      {"args":[2], "expected":4},
+        {"args":[3], "expected":9}
+      ]
+    },
+    {
       "id": "factorial",
       "description": "Escreva uma função para calcular o factorial de um número inteiro.",
       "startCode": "class Factorial {\\n\\n}",
