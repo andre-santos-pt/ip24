@@ -1,5 +1,6 @@
 {
   "title": "Funções Independentes",
+  "description": "O objectivo deste módulo é experimentar a definição de funções simples sem algoritmo, adquirindo a noção de <i>parâmetro</i>.",
   "exercises": [
     {
       "id": "factorial",
