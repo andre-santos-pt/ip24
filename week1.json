@@ -4,33 +4,31 @@
   "exercises": [
     {
       "id": "double",
-      "description": "Obter o dobro de um número.",
-      "startCode": "int doubleOf(int x) {\n\t//...\n}",
+      "description": "Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).",
+      "startCode": "int doubleOf(int n) {\n\t//...\n}",
       "relaxedSource": true,
       "tests":[
-      {"args":[2], "expected":4},
-        {"args":[3], "expected":6}
+        {"args":[2], "expected":4},
+        {"args":[3], "expected":6},
+        {"args":[10], "expected:10}
       ]
     },
     {
       "id": "square",
-      "description": "Obter o quadrado de um número.",
+      "description": "Escreva uma função para calcular o quadrado de um número.",
       "tests":[
-      {"args":[2], "expected":4},
-        {"args":[3], "expected":9}
+        {"args":[2], "expected":4},
+        {"args":[3], "expected":9},
+        {"args":[6], "expected":36},
+        {"args":[-2], "expected":4}
       ]
     },
     {
-      "id": "factorial",
-      "description": "Escreva uma função para calcular o factorial de um número inteiro.",
-      "startCode": "class Factorial {\\n\\n}",
-      "isSignature": true,
-      "solutions": [
-        "int factorial(int n) { return 0; }"
-      ],
-      "tests": [
-        {"args":[1], "expected": 1},
-        {"args":[5], "expected": 120}
+      "id": "difference",
+      "description": "Escreva uma função para calcular a diferença entre dois números.",
+      "tests":[
+        {"args":[10, 4], "expected":6},
+        {"args":[3, 6], "expected":-3}
       ]
     },
     {
