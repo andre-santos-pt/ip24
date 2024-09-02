@@ -1,5 +1,5 @@
-class sum {
-    static int f(int a, int b) {
-        return a + b;
-    }
+class Test2 {
+ static int sum(int a, int b) {
+    return 0;
+ }
 }
