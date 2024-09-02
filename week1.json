@@ -6,7 +6,7 @@
       "id": "double",
       "description": "Obter o dobro de um número.",
       "startCode": "int doubleOf(int x) {\n\t//...\n}",
-      "isSignature": true,
+      "relaxedSource": true,
       "tests":[
       {"args":[2], "expected":4},
         {"args":[3], "expected":6}
