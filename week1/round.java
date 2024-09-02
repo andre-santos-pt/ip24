@@ -1,3 +1,3 @@
-int r(int n) {
+int r(double n) {
     return (int) n;
 }
