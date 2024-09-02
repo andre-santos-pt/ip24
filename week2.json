@@ -1,20 +1,36 @@
 {
-  "title": "Semana 2",
+  "title": "Variáveis e estruturas de controlo",
   "exercises": [
     {
-     "id": "Test4",
-      "description": "This is a test description",
-      "startCode": "class Test5{ }"
+     "id": "max",
+      "description": "Escreva uma função que dados dois números inteiros, devolve o valor máximo.",
+      "startCode": "int max(int a, int b) {\\n\\n}",
+      "relaxedSource": true,
+      "isSignature": true,
+      "tests": [
+        {"args":[5, 7], "expected": 7},
+        {"args":[10, 7], "expected": 10},
+        {"args":[5, 5], "expected": 5}
+      ]
     },
     {
-      "id": "Test5",
-      "description": "This is a test2 description",
-      "startCode": "class Test2 { }"
+      "id": "isMultiple",
+      "description": "Escreva uma função que permita verificar se um número inteiro positivo é múltiplo de um outro número positivo, <b>sem recorrer ao operador do resto da divisão (%)</b>.",
+      "relaxedSource": true,
+      "tests": [
+        {"args":[25, 5], "expected": true},
+        {"args":[25, 5], "expected": true}
+      ]
     },
     {
-      "id": "Test6",
-      "description": "This is a test2 description",
-      "startCode": "class Test2 { }"
+      "id": "abs",
+      "description": "Defina uma função para obter o valor absoluto de um número.",
+      "relaxedSource": true,
+      "tests": [
+        {"args":[5], "expected": 5},
+        {"args":[-10], "expected": 10},
+        {"args":[0], "expected": 0}
+      ]
     }
   ]
 }
