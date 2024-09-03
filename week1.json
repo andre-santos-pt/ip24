@@ -1,12 +1,13 @@
 {
   "title": "Funções Independentes",
-  "description": "O objectivo deste módulo é dominar a definição de funções simples sem algoritmo, adquirindo noções de: <ul><li>função</li><li>parâmetro</li><li>argumento</li><li>operadores aritméticos (+, -, *, /, %)</li><li>operadores relacionais (==, !=, <, <=, >, >=)</li>operadores lógicos (&&, ||, ^, !)</ul>",
+  "description": "O objectivo deste módulo é dominar a definição de funções simples sem algoritmo, adquirindo noções de: <ul><li>função</li><li>parâmetro</li><li>argumento</li><li>operadores aritméticos (+, -, *, /, %)</li><li>operadores relacionais (==, !=, <, <=, >, >=)</li><li>operadores lógicos (&&, ||, ^, !)</li></ul>",
   "exercises": [
     {
       "id": "doubleOf",
       "description": "Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).",
       "startCode": "int doubleOf(int n) {\n\t//...\n}",
       "relaxedSource": true,
+      "isSignature": true,
       "tests":[
         {"args":[2], "expected":4},
         {"args":[3], "expected":6},
@@ -47,6 +48,12 @@
         {"args": [5.4], "expected": 5},
         {"args": [5.6], "expected": 6}
       ]
+    },
+    {
+      "id": "staticClass",
+      "description": "Inclua no seguinte módulo duas funções escritas anteriormente, utilizando o modificador <b>static</b>.",
+      "startCode": "class Util {\\n\tstatic int doubleOf(int n) {\\n\treturn n*2;\n}\n\n}",
+      "isSignature": true
     }
   ]
 }
