@@ -16,12 +16,12 @@
     },
     {
       "id": "square",
-      "description": "Escreva uma função para calcular o quadrado de um número.",
+      "description": "Escreva uma função com nome <i>square</i> para calcular o quadrado de um número.",
       "tests":[
-        {"args":[2], "expected":4},
-        {"args":[3], "expected":9},
-        {"args":[6], "expected":36},
-        {"args":[-2], "expected":4}
+        {"name": "square", "args":[2], "expected":4},
+        {"name": "square", "args":[3], "expected":9},
+        {"name": "square", "args":[6], "expected":36},
+        {"name": "square", "args":[-2], "expected":4}
       ]
     },
     {
@@ -51,9 +51,13 @@
     },
     {
       "id": "staticClass",
-      "description": "Inclua no seguinte módulo duas funções escritas anteriormente, utilizando o modificador <b>static</b>.",
-      "startCode": "class Util {\\n\tstatic int doubleOf(int n) {\\n\treturn n*2;\n}\n\n}",
-      "isSignature": true
+      "description": "Inclua no seguinte módulo a função <i>square</i> escrita anteriormente, utilizando o modificador <b>static</b> à semelhança do exemplo.",
+      "startCode": "class Util {\\n\tstatic int doubleOf(int n) {\\n\t\treturn n*2;\n\t}\n\n}",
+      "isSignature": true,
+      "tests": [
+        {"name": "doubleOf", "args": [3], "expected": 6},
+        {"name": "square", "args": [3], "expected": 9}
+      ]
     }
   ]
 }
