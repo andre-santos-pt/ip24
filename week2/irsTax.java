@@ -1,3 +1,3 @@
-int tax(int value) {
+int tax(int n) {
     return 1;
 }
