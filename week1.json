@@ -1,16 +1,16 @@
 {
   "title": "Funções Independentes",
-  "description": "O objectivo deste módulo é experimentar a definição de funções simples sem algoritmo, adquirindo a noção de <i>parâmetro</i>.",
+  "description": "O objectivo deste módulo é experimentar a definição de funções simples sem algoritmo, adquirindo noções de: <ul><li>função</li><li>parâmetro</li></ol>.",
   "exercises": [
     {
-      "id": "double",
+      "id": "doubleOf",
       "description": "Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).",
       "startCode": "int doubleOf(int n) {\n\t//...\n}",
       "relaxedSource": true,
       "tests":[
         {"args":[2], "expected":4},
         {"args":[3], "expected":6},
-        {"args":[10], "expected":10}
+        {"args":[10], "expected":20}
       ]
     },
     {
@@ -42,7 +42,7 @@
     {
       "id": "round",
       "description": "Write a function that rounds a real number to integer.",
-      "qlc": ["PARAMS", "VARS"],
+      "startCode": "...",
       "tests": [
         {"args": [5.4], "expected": 5},
         {"args": [5.6], "expected": 6}
