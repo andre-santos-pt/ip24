@@ -7,7 +7,6 @@
       "description": "Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).",
       "startCode": "int doubleOf(int n) {\n\t//...\n}",
       "relaxedSource": true,
-      "isSignature": true,
       "tests":[
         {"args":[2], "expected":4},
         {"args":[3], "expected":6},
@@ -53,7 +52,7 @@
       "id": "staticClass",
       "description": "Inclua no seguinte módulo a função <i>square</i> escrita anteriormente, utilizando o modificador <b>static</b> à semelhança do exemplo.",
       "startCode": "class Util {\\n\tstatic int doubleOf(int n) {\\n\t\treturn n*2;\n\t}\n\n}",
-      "isSignature": true,
+      "freezeTop": 4,
       "tests": [
         {"name": "doubleOf", "args": [3], "expected": 6},
         {"name": "square", "args": [3], "expected": 9}
