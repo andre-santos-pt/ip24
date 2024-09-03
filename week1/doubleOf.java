@@ -1,3 +1,3 @@
 int doubleOf(int n) {
-    return 4;
+    return n*2;
 }
