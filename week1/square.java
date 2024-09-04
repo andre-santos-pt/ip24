@@ -1,3 +1,3 @@
-int sq(int n) {
+int square(int n) {
     return n*n;
 }
