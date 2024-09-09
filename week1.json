@@ -1,12 +1,43 @@
 {
-  "title": "Funções Independentes",
+  "title": "Funções e Expressões",
   "description": "O objectivo deste módulo é dominar a definição de funções simples sem algoritmo, adquirindo noções de: <ul><li>função</li><li>parâmetro</li><li>argumento</li><li>operadores aritméticos (+, -, *, /, %)</li><li>operadores relacionais (==, !=, <, <=, >, >=)</li><li>operadores lógicos (&&, ||, ^, !)</li></ul>",
   "exercises": [
     {
+      "id": "next",
+      "type": "JFUNCTION",
+      "description": "O seguinte código ilustra a sintaxe elementar para definir funções. Ao experimentar executar por exemplo <code>next(4)</code> irá ser devolvido o mesmo número (4). Altere o código para que seja devolvido o número seguinte ao fornecido para o parâmetro <i>n</i> (5 para o exemplo dado).",
+      "startCode": "int next(int n) {\n    return n;\n}",
+      "required": true,
+      "freezeTop": 1,
+      "freezeBottom": 1,
+      "tests":[
+        {"args":[4], "expected":5},
+        {"args":[9], "expected":10},
+        {"args":[-1], "expected":0}
+      ]
+    },
+    {
+      "id": "previous",
+      "type": "JFUNCTION",
+      "description": "Complete a função para que seja devolvido o número anterior ao passado como argumento.",
+      "required": true,
+      "startCode": "int previous(int n) {\n\n}",
+      "freezeTop": 1,
+      "freezeBottom": 1,
+      "tests":[
+        {"args":[4], "expected":3},
+        {"args":[9], "expected":8},
+        {"args":[-1], "expected":-2}
+      ]
+    },
+    {
       "id": "doubleOf",
+      "type": "JFUNCTION",
       "description": "Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).",
-      "startCode": "int doubleOf(int n) {\n\t//...\n}",
-      "relaxedSource": true,
+      "required": true,
+      "startCode": "int doubleOf(int n) {\n\n}",
+      "freezeTop": 1,
+      "freezeBottom": 1,
       "tests":[
         {"args":[2], "expected":4},
         {"args":[3], "expected":6},
@@ -15,7 +46,9 @@
     },
     {
       "id": "square",
+      "type": "JFUNCTION",
       "description": "Escreva uma função com nome <i>square</i> para calcular o quadrado de um número.",
+      "required": true,
       "tests":[
         {"name": "square", "args":[2], "expected":4},
         {"name": "square", "args":[3], "expected":9},
@@ -25,37 +58,106 @@
     },
     {
       "id": "difference",
-      "description": "Escreva uma função para calcular a diferença entre dois números.",
+      "type": "JFUNCTION",
+      "description": "Complete a função para calcular a diferença entre dois números.",
+      "required": true,
+      "startCode": "int difference(int a, int b) {\n\n}",
+      "freezeTop": 1,
+      "freezeBottom": 1,
       "tests":[
         {"args":[10, 4], "expected":6},
         {"args":[3, 6], "expected":-3}
       ]
     },
     {
-      "id": "sum",
-      "description": "This is a test2 description",
-      "startCode": "class Test2 {\\n static sum(int a, int b) {\\n\\n }\\n}",
-      "tests": [
-        {"args": [1, 2], "expected": 3}
-      ]
-    },
-    {
       "id": "round",
-      "description": "Write a function that rounds a real number to integer.",
-      "startCode": "...",
+      "type": "JFUNCTION",
+      "description": "A seguinte função faz uma <i>truncagem</i> de um número inteiro, e não um arredondamento por excesso/defeito -- altere o código tendo em conta este objetivo.",
+      "startCode": "int round(double n) {\n    return (int) n;\n}",
       "tests": [
         {"args": [5.4], "expected": 5},
         {"args": [5.6], "expected": 6}
       ]
     },
     {
-      "id": "staticClass",
-      "description": "Inclua no seguinte módulo a função <i>square</i> escrita anteriormente, utilizando o modificador <b>static</b> à semelhança do exemplo.",
-      "startCode": "class Util {\\n\tstatic int doubleOf(int n) {\\n\t\treturn n*2;\n\t}\n\n}",
+      "id": "isNegative",
+      "type": "JFUNCTION",
+      "description": "Pretende-se que a seguinte função indique se um número é negativo (verdadeiro/falso). O código tem um erro de compilação e um erro lógico. O objetivo é corrigir os erros.",
+      "required": true,
+      "startCode": "boolean isNegative(int x) {\n    return n > 0;\n}",
+      "freezeTop": 1,
+      "freezeBottom": 1,
+      "tests": [
+        {"args": [-4], "expected": true},
+        {"args": [0], "expected": false},
+        {"args": [2], "expected": false}
+      ]
+    },
+    {
+      "id": "isDigit",
+      "type": "JFUNCTION",
+      "description": "Escreva uma função para determinar se um número é um dígito (i.e., está no intervalo [0-9]).",
+      "required": true,
+      "tests": [
+        {"args": [2], "expected": true},
+        {"args": [0], "expected": true},
+        {"args": [9], "expected": true},
+        {"args": [-1], "expected": false},
+        {"args": [10], "expected": false},
+        {"args": [52], "expected": false}
+      ]
+    },
+    {
+      "id": "isEven",
+      "type": "JFUNCTION",
+      "description": "Escreva uma função <code>isEven</code> para determinar se um número é par.",
+      "required": true,
+      "tests": [
+        {"name": "isEven","args": [5], "expected": false},
+        {"name": "isEven","args": [0], "expected": true},
+        {"name": "isEven","args": [-3], "expected": false},
+        {"name": "isEven","args": [4], "expected": true}
+      ]
+    },
+    {
+      "id": "isOdd",
+      "type": "JFUNCTION",
+      "description": "Escreva uma função <code>isOdd</code> para determinar se um número é ímpar.",
+      "required": true,
+      "tests": [
+        {"name": "isOdd","args": [5], "expected": true},
+        {"name": "isOdd","args": [0], "expected": false},
+        {"name": "isOdd","args": [-3], "expected": true},
+        {"name": "isOdd","args": [4], "expected": false}
+      ]
+    },
+    {
+      "id": "isVowel",
+      "type": "JFUNCTION",
+      "description": "Escreva uma função para determinar se um carácter (char) corresponde a uma vogal minúscula.",
+      "tests": [
+        {"args":  ["a"], "expected": true},
+        {"args":  ["e"], "expected": true},
+        {"args":  ["i"], "expected": true},
+        {"args":  ["o"], "expected": true},
+        {"args":  ["u"], "expected": true},
+        {"args":  ["A"], "expected": false},
+        {"args":  ["c"], "expected": false},
+        {"args":  ["7"], "expected": false}
+      ]
+    },
+    {
+      "id": "utilModule",
+      "type": "JCLASS",
+      "description": "Inclua no seguinte módulo as funções <code>square</code> e <code>difference</code> escritas anteriormente, utilizando o modificador <code>static</code> à semelhança do exemplo.",
+      "required": true,
+      "startCode": "class Util {\\n    static int doubleOf(int n) {\\n        return n*2;\n    }\n\n}",
       "freezeTop": 4,
+      "freezeBottom": 1,
       "tests": [
         {"name": "doubleOf", "args": [3], "expected": 6},
-        {"name": "square", "args": [3], "expected": 9}
+        {"name": "square", "args": [3], "expected": 9},
+        {"name": "difference", "args": [7,3], "expected": 4}
       ]
     }
   ]
