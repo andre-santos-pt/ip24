@@ -1,0 +1,72 @@
+{
+  "title": "Funções Dependentes",
+  "description": "",
+  "exercises": [
+    {
+      "id": "oddIsNotEven",
+      "description" : "Escreva a função <code>isOdd</code> recorrendo à função <code>isEven</code> dada.",
+      "type": "JCLASS",
+      "startCode": "class EvenOdd {\n    static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n\n}",
+      "freezeTop": 4,
+      "freezeBottom": 1,
+      "tests": [
+        {"name": "isOdd", "args": [7], "expected": true},
+        {"name": "isOdd", "args": [8], "expected": false}
+      ]
+    },
+    {
+      "id": "primes",
+      "description": "Escreva duas funções:<ul><li><code>divisors</code>: para contar quantos divisores tem um número inteiro;</li><li><code>isPrime</code>: para determinar se um número é primo.</ul><br>A segunda pode ser facilmente implementada recorrendo à primeira (embora não seja a implementação mais eficaz).",
+      "type": "JCLASS",
+      "startCode": "class Primes {\n\n}",
+      "freezeTop": 1,
+      "freezeBottom": 1,
+      "tests":[
+        {"name": "divisors", "args":[1], "expected":1},
+        {"name": "divisors", "args":[2], "expected":2},
+        {"name": "divisors", "args":[3], "expected":2},
+        {"name": "divisors", "args":[4], "expected":3},
+        {"name": "divisors", "args":[7], "expected":2},
+        {"name": "divisors", "args":[9], "expected":3},
+        {"name": "divisors", "args":[12], "expected":6},
+
+        {"name": "isPrime", "args":[1], "expected":false},
+        {"name": "isPrime", "args":[1], "expected":true},
+        {"name": "isPrime", "args":[2], "expected":true},
+        {"name": "isPrime", "args":[3], "expected":true},
+        {"name": "isPrime", "args":[4], "expected":false},
+        {"name": "isPrime", "args":[7], "expected":true},
+        {"name": "isPrime", "args":[9], "expected":false}
+      ]
+    },
+    {
+      "id": "perfectNumbers",
+      "description": "Escreva três funções:<ul><li><code>sumProperDivisors</code>: para calcular a soma dos divisores próprios de um número inteiro (não incluem o próprio número);",
+      "type": "JCLASS"
+    },
+    {
+      "id": "countPrimes",
+      "description": "Escreva uma função <code>countPrimes</code> para contar quantos números primos existem até um valor máximo dado, utilizando a função <code>isPrime</code> dada.",
+      "type": "JCLASS",
+      "startCode": "class CountPrimes {\n    static boolean isPrime(int n) {\n        int i = 2;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                return false;\n            }\n            i++;\n        }\n        return true;\n    }\n\n}\n",
+      "freezeTop": 11,
+      "freezeBottom": 1,
+      "tests":[
+        {"name": "countPrimes", "args": [10], "expected": 4},
+        {"name": "countPrimes", "args": [13], "expected": 6}
+        ]
+    },
+    {
+      "id": "existsPrime",
+      "description": "Escreva uma função <code>existsPrime</code> para saber se existe algum número primo entre um dado intervalo (aberto), utilizando a função <code>isPrime</code> dada.",
+      "type": "JCLASS",
+      "startCode": "class CountPrimes {\n    static boolean isPrime(int n) {\n        int i = 2;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                return false;\n            }\n            i++;\n        }\n        return true;\n    }\n\n}\n",
+      "freezeTop": 11,
+      "freezeBottom": 1,
+      "tests":[
+        {"name": "existsPrime", "args": [5,9], "expected": true},
+        {"name": "existsPrime", "args": [7,11], "expected": false}
+      ]
+    }
+  ]
+}
