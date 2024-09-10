@@ -3,6 +3,6 @@
   "modules": [
     {"id":"week1", "requires":[]},
     {"id":"week2", "requires":["week1"]},
-     {"id":"week3", "requires":["week2"]}
+    {"id":"week3", "visible": false, "requires":["week2"]}
   ]
 }
