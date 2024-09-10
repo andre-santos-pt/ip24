@@ -1,164 +1,543 @@
 {
-  "title": "Funções e Expressões",
-  "description": "O objectivo deste módulo é dominar a definição de funções simples sem algoritmo, adquirindo noções de: <ul><li>função</li><li>parâmetro</li><li>argumento</li><li>operadores aritméticos (+, -, *, /, %)</li><li>operadores relacionais (==, !=, <, <=, >, >=)</li><li>operadores lógicos (&&, ||, ^, !)</li></ul>",
-  "exercises": [
-    {
-      "id": "next",
-      "type": "JFUNCTION",
-      "description": "O seguinte código ilustra a sintaxe elementar para definir funções. Ao experimentar executar por exemplo <code>next(4)</code> irá ser devolvido o mesmo número (4). Altere o código para que seja devolvido o número seguinte ao fornecido para o parâmetro <i>n</i> (5 para o exemplo dado).",
-      "startCode": "int next(int n) {\n    return n;\n}",
-      "required": true,
-      "freezeTop": 1,
-      "freezeBottom": 1,
-      "tests":[
-        {"args":[4], "expected":5},
-        {"args":[9], "expected":10},
-        {"args":[-1], "expected":0}
-      ]
-    },
-    {
-      "id": "previous",
-      "type": "JFUNCTION",
-      "description": "Complete a função para que seja devolvido o número anterior ao passado como argumento.",
-      "required": true,
-      "startCode": "int previous(int n) {\n\n}",
-      "freezeTop": 1,
-      "freezeBottom": 1,
-      "tests":[
-        {"args":[4], "expected":3},
-        {"args":[9], "expected":8},
-        {"args":[-1], "expected":-2}
-      ]
-    },
-    {
-      "id": "doubleOf",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).",
-      "required": true,
-      "startCode": "int doubleOf(int n) {\n\n}",
-      "freezeTop": 1,
-      "freezeBottom": 1,
-      "tests":[
-        {"args":[2], "expected":4},
-        {"args":[3], "expected":6},
-        {"args":[10], "expected":20}
-      ]
-    },
-    {
-      "id": "square",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função com nome <i>square</i> para calcular o quadrado de um número.",
-      "required": true,
-      "tests":[
-        {"name": "square", "args":[2], "expected":4},
-        {"name": "square", "args":[3], "expected":9},
-        {"name": "square", "args":[6], "expected":36},
-        {"name": "square", "args":[-2], "expected":4}
-      ]
-    },
-    {
-      "id": "difference",
-      "type": "JFUNCTION",
-      "description": "Complete a função para calcular a diferença entre dois números.",
-      "required": true,
-      "startCode": "int difference(int a, int b) {\n\n}",
-      "freezeTop": 1,
-      "freezeBottom": 1,
-      "tests":[
-        {"args":[10, 4], "expected":6},
-        {"args":[3, 6], "expected":-3}
-      ]
-    },
-    {
-      "id": "round",
-      "type": "JFUNCTION",
-      "description": "A seguinte função faz uma <i>truncagem</i> de um número inteiro, e não um arredondamento por excesso/defeito -- altere o código tendo em conta este objetivo.",
-      "startCode": "int round(double n) {\n    return (int) n;\n}",
-      "tests": [
-        {"args": [5.4], "expected": 5},
-        {"args": [5.6], "expected": 6}
-      ]
-    },
-    {
-      "id": "isNegative",
-      "type": "JFUNCTION",
-      "description": "Pretende-se que a seguinte função indique se um número é negativo (verdadeiro/falso). O código tem um erro de compilação e um erro lógico. O objetivo é corrigir os erros.",
-      "required": true,
-      "startCode": "boolean isNegative(int x) {\n    return n > 0;\n}",
-      "freezeTop": 1,
-      "freezeBottom": 1,
-      "tests": [
-        {"args": [-4], "expected": true},
-        {"args": [0], "expected": false},
-        {"args": [2], "expected": false}
-      ]
-    },
-    {
-      "id": "isDigit",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função para determinar se um número é um dígito (i.e., está no intervalo [0-9]).",
-      "required": true,
-      "tests": [
-        {"args": [2], "expected": true},
-        {"args": [0], "expected": true},
-        {"args": [9], "expected": true},
-        {"args": [-1], "expected": false},
-        {"args": [10], "expected": false},
-        {"args": [52], "expected": false}
-      ]
-    },
-    {
-      "id": "isEven",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função <code>isEven</code> para determinar se um número é par.",
-      "required": true,
-      "tests": [
-        {"name": "isEven","args": [5], "expected": false},
-        {"name": "isEven","args": [0], "expected": true},
-        {"name": "isEven","args": [-3], "expected": false},
-        {"name": "isEven","args": [4], "expected": true}
-      ]
-    },
-    {
-      "id": "isOdd",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função <code>isOdd</code> para determinar se um número é ímpar.",
-      "required": true,
-      "tests": [
-        {"name": "isOdd","args": [5], "expected": true},
-        {"name": "isOdd","args": [0], "expected": false},
-        {"name": "isOdd","args": [-3], "expected": true},
-        {"name": "isOdd","args": [4], "expected": false}
-      ]
-    },
-    {
-      "id": "isVowel",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função para determinar se um carácter (char) corresponde a uma vogal minúscula.",
-      "tests": [
-        {"args":  ["a"], "expected": true},
-        {"args":  ["e"], "expected": true},
-        {"args":  ["i"], "expected": true},
-        {"args":  ["o"], "expected": true},
-        {"args":  ["u"], "expected": true},
-        {"args":  ["A"], "expected": false},
-        {"args":  ["c"], "expected": false},
-        {"args":  ["7"], "expected": false}
-      ]
-    },
-    {
-      "id": "utilModule",
-      "type": "JCLASS",
-      "description": "Inclua no seguinte módulo as funções <code>square</code> e <code>difference</code> escritas anteriormente, utilizando o modificador <code>static</code> à semelhança do exemplo.",
-      "required": true,
-      "startCode": "class Util {\\n    static int doubleOf(int n) {\\n        return n*2;\n    }\n\n}",
-      "freezeTop": 4,
-      "freezeBottom": 1,
-      "tests": [
-        {"name": "doubleOf", "args": [3], "expected": 6},
-        {"name": "square", "args": [3], "expected": 9},
-        {"name": "difference", "args": [7,3], "expected": 4}
-      ]
-    }
-  ]
+  "title" : "Funções e Expressões",
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a definição de funções simples sem algoritmo,\nadquirindo noções de:</p>\n  <ul>\n    <li>função</li>\n    <li>parâmetro</li>\n    <li>argumento</li>\n    <li>operadores aritméticos (+, -, *, /, %)</li>\n    <li>operadores relacionais (==, !=, &lt;, &lt;=, &gt;, &gt;=)</li>\n    <li>operadores lógicos (&amp;&amp;, ||, ^, !)</li>\n  </ul>\n</div>\n",
+  "exercises" : [ {
+    "id" : "next",
+    "type" : "JFUNCTION",
+    "description" : "<div>O seguinte código ilustra a sintaxe elementar para definir funções. Ao experimentar executar por exemplo <code>next(4)</code> irá ser devolvido o mesmo número (4). \nAltere o código para que seja devolvido o número seguinte ao fornecido para o parâmetro <i>n</i> (5 para o exemplo dado).</div>\n",
+    "required" : true,
+    "startCode" : "int next(int n) {\n     return n;\n}",
+    "solutions" : [ "int next(int n) {\n    return n+1;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "next",
+      "args" : [ 4 ],
+      "expected" : 5
+    }, {
+      "name" : "next",
+      "args" : [ 6 ],
+      "expected" : 7
+    }, {
+      "name" : "next",
+      "args" : [ -1 ],
+      "expected" : 0
+    } ]
+  }, {
+    "id" : "previous",
+    "type" : "JFUNCTION",
+    "description" : "<div>Complete a função para que seja devolvido o número anterior ao passado como argumento.</div>\n",
+    "required" : true,
+    "startCode" : "int previous(int n) {\n     \n}",
+    "solutions" : [ "int previous(int n) {\n    return n-1;        \n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "previous",
+      "args" : [ 4 ],
+      "expected" : 3
+    }, {
+      "name" : "previous",
+      "args" : [ 10 ],
+      "expected" : 9
+    }, {
+      "name" : "previous",
+      "args" : [ 0 ],
+      "expected" : -1
+    } ]
+  }, {
+    "id" : "doubleOf",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).</div>\n",
+    "required" : true,
+    "startCode" : "double doubleOf(double n) {\n     \n}",
+    "solutions" : [ "double doubleOf(double n) {\n      return n * 2;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "doubleOf",
+      "args" : [ 2.3 ],
+      "expected" : 4.6
+    }, {
+      "name" : "doubleOf",
+      "args" : [ 110.5 ],
+      "expected" : 221.0
+    } ]
+  }, {
+    "id" : "square",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função com nome <i>square</i> para calcular o quadrado de um número inteiro.</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "int square(int n) {\n      return n * n;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : "square",
+      "args" : [ 2 ],
+      "expected" : 4
+    }, {
+      "name" : "square",
+      "args" : [ 3 ],
+      "expected" : 9
+    }, {
+      "name" : "square",
+      "args" : [ 6 ],
+      "expected" : 36
+    }, {
+      "name" : "square",
+      "args" : [ -2 ],
+      "expected" : 4
+    } ]
+  }, {
+    "id" : "difference",
+    "type" : "JFUNCTION",
+    "description" : "<div>Complete a função para calcular a diferença entre dois números.</div>\n",
+    "required" : true,
+    "startCode" : "int difference(int a, int b) {\n\n}",
+    "solutions" : [ "int difference(int a, int b) {\n    return a - b;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "difference",
+      "args" : [ 10, 4 ],
+      "expected" : 6
+    }, {
+      "name" : "difference",
+      "args" : [ 3, 6 ],
+      "expected" : -3
+    } ]
+  }, {
+    "id" : "average",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para calcular a média de dois números reais (<code>double</code>).</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "double average(double a, double b) {\n     return (a + b) / 2;\n }" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 10.6, 11.0 ],
+      "expected" : 10.8
+    }, {
+      "name" : null,
+      "args" : [ 12.3, 13.5 ],
+      "expected" : 12.9
+    } ]
+  }, {
+    "id" : "averageInt",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para calcular a média de dois números inteiros.</div>\n",
+    "required" : true,
+    "startCode" : "double average(int a, int b) {\n\n}",
+    "solutions" : [ "double average(int a, int b) {\n     return (a + b) / 2.0;\n }" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "average",
+      "args" : [ 10, 11 ],
+      "expected" : 10.5
+    }, {
+      "name" : "average",
+      "args" : [ 12, 16 ],
+      "expected" : 14.0
+    } ]
+  }, {
+    "id" : "round",
+    "type" : "JFUNCTION",
+    "description" : "<div>Pretende-se uma função para obter arredondamentos (excesso/defeito).\nA seguinte implementação faz uma <i>truncagem</i> de um número inteiro, experimente executar <code>round(4.9)</code>. \nAltere o código tendo em conta o objetivo.</div>\n",
+    "required" : false,
+    "startCode" : "int round(double n) {\n    return (int) n;\n}",
+    "solutions" : [ "int round(double n) {\n     return (int) (n + 0.5);\n }" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "round",
+      "args" : [ 5.4 ],
+      "expected" : 5
+    }, {
+      "name" : "round",
+      "args" : [ 5.6 ],
+      "expected" : 6
+    } ]
+  }, {
+    "id" : "isNegative",
+    "type" : "JFUNCTION",
+    "description" : "<div>Pretende-se que a seguinte função indique se um número é negativo (verdadeiro/falso). \nO código tem um erro de compilação e um erro lógico. O objetivo é corrigir os erros.</div>\n",
+    "required" : true,
+    "startCode" : "boolean isNegative(int x) {\n   return n > 0;\n}\"",
+    "solutions" : [ "boolean isNegative(int x) {\n    return x < 0;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "isNegative",
+      "args" : [ -4 ],
+      "expected" : true
+    }, {
+      "name" : "isNegative",
+      "args" : [ 0 ],
+      "expected" : false
+    }, {
+      "name" : "isNegative",
+      "args" : [ 2 ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "isDigit",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para determinar se um número é um dígito (i.e., está no intervalo [0-9]).</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "boolean isDigit(int n) {\n    return n >= 0 && n <= 9;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 2 ],
+      "expected" : true
+    }, {
+      "name" : null,
+      "args" : [ 0 ],
+      "expected" : true
+    }, {
+      "name" : null,
+      "args" : [ 9 ],
+      "expected" : true
+    }, {
+      "name" : null,
+      "args" : [ 10 ],
+      "expected" : false
+    }, {
+      "name" : null,
+      "args" : [ -1 ],
+      "expected" : false
+    }, {
+      "name" : null,
+      "args" : [ 50 ],
+      "expected" : false
+    }, {
+      "name" : null,
+      "args" : [ -100 ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "isEven",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>isEven</code> para determinar se um número é par.</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "boolean isEven(int n) {\n    return n % 2 == 0;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : "isEven",
+      "args" : [ 5 ],
+      "expected" : false
+    }, {
+      "name" : "isEven",
+      "args" : [ -3 ],
+      "expected" : false
+    }, {
+      "name" : "isEven",
+      "args" : [ 0 ],
+      "expected" : true
+    }, {
+      "name" : "isEven",
+      "args" : [ 4 ],
+      "expected" : true
+    } ]
+  }, {
+    "id" : "isOdd",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>isOdd</code> para determinar se um número é ímpar.</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "boolean isOdd(int n) {\n    return n % 2 != 0;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : "isOdd",
+      "args" : [ 5 ],
+      "expected" : true
+    }, {
+      "name" : "isOdd",
+      "args" : [ -3 ],
+      "expected" : true
+    }, {
+      "name" : "isOdd",
+      "args" : [ 0 ],
+      "expected" : false
+    }, {
+      "name" : "isOdd",
+      "args" : [ 4 ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "abs",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>abs</code> para obter o valor absoluto de um número real,\nutilizando uma expressão condicional (<code>cond ? trueValue : falseValue</code>).</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "double abs(double n) {\n     return n < 0 ? -n : n;\n }" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : "abs",
+      "args" : [ -2.5 ],
+      "expected" : 2.5
+    }, {
+      "name" : "abs",
+      "args" : [ 1.3 ],
+      "expected" : 1.3
+    }, {
+      "name" : "abs",
+      "args" : [ 0.0 ],
+      "expected" : 0.0
+    } ]
+  }, {
+    "id" : "min",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>min</code> para obter o valor mínimo entre dois números reais,\nutilizando uma expressão condicional.</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "double min(double a, double b) {\n     return a < b ? a : b;\n }" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : "min",
+      "args" : [ -2.0, 4.3 ],
+      "expected" : -2.0
+    }, {
+      "name" : "min",
+      "args" : [ 3.1, 4.4 ],
+      "expected" : 3.1
+    }, {
+      "name" : "min",
+      "args" : [ 6.6, -1.0 ],
+      "expected" : -1.0
+    }, {
+      "name" : "min",
+      "args" : [ -2.2, -1.5 ],
+      "expected" : -2.2
+    } ]
+  }, {
+    "id" : "isVowel",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para determinar se um carácter (<code>char</code>) corresponde a uma vogal minúscula.</div>\n",
+    "required" : false,
+    "startCode" : "boolean isVowel(char c) {\n\n}",
+    "solutions" : [ "boolean isVowel(char c) {\n     return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'; \n }" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "isVowel",
+      "args" : [ "a" ],
+      "expected" : true
+    }, {
+      "name" : "isVowel",
+      "args" : [ "e" ],
+      "expected" : true
+    }, {
+      "name" : "isVowel",
+      "args" : [ "i" ],
+      "expected" : true
+    }, {
+      "name" : "isVowel",
+      "args" : [ "o" ],
+      "expected" : true
+    }, {
+      "name" : "isVowel",
+      "args" : [ "u" ],
+      "expected" : true
+    }, {
+      "name" : "isVowel",
+      "args" : [ "A" ],
+      "expected" : false
+    }, {
+      "name" : "isVowel",
+      "args" : [ "c" ],
+      "expected" : false
+    }, {
+      "name" : "isVowel",
+      "args" : [ "7" ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "inOrder",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para determinar se três números inteiros estão por ordem estritamente crescente (não podem haver repetidos).</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "boolean inOrder(int a, int b, int c) {\n     return a < b && b < c;\n }" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : "inOrder",
+      "args" : [ 1, 2, 3 ],
+      "expected" : true
+    }, {
+      "name" : "inOrder",
+      "args" : [ 2, 2, 4 ],
+      "expected" : false
+    }, {
+      "name" : "inOrder",
+      "args" : [ 0, 2, 4 ],
+      "expected" : true
+    }, {
+      "name" : "inOrder",
+      "args" : [ 1, 0, 3 ],
+      "expected" : false
+    }, {
+      "name" : "inOrder",
+      "args" : [ 1, 2, 0 ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "isIncluded",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para determinar se um número está incluído num dado intervalo (fechado).\nO primeiro parâmetro corresponderá ao número a verificar (<code>n</code>), \ne outros dois ao intervalo [<code>min</code>, <code>max</code>].</div>\n",
+    "required" : true,
+    "startCode" : "boolean isIncluded(int n, int min, int max) {\n\n}",
+    "solutions" : [ "boolean isIncluded(int n, int min, int max) {\n     return n >= min && n <= max;\n }" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "isIncluded",
+      "args" : [ 1, 2, 3 ],
+      "expected" : false
+    }, {
+      "name" : "isIncluded",
+      "args" : [ 2, 2, 4 ],
+      "expected" : true
+    }, {
+      "name" : "isIncluded",
+      "args" : [ 6, 2, 6 ],
+      "expected" : true
+    }, {
+      "name" : "isIncluded",
+      "args" : [ -1, 0, 3 ],
+      "expected" : false
+    }, {
+      "name" : "isIncluded",
+      "args" : [ 1, 10, 0 ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "isExcluded",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para determinar se um número está excluído de um dado intervalo (fechado).\nO primeiro parâmetro corresponderá ao número a verificar, \ne outros dois ao intervalo.</div>\n",
+    "required" : true,
+    "startCode" : "",
+    "solutions" : [ "boolean isExcluded(int n, int min, int max) {\n     return n < min || n > max;\n }" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 4, 4, 9 ],
+      "expected" : false
+    }, {
+      "name" : null,
+      "args" : [ 3, 4, 9 ],
+      "expected" : true
+    }, {
+      "name" : null,
+      "args" : [ 6, 2, 6 ],
+      "expected" : false
+    }, {
+      "name" : null,
+      "args" : [ -1, 0, 3 ],
+      "expected" : true
+    }, {
+      "name" : null,
+      "args" : [ 1, 10, 0 ],
+      "expected" : true
+    } ]
+  }, {
+    "id" : "xor",
+    "type" : "JFUNCTION",
+    "description" : "<div>Complete a função para calcular a operação lógica disjunção exclusiva (XOR) entre dois valores booleanos, \nsem utilizar o operador <code>^</code>.\n<table>\n<tr>\n<td><b>a</b></td><td><b>b</b></td><td><b>XOR</b></td>\n<td>true</td><td>true</td><td>false</td>\n<td>true</td><td>false</td><td>true</td>\n<td>false</td><td>true</td><td>true</td>\n<td>false</td><td>false</td><td>false</td>\n</tr>\n</table></div>\n",
+    "required" : false,
+    "startCode" : "boolean xor(boolean a, boolean b) {\n\n}",
+    "solutions" : [ "boolean xor(boolean a, boolean b) {\n    return !(a == b);\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "xor",
+      "args" : [ true, true ],
+      "expected" : false
+    }, {
+      "name" : "xor",
+      "args" : [ true, false ],
+      "expected" : true
+    }, {
+      "name" : "xor",
+      "args" : [ false, true ],
+      "expected" : true
+    }, {
+      "name" : "xor",
+      "args" : [ false, false ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "sameSign",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para determinar se dois números inteiros têm o mesmo sinal (i.e. são ambos positivos ou negativos).</div>\n",
+    "required" : false,
+    "startCode" : "",
+    "solutions" : [ "boolean sameSign(int a, int b) {\n     return a < 0 && b < 0 || a > 0 && b > 0;\n }" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : "sameSign",
+      "args" : [ 1, 3 ],
+      "expected" : true
+    }, {
+      "name" : "sameSign",
+      "args" : [ 3, 3 ],
+      "expected" : true
+    }, {
+      "name" : "sameSign",
+      "args" : [ 0, 3 ],
+      "expected" : false
+    }, {
+      "name" : "sameSign",
+      "args" : [ 3, 0 ],
+      "expected" : false
+    }, {
+      "name" : "sameSign",
+      "args" : [ -1, -5 ],
+      "expected" : true
+    }, {
+      "name" : "sameSign",
+      "args" : [ -2, 5 ],
+      "expected" : false
+    } ]
+  }, {
+    "id" : "onlyOnePositive",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para determinar se entre dois números inteiros apenas um é positivo.</div>\n",
+    "required" : false,
+    "startCode" : "",
+    "solutions" : [ "boolean onlyOnePositive(int a, int b) {\n     return a > 0 ^ b > 0;\n }" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ -2, 4 ],
+      "expected" : true
+    }, {
+      "name" : null,
+      "args" : [ 3, 4 ],
+      "expected" : false
+    }, {
+      "name" : null,
+      "args" : [ 6, -1 ],
+      "expected" : true
+    }, {
+      "name" : null,
+      "args" : [ -2, -1 ],
+      "expected" : false
+    } ]
+  } ]
 }
