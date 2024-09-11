@@ -1,6 +1,6 @@
 {
   "title" : "Variáveis e Estruturas de Controlo",
-  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a manipulação de variáveis e estruturas de controlo\n&lt;code&gt;if-else&lt;/code&gt; e &lt;code&gt;while&lt;/code&gt; para desenvolver funções independentes\nque implementam algoritmos simples, adquirindo noções de:</p>\n  <ul>\n    <li>variável</li>\n    <li>atribuição (&lt;code&gt;=&lt;/code&gt;</li>\n    <li>seleção (&lt;code&gt;if-else&lt;/code&gt;)</li>\n    <li>ciclos (&lt;code&gt;while&lt;/code&gt;</li>\n    <li>acumulação</li>\n    <li>contagem</li>\n    <li>iteração</li>\n  </ul>\n</div>\n",
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a manipulação de variáveis e estruturas de controlo\n&lt;code&gt;if-else&lt;/code&gt; e &lt;code&gt;while&lt;/code&gt; para desenvolver funções independentes\nque implementam algoritmos simples, adquirindo noções de:</p>\n  <ul>\n    <li>variável</li>\n    <li>atribuição (&lt;code&gt;=&lt;/code&gt;})</li>\n    <li>seleção (&lt;code&gt;if-else&lt;/code&gt;)</li>\n    <li>ciclos (&lt;code&gt;while&lt;/code&gt;</li>\n    <li>acumulação</li>\n    <li>contagem</li>\n    <li>iteração</li>\n  </ul>\n</div>\n",
   "exercises" : [ {
     "id" : "max",
     "type" : "JFUNCTION",
