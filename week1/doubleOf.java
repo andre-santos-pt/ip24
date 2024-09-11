@@ -1,3 +1,3 @@
 double doubleOf(double n) {
-     return n*1;
+     return n*2;
 }
