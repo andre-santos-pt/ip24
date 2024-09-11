@@ -4,7 +4,7 @@
   "exercises" : [ {
     "id" : "next",
     "type" : "JFUNCTION",
-    "description" : "<div>O seguinte código ilustra a sintaxe elementar para definir funções. Ao experimentar executar por exemplo <code>next(4)</code> irá ser devolvido o mesmo número (4). \nAltere o código para que seja devolvido o número seguinte ao fornecido para o parâmetro <i>n</i> (5 para o exemplo dado).</div>\n",
+    "description" : "<div>O seguinte código ilustra a sintaxe elementar para definir funções. Ao experimentar executar por exemplo <code>next(4)</code> irá ser devolvido o mesmo número (4). \nAltere o código para que seja devolvido o número seguinte ao fornecido para o parâmetro <code>n</code> (5 para o exemplo dado).</div>\n",
     "required" : true,
     "startCode" : "int next(int n) {\n     return n;\n}",
     "solutions" : [ "int next(int n) {\n    return n+1;\n}" ],
@@ -48,7 +48,7 @@
   }, {
     "id" : "doubleOf",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para calcular o dobro de um número (parâmetro <i>n</i>).</div>\n",
+    "description" : "<div>Escreva uma função para calcular o dobro de um número real (parâmetro <code>n</code>).</div>\n",
     "required" : true,
     "startCode" : "double doubleOf(double n) {\n     \n}",
     "solutions" : [ "double doubleOf(double n) {\n      return n * 2;\n}" ],
@@ -66,7 +66,7 @@
   }, {
     "id" : "square",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função com nome <i>square</i> para calcular o quadrado de um número inteiro.</div>\n",
+    "description" : "<div>Escreva uma função com nome <code>square</code> para calcular o quadrado de um número inteiro.</div>\n",
     "required" : true,
     "startCode" : "",
     "solutions" : [ "int square(int n) {\n      return n * n;\n}" ],
@@ -456,7 +456,7 @@
   }, {
     "id" : "xor",
     "type" : "JFUNCTION",
-    "description" : "<div>Complete a função para calcular a operação lógica disjunção exclusiva (XOR) entre dois valores booleanos, \nsem utilizar o operador <code>^</code>.\n<table>\n<tr>\n<td><b>a</b></td><td><b>b</b></td><td><b>XOR</b></td>\n<td>true</td><td>true</td><td>false</td>\n<td>true</td><td>false</td><td>true</td>\n<td>false</td><td>true</td><td>true</td>\n<td>false</td><td>false</td><td>false</td>\n</tr>\n</table></div>\n",
+    "description" : "<div>         Complete a função para calcular a operação lógica disjunção exclusiva (XOR) entre dois valores booleanos, \n         sem utilizar o operador <code>^</code>.\n<table>\n   <tr>\n        <th>a</th><th>b</th><th>XOR</th>\n        </tr>\n    <tr>\n        <td>true</td><td>true</td><td>false</td>\n    </tr>\n    <tr>\n        <td>true</td><td>false</td><td>true</td>\n    </tr>\n    <tr>\n        <td>false</td><td>true</td><td>true</td>\n    </tr>\n    <tr>\n        <td>false</td><td>false</td><td>false</td>\n    </tr>\n</table></div>\n",
     "required" : false,
     "startCode" : "boolean xor(boolean a, boolean b) {\n\n}",
     "solutions" : [ "boolean xor(boolean a, boolean b) {\n    return !(a == b);\n}" ],
