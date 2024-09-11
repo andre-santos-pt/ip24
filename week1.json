@@ -166,7 +166,7 @@
     "type" : "JFUNCTION",
     "description" : "<div>Pretende-se que a seguinte função indique se um número é negativo (verdadeiro/falso). \nO código tem um erro de compilação e um erro lógico. O objetivo é corrigir os erros.</div>\n",
     "required" : true,
-    "startCode" : "boolean isNegative(int x) {\n   return n > 0;\n}\"",
+    "startCode" : "boolean isNegative(int x) {\n   return n > 0;\n}",
     "solutions" : [ "boolean isNegative(int x) {\n    return x < 0;\n}" ],
     "freezeTop" : 1,
     "freezeBottom" : 1,
@@ -538,6 +538,28 @@
       "name" : null,
       "args" : [ -2, -1 ],
       "expected" : false
+    } ]
+  }, {
+    "id" : "staticModule",
+    "type" : "JCLASS",
+    "description" : "<div>Inclua no seguinte módulo as funções <code>min</code> e <code>inOrder</code> escritas anteriormente, \nutilizando o modificador <code>static</code> à semelhança do exemplo.</div>\n",
+    "required" : true,
+    "startCode" : "class Util {\n     static int max(int a, int b) {\n         return a > b ? a : b;\n     }\n     \n}",
+    "solutions" : [ "class Util {\n     static boolean isEven(int n) {\n         return n % 2 == 0;\n     }\n     static int min(int a, int b) {\n         return a < b ? a : b;\n     }\n     static boolean inOrder(int a, int b, int c) {\n         return a < b && b < c;\n     } \n}" ],
+    "freezeTop" : 4,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "isEven",
+      "args" : [ 4 ],
+      "expected" : true
+    }, {
+      "name" : "min",
+      "args" : [ 2, 4 ],
+      "expected" : 2
+    }, {
+      "name" : "inOrder",
+      "args" : [ 1, 2, 3 ],
+      "expected" : true
     } ]
   } ]
 }
