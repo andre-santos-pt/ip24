@@ -1,135 +1,27 @@
 {
-  "title": "Variáveis e Estruturas de Controlo",
-  "exercises": [
-    {
-      "id": "max",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função que dados dois números inteiros, devolve o valor maior.",
-      "startCode": "int max(int a, int b) {\n\n}",
-      "tests": [
-        {"args":[5, 7], "expected": 7},
-        {"args":[10, 7], "expected": 10},
-        {"args":[5, 5], "expected": 5}
-      ]
-    },
-    {
-      "id": "min",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função <code>min</code> que dados dois números inteiros, devolve o valor menor.",
-      "tests": [
-        {"name":"min","args":[5, 7], "expected": 5},
-        {"name":"min","args":[10, 7], "expected": 7},
-        {"name":"min","args":[5, 5], "expected": 5}
-      ]
-    },
-    {
-      "id": "isMultiple",
-      "type": "JFUNCTION",
-      "description": "Escreva uma função que permita verificar se um número inteiro positivo é múltiplo de um outro número positivo, <b>sem recorrer ao operador do resto da divisão (%)</b>.",
-      "tests": [
-        {"args":[25, 5], "expected": true},
-        {"args":[25, 5], "expected": true}
-      ]
-    },
-    {
-      "id": "abs",
-      "type": "JFUNCTION",
-      "description": "Defina uma função para obter o valor absoluto de um número.",
-      "tests": [
-        {"args":[5], "expected": 5},
-        {"args":[-10], "expected": 10},
-        {"args":[0], "expected": 0}
-      ]
-    },
-    {
-      "id": "irsTax",
-      "type": "JFUNCTION",
-      "description": "Defina uma função obter qual o escalão de IRS (1 a 4, de um país hipotético) dado o rendimento anual, segundo a seguinte tabela.<br><br><table border=1 padding=3> <tbody><tr><td>1</td><td>até 10.000</td></tr><tr><td>2</td><td>10.000 - 25.500</td>    </tr><tr><td>3</td><td>25.500 - 48.500</td></tr><tr><td>4</td><td>mais de 48.500</td></tr></tbody></table>",
-      "tests": [
-        {"args":[5000], "expected": 1},
-        {"args":[10000], "expected": 1},
-        {"args":[12000], "expected": 2},
-        {"args":[48500], "expected": 3},
-        {"args":[50000], "expected": 4}
-      ]
-    },
-    {
-      "id": "nextLetter",
-      "type": "JFUNCTION",
-      "description": "Defina uma função que dada uma letra é devolvida a letra seguinte no alfabeto, considerando que o alfabeto é circular (depois do <i>z</i> vem o <i>a</i>).",
-      "tests": [
-        {"args": ["a"], "expected": "b"},
-        {"args": ["i"], "expected": "j"},
-        {"args": ["z"], "expected": "a"}
-      ]
-    },
-    {
-      "id": "firstDigit",
-      "type": "JFUNCTION",
-      "description": "Defina uma função que recebe como argumento um número natural n e devolve o primeiro algarismo da representação decimal de n. O valor pode ser obtido dividindo (divisão inteira) sucessivamente por 10: ((2024 / 10 = 202) / 10 = 20) / 10 = <b>2</b>",
-      "tests": [
-        {"args":[2024], "expected": 2},
-        {"args":[9], "expected": 9},
-        {"args":[100], "expected": 1}
-      ]
-    },
-    {
-      "id": "intDivision",
-      "type": "JFUNCTION",
-      "description": "Defina uma função para obter o quociente da divisão inteira, <b>sem recorrer ao operador de divisão (/)</b>. O valor pode ser obtido com uma contagem de subtrações sucessivas do divisor ao dividendo. Para 19 / 6: ((19 <b>- 6</b> = 13) <b>- 6</b>) = 7) <b>- 6</b> (as 3 subtrações corresponde ao resultado da divisão inteira).",
-      "tests": [
-        {"args":[19, 6], "expected": 3},
-        {"args":[30, 5], "expected": 6},
-        {"args":[15, 2], "expected": 7}
-      ]
-    },
-    {
-      "id": "powerOfTwo",
-      "type": "JFUNCTION",
-      "description": "Defina uma função que recebe como argumento um número maior ou igual a zero e devolve a potência 2<sup>n</sup>.",
-      "tests": [
-        {"args": [0], "expected": 1},
-        {"args": [1], "expected": 2},
-        {"args": [2], "expected": 4},
-        {"args": [4], "expected": 16},
-        {"args": [8], "expected": 256}
-      ]
-    },
-    {
-      "id": "sumNaturals",
-      "type": "JFUNCTION",
-      "description": "Defina uma função que recebe como argumento um número natural n e devolve a soma dos números naturais até n.",
-      "tests": [
-        {"args": [0], "expected": 0},
-        {"args": [1], "expected": 1},
-        {"args": [4], "expected": 10},
-        {"args": [5], "expected": 15}
-        ]
-    },
-    {
-      "id": "sumEvenBetween",
-      "type": "JFUNCTION",
-      "description": "Defina uma função que recebe como argumento dois números naturais n e p e devolve a soma dos números naturais pares compreendidos entre n e p (intervalo fechado).",
-      "tests": [
-        {"args": [3,3], "expected": 0},
-        {"args": [3,4], "expected": 4},
-        {"args": [3, 8], "expected": 18},
-        {"args": [4, 8], "expected": 18},
-        {"args": [4, 9], "expected": 18}
-      ]
-    },
-    {
-      "id": "utilModule",
-      "type": "JCLASS",
-      "description": "Defina um módulo (<code>class</code>) com as funções <code>max</code> e <code>min</code> desenvolvidas anteriormente(utilizando <code>static</code>).",
-      "startCode": "class Util {\n\n}",
-      "freezeTop": 1,
-      "freezeBottom": 1,
-      "tests": [
-        {"name":"max","args":[5, 7], "expected": 7},
-        {"name":"min","args":[5, 7], "expected": 5}
-      ]
-    }
-  ]
+  "title" : "Variáveis e Estruturas de Controlo",
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a manipulação de variáveis e estruturas de controlo\n&lt;code&gt;if-else&lt;/code&gt; e &lt;code&gt;while&lt;/code&gt; para desenvolver funções independentes\nque implementam algoritmos simples, adquirindo noções de:</p>\n  <ul>\n    <li>variável</li>\n    <li>atribuição (&lt;code&gt;=&lt;/code&gt;</li>\n    <li>seleção (&lt;code&gt;if-else&lt;/code&gt;)</li>\n    <li>ciclos (&lt;code&gt;while&lt;/code&gt;</li>\n    <li>acumulação</li>\n    <li>contagem</li>\n    <li>iteração</li>\n  </ul>\n</div>\n",
+  "exercises" : [ {
+    "id" : "max",
+    "type" : "JFUNCTION",
+    "description" : "<div>O seguinte código ilustra a sintaxe elementar para definir funções. Ao experimentar executar por exemplo <code>next(4)</code> irá ser devolvido o mesmo número (4). \nAltere o código para que seja devolvido o número seguinte ao fornecido para o parâmetro <code>n</code> (5 para o exemplo dado).</div>\n",
+    "required" : true,
+    "startCode" : "int next(int n) {\n     return n;\n}",
+    "solutions" : [ "int next(int n) {\n    return n+1;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "tests" : [ {
+      "name" : "next",
+      "args" : [ 4 ],
+      "expected" : 5
+    }, {
+      "name" : "next",
+      "args" : [ 6 ],
+      "expected" : 7
+    }, {
+      "name" : "next",
+      "args" : [ -1 ],
+      "expected" : 0
+    } ]
+  } ]
 }
-
