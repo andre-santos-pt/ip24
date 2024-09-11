@@ -1,3 +1,3 @@
 int previous(int n) {
-     return n;
+     return n-1;
 }
