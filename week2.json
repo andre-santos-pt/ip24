@@ -5,7 +5,7 @@
       "id": "max",
       "type": "JFUNCTION",
       "description": "Escreva uma função que dados dois números inteiros, devolve o valor maior.",
-      "startCode": "int max(int a, int b) {\\n\\n}",
+      "startCode": "int max(int a, int b) {\n\n}",
       "tests": [
         {"args":[5, 7], "expected": 7},
         {"args":[10, 7], "expected": 10},
