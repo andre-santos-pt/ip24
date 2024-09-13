@@ -1,8 +1,12 @@
 {
-  "id": "ip24",
-  "modules": [
-    {"id":"week1", "requires":[]},
-    {"id":"week2", "visible": false, "requires":["week1"]},
-    {"id":"week4", "requires":[]}
-  ]
+  "id" : "ip24",
+  "modules" : [ {
+    "id" : "week1",
+    "visible" : true,
+    "requires" : [ ]
+  }, {
+    "id" : "week2",
+    "visible" : false,
+    "requires" : [ "week1" ]
+  } ]
 }
