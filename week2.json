@@ -1,6 +1,6 @@
 {
   "title" : "Variáveis e Estruturas de Controlo",
-  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a manipulação de variáveis e estruturas de controlo\n<code>if-else</code> e <code>while</code> para desenvolver funções independentes\nque implementam algoritmos simples, adquirindo noções de:</p>\n  <ul>\n    <li>variável</li>\n    <li>atribuição (<code>=</code>)</li>\n    <li>seleção (<code>if-else</code>)</li>\n    <li>ciclos (<code>while</code>)</li>\n    <li>acumulação</li>\n    <li>contagem</li>\n    <li>iteração</li>\n  </ul>\n</div>\n",
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a manipulação de variáveis e estruturas de controlo\n<code>if-else</code> e <code>while</code> para desenvolver funções independentes\nque implementam algoritmos simples, adquirindo noções de:</p>\n  <ul>\n    <li>variável</li>\n    <li>atribuição (<code>=</code>)</li>\n    <li>seleção (<code>if-else</code>)</li>\n    <li>ciclos (<code>while</code>)</li>\n    <li>acumulação</li>\n    <li>iteração</li>\n  </ul>\n</div>\n",
   "exercises" : [ {
     "id" : "abs",
     "type" : "JFUNCTION",
@@ -332,6 +332,102 @@
       "name" : null,
       "args" : [ 4, 9 ],
       "expected" : 18
+    } ]
+  }, {
+    "id" : "nextLetter",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n",
+    "required" : false,
+    "startCode" : "",
+    "solutions" : [ "char nextLetter(char l) {\n     if(l == 'z') {\n         return 'a';\n     }\n     else {\n         return (char) (l + 1);\n     }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ "a" ],
+      "expected" : "b"
+    }, {
+      "name" : null,
+      "args" : [ "i" ],
+      "expected" : "j"
+    }, {
+      "name" : null,
+      "args" : [ "z" ],
+      "expected" : "a"
+    } ]
+  }, {
+    "id" : "gcd",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função que recebe como argumento dois números naturais <code>a</code> e <code>b</code> e\n que calcula o máximo divisor comum desses dois números, usando o algoritmo de Euclides.<br>\n \n O algoritmo consiste em iterativamente substituir <code>a</code> por <code>b</code>, e <code>b</code> pelo resto da divisão de <code>a</code> por <code>b</code>.\n Quando <code>b</code> é zero, a resposta está em <code>a</code>.\n  <table class='table table-striped' style='width:150px'><tbody>\n  <thead><td>a</td><td>b</td></thead>\n   <tr><td>25</td><td>30</td></tr>\n   <tr><td>30</td><td>25</td></tr>\n   <tr><td>25</td><td>5</td></tr>\n   <tr><td>5</td><td>0</td></tr>\n   </tbody></table></div>\n",
+    "required" : false,
+    "startCode" : "",
+    "solutions" : [ "int gcd(int a, int b) {\n     while(b != 0) {\n         int r = a % b;\n         a = b;\n         b = r;\n     }\n     return a;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 25, 30 ],
+      "expected" : 5
+    }, {
+      "name" : null,
+      "args" : [ 30, 25 ],
+      "expected" : 5
+    }, {
+      "name" : null,
+      "args" : [ 3, 7 ],
+      "expected" : 1
+    }, {
+      "name" : null,
+      "args" : [ 348, 156 ],
+      "expected" : 12
+    } ]
+  }, {
+    "id" : "fibonacci",
+    "type" : "JFUNCTION",
+    "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n",
+    "required" : false,
+    "startCode" : "",
+    "solutions" : [ "int fib(int n) {\n     if(n <= 1) {\n         return n;\n     }\n     int a = 0;\n     int b = 1;\n     int i = 2;\n     while(i != n) {\n         int t = a + b;\n         a = b;\n         b = t;\n         i = i + 1;\n     }\n     return a + b;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 0 ],
+      "expected" : 0
+    }, {
+      "name" : null,
+      "args" : [ 1 ],
+      "expected" : 1
+    }, {
+      "name" : null,
+      "args" : [ 2 ],
+      "expected" : 1
+    }, {
+      "name" : null,
+      "args" : [ 3 ],
+      "expected" : 2
+    }, {
+      "name" : null,
+      "args" : [ 4 ],
+      "expected" : 3
+    }, {
+      "name" : null,
+      "args" : [ 5 ],
+      "expected" : 5
+    }, {
+      "name" : null,
+      "args" : [ 6 ],
+      "expected" : 8
+    }, {
+      "name" : null,
+      "args" : [ 7 ],
+      "expected" : 13
     } ]
   } ]
 }
