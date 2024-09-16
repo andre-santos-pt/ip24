@@ -556,7 +556,7 @@
   }, {
     "id" : "sameSign",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para determinar se dois números inteiros têm o mesmo sinal (i.e. são ambos positivos ou negativos).</div>\n",
+    "description" : "<div>Escreva uma função para determinar se dois números inteiros têm o mesmo sinal (i.e. são ambos positivos ou negativos).\nConsidere que zero não é positivo nem negativo (não tem sinal), e logo, quando há um zero nos valores, a resposta será sempre falsa.</div>\n",
     "required" : false,
     "startCode" : "",
     "solutions" : [ "boolean sameSign(int a, int b) {\n     return a < 0 && b < 0 || a > 0 && b > 0;\n }" ],
