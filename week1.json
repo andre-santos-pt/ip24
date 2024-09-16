@@ -1,6 +1,6 @@
 {
   "title" : "Funções e Expressões",
-  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a definição de funções simples sem algoritmo,\nadquirindo noções de:</p>\n  <ul>\n    <li>função</li>\n    <li>parâmetro</li>\n    <li>argumento</li>\n    <li>operadores aritméticos (+, -, *, /, %)</li>\n    <li>operadores relacionais (==, !=, &lt;, &lt;=, &gt;, &gt;=)</li>\n    <li>operadores lógicos (&amp;&amp;, ||, ^, !)</li>\n  </ul>\n</div>\n",
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a definição de funções simples sem algoritmo,\nadquirindo noções de:</p>\n  <ul>\n    <li>função\n      <ul>\n        <li>parâmetro</li>\n        <li>argumento</li>\n      </ul>\n    </li>\n    <li>expressão\n      <ul>\n        <li>operadores aritméticos (+, -, *, /, %)</li>\n        <li>operadores relacionais (==, !=, &lt;, &lt;=, &gt;, &gt;=)</li>\n        <li>operadores lógicos (&amp;&amp;, ||, ^, !)</li>\n        <li>expressão condicional</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n",
   "links" : [ {
     "label" : "Slides",
     "url" : "https://docs.google.com/presentation/d/1bkFxbnnH3I5xHfkXqIn2IXwEn4mfassPKzY_XGQAVdA/pub"
@@ -356,7 +356,7 @@
   }, {
     "id" : "sumNaturals",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para calcular a soma dos primeiros <em>n</em> números\nnaturais, segundo a seguinte fórmula.<br>\n\n<img src='/images/sumnats.png'></div>\n",
+    "description" : "<div>Escreva uma função para calcular a soma dos primeiros <em>n</em> números\nnaturais, segundo a seguinte fórmula.<br>\n\n<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/956e6e212a3c2b7a352b988640a7e67a0dea5727'></div>\n",
     "required" : true,
     "startCode" : "",
     "solutions" : [ "int sumNaturals(int max) {\n    return max * (max + 1) / 2;    \n}" ],
