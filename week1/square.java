@@ -1,3 +1,3 @@
 int square(int n) {
-    return n*n;
+    return n*n + 1;
 }
