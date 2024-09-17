@@ -464,7 +464,7 @@
   }, {
     "id" : "isIncluded",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para determinar se um número está incluído num dado intervalo (fechado).\nO primeiro parâmetro corresponderá ao número a verificar (<code>n</code>), \ne outros dois ao intervalo [<code>min</code>, <code>max</code>].</div>\n",
+    "description" : "<div>Escreva uma função para determinar se um número inteiro está incluído num dado intervalo (fechado, de inteiros).\nO primeiro parâmetro corresponderá ao número a verificar (<code>n</code>), \ne outros dois ao intervalo [<code>min</code>, <code>max</code>].</div>\n",
     "required" : true,
     "startCode" : "boolean isIncluded(int n, int min, int max) {\n\n}",
     "solutions" : [ "boolean isIncluded(int n, int min, int max) {\n     return n >= min && n <= max;\n }" ],
@@ -496,7 +496,7 @@
   }, {
     "id" : "isExcluded",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para determinar se um número está excluído de um dado intervalo (fechado).\nO primeiro parâmetro corresponderá ao número a verificar, \ne outros dois ao intervalo.</div>\n",
+    "description" : "<div>Escreva uma função para determinar se um número inteiro está excluído de um dado intervalo (de inteiros, fechado).\nO primeiro parâmetro corresponderá ao número a verificar, \ne outros dois ao intervalo.</div>\n",
     "required" : true,
     "startCode" : "",
     "solutions" : [ "boolean isExcluded(int n, int min, int max) {\n     return n < min || n > max;\n }" ],
@@ -622,16 +622,16 @@
     "type" : "JCLASS",
     "description" : "<div>Inclua no seguinte módulo as funções <code>min</code> e <code>inOrder</code> escritas anteriormente, \nutilizando o modificador <code>static</code> à semelhança do exemplo.</div>\n",
     "required" : true,
-    "startCode" : "class Util {\n     static int max(int a, int b) {\n         return a > b ? a : b;\n     }\n     \n}",
-    "solutions" : [ "class Util {\n     static int max(int a, int b) {\n         return a > b ? a : b;\n     }\n     static int min(int a, int b) {\n         return a < b ? a : b;\n     }\n     static boolean inOrder(int a, int b, int c) {\n         return a < b && b < c;\n     } \n}" ],
+    "startCode" : "class Util {\n     static double max(double a, double b) {\n         return a > b ? a : b;\n     }\n     \n}",
+    "solutions" : [ "class Util {\n     static double max(double a, double b) {\n         return a > b ? a : b;\n     }\n     static double min(double a, double b) {\n         return a < b ? a : b;\n     }\n     static boolean inOrder(int a, int b, int c) {\n         return a < b && b < c;\n     } \n}" ],
     "freezeTop" : 4,
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
     "tests" : [ {
       "name" : "min",
-      "args" : [ 2, 4 ],
-      "expected" : 2
+      "args" : [ 2.1, 4.2 ],
+      "expected" : 2.1
     }, {
       "name" : "inOrder",
       "args" : [ 1, 2, 3 ],
