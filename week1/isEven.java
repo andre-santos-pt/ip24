@@ -1,3 +1,3 @@
 boolean isEven(int n) {
-    return true;
+    return n % 2 == 0;
 }
