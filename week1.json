@@ -16,21 +16,23 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "next",
       "args" : [ 4 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "next",
       "args" : [ 6 ],
       "expected" : 7,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "next",
       "args" : [ -1 ],
       "expected" : 0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "previous",
@@ -43,21 +45,23 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "previous",
       "args" : [ 4 ],
       "expected" : 3,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "previous",
       "args" : [ 10 ],
       "expected" : 9,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "previous",
       "args" : [ 0 ],
       "expected" : -1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "doubleOf",
@@ -70,48 +74,52 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "doubleOf",
       "args" : [ 2.3 ],
       "expected" : 4.6,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "doubleOf",
       "args" : [ 110.5 ],
       "expected" : 221.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "square",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função com nome <code>square</code> para calcular o quadrado de um número inteiro.</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int square(int n) {\n      return n * n;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "square",
       "args" : [ 2 ],
       "expected" : 4,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "square",
       "args" : [ 3 ],
       "expected" : 9,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "square",
       "args" : [ 6 ],
       "expected" : 36,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "square",
       "args" : [ -2 ],
       "expected" : 4,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "difference",
@@ -124,38 +132,42 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "difference",
       "args" : [ 10, 4 ],
       "expected" : 6,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "difference",
       "args" : [ 3, 6 ],
       "expected" : -3,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "average",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função para calcular a média de dois números reais (<code>double</code>).</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "double average(double a, double b) {\n     return (a + b) / 2;\n }" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 10.6, 11.0 ],
       "expected" : 10.8,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 12.3, 13.5 ],
       "expected" : 12.9,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "averageInt",
@@ -168,16 +180,18 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "average",
       "args" : [ 10, 11 ],
       "expected" : 10.5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "average",
       "args" : [ 12, 16 ],
       "expected" : 14.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "round",
@@ -190,16 +204,18 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "round",
       "args" : [ 5.4 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "round",
       "args" : [ 5.6 ],
       "expected" : 6,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isNegative",
@@ -212,228 +228,242 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "isNegative",
       "args" : [ -4 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isNegative",
       "args" : [ 0 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isNegative",
       "args" : [ 2 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isDigit",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função para determinar se um número é um dígito (i.e., está no intervalo [0-9]).</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean isDigit(int n) {\n    return n >= 0 && n <= 9;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 2 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 0 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 9 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 10 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -1 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 50 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -100 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isEven",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função <code>isEven</code> para determinar se um número é par.</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean isEven(int n) {\n    return n % 2 == 0;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "isEven",
       "args" : [ 5 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isEven",
       "args" : [ -3 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isEven",
       "args" : [ 0 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isEven",
       "args" : [ 4 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isOdd",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função <code>isOdd</code> para determinar se um número é ímpar.</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean isOdd(int n) {\n    return n % 2 != 0;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "isOdd",
       "args" : [ 5 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ -3 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ 0 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ 4 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "abs",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função <code>abs</code> para obter o valor absoluto de um número real,\nutilizando uma expressão condicional.<br>(<code>cond ? trueValue : falseValue</code>)</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "double abs(double n) {\n     return n < 0 ? -n : n;\n }" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ "IF" ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "abs",
       "args" : [ -2.5 ],
       "expected" : 2.5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 1.3 ],
       "expected" : 1.3,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 0.0 ],
       "expected" : 0.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "min",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função <code>min</code> para obter o valor mínimo entre dois números reais,\nutilizando uma expressão condicional.</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "double min(double a, double b) {\n     return a < b ? a : b;\n }" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ "IF" ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "min",
       "args" : [ -2.0, 4.3 ],
       "expected" : -2.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ 3.1, 4.4 ],
       "expected" : 3.1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ 6.6, -1.0 ],
       "expected" : -1.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ -2.2, -1.5 ],
       "expected" : -2.2,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "sumNaturals",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para calcular a soma dos primeiros <em>n</em> números\nnaturais, segundo a seguinte fórmula.<br>\n\n<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/956e6e212a3c2b7a352b988640a7e67a0dea5727'></div>\n",
+    "description" : "<div>Escreva uma função para calcular a soma dos primeiros <em>n</em> números\nnaturais, segundo a seguinte fórmula.<br><br><img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/956e6e212a3c2b7a352b988640a7e67a0dea5727'></div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int sumNaturals(int max) {\n    return max * (max + 1) / 2;    \n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 1 ],
       "expected" : 1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 2 ],
       "expected" : 3,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3 ],
       "expected" : 6,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 5 ],
       "expected" : 15,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 7 ],
       "expected" : 28,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isVowel",
@@ -446,83 +476,87 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "isVowel",
       "args" : [ "a" ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "e" ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "i" ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "o" ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "u" ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "A" ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "c" ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "7" ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "inOrder",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função para determinar se três números inteiros estão por ordem estritamente crescente (não podem haver repetidos).</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean inOrder(int a, int b, int c) {\n     return a < b && b < c;\n }" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "inOrder",
       "args" : [ 1, 2, 3 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 2, 2, 4 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 0, 2, 4 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 1, 0, 3 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 1, 2, 0 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isIncluded",
@@ -535,68 +569,72 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "isIncluded",
       "args" : [ 1, 2, 3 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ 2, 2, 4 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ 6, 2, 6 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ -1, 0, 3 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ 1, 10, 0 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isExcluded",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função para determinar se um número inteiro está excluído de um dado intervalo (de inteiros, fechado).\nO primeiro parâmetro corresponderá ao número a verificar, \ne outros dois ao intervalo.</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean isExcluded(int n, int min, int max) {\n     return n < min || n > max;\n }" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 4, 4, 9 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 4, 9 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 6, 2, 6 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -1, 0, 3 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 1, 10, 0 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "xor",
@@ -609,100 +647,106 @@
     "freezeBottom" : 1,
     "exclude" : [ "XOR" ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "xor",
       "args" : [ true, true ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "xor",
       "args" : [ true, false ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "xor",
       "args" : [ false, true ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "xor",
       "args" : [ false, false ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "sameSign",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função para determinar se dois números inteiros têm o mesmo sinal (i.e. são ambos positivos ou negativos).\nConsidere que zero não é positivo nem negativo (não tem sinal), e logo, quando há um zero nos valores, a resposta será sempre falsa.</div>\n",
     "required" : false,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean sameSign(int a, int b) {\n     return a < 0 && b < 0 || a > 0 && b > 0;\n }" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 1, 3 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 3 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 0, 3 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 0 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -1, -5 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -2, 5 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "onlyOnePositive",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função para determinar se entre dois números inteiros apenas um é positivo.</div>\n",
     "required" : false,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean onlyOnePositive(int a, int b) {\n     return a > 0 ^ b > 0;\n }" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ -2, 4 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 4 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 6, -1 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -2, -1 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "staticModule",
@@ -715,16 +759,18 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "min",
       "args" : [ 2.1, 4.2 ],
       "expected" : 2.1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 1, 2, 3 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   } ]
 }

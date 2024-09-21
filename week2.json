@@ -1,7 +1,10 @@
 {
   "title" : "Variáveis e Estruturas de Controlo",
-  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a manipulação de variáveis e estruturas de controlo\n<code>if-else</code> e <code>while</code> para desenvolver funções independentes\nque implementam algoritmos simples, adquirindo noções de:</p>\n  <ul>\n    <li>variável</li>\n    <li>atribuição (<code>=</code>)</li>\n    <li>seleção (<code>if-else</code>)</li>\n    <li>ciclos (<code>while</code>)</li>\n    <li>acumulação</li>\n    <li>iteração</li>\n  </ul>\n</div>\n",
-  "links" : [ ],
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a manipulação de variáveis e estruturas de controlo\n<code>if-else</code> e <code>while</code> para desenvolver funções independentes\nque implementam algoritmos simples, adquirindo noções de:</p>\n  <ul>\n    <li>declaração de variável</li>\n    <li>atribuição (<code>=</code>)</li>\n    <li>seleção (<code>if-else</code>)</li>\n    <li>ciclos (<code>while</code>)</li>\n    <li>acumulação</li>\n    <li>iteração</li>\n    <li>contagem</li>\n  </ul>\n</div>\n",
+  "links" : [ {
+    "label" : "Slides",
+    "url" : "https://docs.google.com/presentation/d/16tZYnjUSXIiyESDTjpjjBiWFQKbYSUFMxon4VenQkeA/pub?start=false&loop=false&delayms=3000"
+  } ],
   "exercises" : [ {
     "id" : "abs",
     "type" : "JFUNCTION",
@@ -13,21 +16,23 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ "IF" ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "abs",
       "args" : [ -2.5 ],
       "expected" : 2.5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 1.3 ],
       "expected" : 1.3,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 0.0 ],
       "expected" : 0.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "max",
@@ -40,132 +45,140 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ "IF" ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "max",
       "args" : [ 4, 7 ],
       "expected" : 7,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "max",
       "args" : [ 7, 7 ],
       "expected" : 7,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "max",
       "args" : [ 10, 5 ],
       "expected" : 10,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "min",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função que devolve o menor valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>min(2, 8) &rarr; 2</li>\n    <li>min(3, 1) &rarr; 1</li>\n  </ul>\n</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int min(int a, int b) {\n   if(a < b) {\n       return a;\n   }\n   else {\n       return b;\n   }\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ "IF" ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "min",
       "args" : [ 4, 7 ],
       "expected" : 4,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ 7, 7 ],
       "expected" : 7,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ 10, 5 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "irsGroup",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função obter qual o escalão de IRS (1 a 4, de um país hipotético) \ndado o rendimento anual (número inteiro), segundo a seguinte tabela.<br><br>\n<table class='table table-striped' style='width:250px'><tbody>\n<tr><td>1</td><td>até 10.000</td></tr>\n<tr><td>2</td><td>10.000 - 25.500</td></tr>\n<tr><td>3</td><td>25.500 - 48.500</td></tr>\n<tr><td>4</td><td>mais de 48.500</td></tr></tbody></table></div>\n",
+    "description" : "<div>Defina uma função para obter qual o escalão de IRS (1 a 4, de um país hipotético) \ndado o rendimento anual (número inteiro), segundo a seguinte tabela.<br><table class='table table-striped' style='width:250px'><tbody>\n<tr><td>1</td><td>até 10.000</td></tr>\n<tr><td>2</td><td>10.000 - 25.500</td></tr>\n<tr><td>3</td><td>25.500 - 48.500</td></tr>\n<tr><td>4</td><td>mais de 48.500</td></tr></tbody></table><br>Após uma execução, experimente verificar as instruções que foram executadas (<i class=\"fas fa-route\"></i>).</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int irsGroup(int income) {\n     if(income < 10000) {\n         return 1;\n     }\n     else {\n         if(income <= 25500) {\n             return 2;\n         }\n         else {\n             if(income <= 48500) {\n                 return 3;\n             }\n             else {\n                 return 4;\n             }\n         }\n     }   \n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 5000 ],
       "expected" : 1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 10000 ],
       "expected" : 2,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 10001 ],
       "expected" : 2,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 48500 ],
       "expected" : 3,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 49000 ],
       "expected" : 4,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "irsTax",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função obter qual a taxa de IRS (percentagem em número real no intervalo [0.0, 1.0]) \ndado o número do escalão (inteiro). Se o escalão for inválido deve ser retornado <code>0.0</code>.<br><br>\n<table class='table table-striped' style='width:150px'><tbody>\n<tr><td>1</td><td>12%</td></tr>\n<tr><td>2</td><td>18%</td></tr>\n<tr><td>3</td><td>23%</td></tr>\n<tr><td>4</td><td>29%</td></tr>\n</tbody></table></div>\n",
+    "description" : "<div>Defina uma função para obter qual a taxa de IRS (percentagem em número real no intervalo [0.0, 1.0]) \ndado o número do escalão (inteiro). Se o escalão for inválido deve ser retornado <code>0.0</code>.<br><br>\n<table class='table table-striped' style='width:150px'><tbody>\n<tr><td>1</td><td>12%</td></tr>\n<tr><td>2</td><td>18%</td></tr>\n<tr><td>3</td><td>23%</td></tr>\n<tr><td>4</td><td>29%</td></tr>\n</tbody></table></div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "double irsTax(int group) {\n     if(group < 1 || group > 4) {\n         return 0.0;\n     }\n     if(group == 1) {\n         return .12;\n     }\n     else {\n         if(group == 2) {\n             return .18;\n         }\n         else {\n             if(group == 3) {\n                 return .23;\n             }\n             else { \n                 return .29;\n             }\n         }\n     }   \n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 0 ],
       "expected" : 0.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -3 ],
       "expected" : 0.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 5 ],
       "expected" : 0.0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 1 ],
       "expected" : 0.12,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 2 ],
       "expected" : 0.18,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3 ],
       "expected" : 0.23,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 4 ],
       "expected" : 0.29,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "irsModule",
@@ -178,33 +191,37 @@
     "freezeBottom" : 1,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : "irsGroup",
       "args" : [ 15000 ],
       "expected" : 2,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : "irsTax",
       "args" : [ 3 ],
       "expected" : 0.23,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "varAssign",
     "type" : "JSCRIPT",
-    "description" : "<div>altere para 1,2,3,4,5</div>\n",
+    "description" : "<div>Na seguinte sequência de instruções é declarada uma variável <code>n</code>,\ncom valor inicial 1, sendo alterado para 2, e por fim para 3.<br>Experimente executar (<i class=\"fas fa-play\"></i>) e observar o estado da\nvariável durante a execução (<i class=\"fas fa-search\"></i>).<br>Acrescente instruções por forma a que a sequência de valores da variável <code>n</code>\nseja: 1, 2, 3, 4, 5.</div>\n",
     "required" : true,
-    "startCode" : "int n = 1;\nn = 2;\nn = n + 1; // 3\n",
+    "startCode" : "int n = 1;\nn = 2;\nn = n + 1;\n",
     "solutions" : [ "int n = 1;\nn = 2;\nn = n + 1;\nn= 4;\nn = n + 1;" ],
     "freezeTop" : 3,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ ],
       "expected" : null,
-      "traceVar" : [ {
+      "traceVars" : [ {
         "name" : "n",
         "values" : [ "1", "2", "3", "4", "5" ]
       } ]
@@ -212,27 +229,63 @@
   }, {
     "id" : "varAssignDiv",
     "type" : "JSCRIPT",
-    "description" : "<div>.... sem ciclo</div>\n",
+    "description" : "<div>Escreva uma sequência de instruções, onde é declarada uma variável inteira <code>v</code>,\na qual assume a sequência de valores: 2024, 202, 20, 2. Calcule cada novo valor\npor meio da divisão inteira por 10, não utilize um ciclo.</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int v = 2024;\nv = v / 10;\nv = v / 10;\nv = v / 10;" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ "WHILE" ],
     "include" : [ "DIV" ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ ],
       "expected" : null,
-      "traceVar" : [ {
+      "traceVars" : [ {
         "name" : "v",
         "values" : [ "2024", "202", "20", "2" ]
       } ]
     } ]
   }, {
+    "id" : "firstDigit",
+    "type" : "JFUNCTION",
+    "description" : "<div>Defina uma função que recebe como argumento um número natural e devolve \no primeiro algarismo do mesmo. O valor pode ser obtido \ndividindo sucessivamente por 10 (divisão inteira): ((2024 / 10 = 202) / 10 = 20) / 10 = <b>2</b>.\nUtilize um ciclo para efetuar o cálculo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>firstDigit(2024) &rarr; 2 (2024 / 10 / 10 / 10)</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "int firstDigit(int n) {\n     int d = n;\n     while(d >= 10) {\n         d = d / 10;\n     }\n     return d;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ "WHILE" ],
+    "importCode" : null,
+    "importExercise" : null,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 2024 ],
+      "expected" : 2,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 5 ],
+      "expected" : 5,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 123 ],
+      "expected" : 1,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 300000 ],
+      "expected" : 3,
+      "traceVars" : [ ]
+    } ]
+  }, {
     "id" : "naturalsIterator",
     "type" : "JSCRIPT",
-    "description" : "<div>iterador alterar 1 a 5</div>\n",
+    "description" : "<div>No seguinte código temos uma variável iteradora <code>i</code>. Experimente executar\npara observar o intervalo de valores percorrido e as sucessivas avaliações\nda condição do ciclo, bem como quantas vezes o bloco\ndo ciclo executou (<i class=\"fas fa-route\"></i>).<br>Altere o código para que intervalo da iteração seja de 1 a 5.</div>\n",
     "required" : true,
     "startCode" : "int i = 0;\nwhile(i < 10) {\n   i = i + 1;\n}",
     "solutions" : [ "int i = 1;\nwhile(i < 5) {\n    i = i + 1;\n}" ],
@@ -240,307 +293,361 @@
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ "WHILE" ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ ],
       "expected" : null,
-      "traceVar" : [ {
+      "traceVars" : [ {
         "name" : "i",
         "values" : [ "1", "2", "3", "4", "5" ]
       } ]
     } ]
   }, {
-    "id" : "firstDigit",
+    "id" : "sumNaturals",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um número natural <em>i</em> e devolve \no primeiro algarismo da representação decimal de <em>n</em>. O valor pode ser obtido \ndividindo sucessivamente por 10 (divisão inteira): ((2024 / 10 = 202) / 10 = 20) / 10 = <b>2</b></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>firstDigit(2024) &rarr; 2 (2024 / 10 / 10 / 10)</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um número natural <code>max</code> \ne devolve a soma dos números naturais [1, <code>max</code>], utilizando um ciclo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>sumNaturals(5) &rarr; 15</li>\n  </ul>\n</div>\n",
     "required" : true,
-    "startCode" : "",
-    "solutions" : [ "int firstDigit(int n) {\n     int d = n;\n     while(d >= 10) {\n         d = d / 10;\n     }\n     return d;\n}" ],
+    "startCode" : null,
+    "solutions" : [ "int sumNaturals(int max) {\n     int s = 0;\n     int n = 1;\n     while(n <= max) {\n         s = s + n;\n         n = n + 1;\n     }\n     return s;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ "WHILE" ],
+    "importCode" : null,
+    "importExercise" : null,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 0 ],
+      "expected" : 0,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 1 ],
+      "expected" : 1,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 4 ],
+      "expected" : 10,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 6 ],
+      "expected" : 21,
+      "traceVars" : [ ]
+    } ]
+  }, {
+    "id" : "reverseIteration",
+    "type" : "JSCRIPT",
+    "description" : "<div>Escreva instruções para declarar uma variável <code>x</code> que efetua uma\niteração reversa, com a seguinte sequência de valores: 5, 4, 3, 2, 1, 0. </div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "int x = 5;\nwhile(x > 0) {\n    x = x - 1;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ "WHILE" ],
+    "importCode" : null,
+    "importExercise" : null,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ ],
+      "expected" : null,
+      "traceVars" : [ {
+        "name" : "x",
+        "values" : [ "5", "4", "3", "2", "1", "0" ]
+      } ]
+    } ]
+  }, {
+    "id" : "powerOfTwo",
+    "type" : "JFUNCTION",
+    "description" : "<div>Defina uma função que recebe o expoente <code>e</code> como argumento \ne devolve a potência 2<sup><code>e</code></sup>. Assuma que o valor passado é número maior ou igual a zero.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>powerOfTwo(4) &rarr; 16</li>\n    <li>powerOfTwo(8) &rarr; 256</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "int powerOfTwo(int e) {\n     int p = 1;\n     int n = e;\n     while(n > 0) {\n         p = p * 2;\n         n = n - 1;\n     }\n     return p;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
-      "args" : [ 2024 ],
-      "expected" : 2,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 5 ],
-      "expected" : 5,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 123 ],
+      "args" : [ 0 ],
       "expected" : 1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 1 ],
+      "expected" : 2,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 4 ],
+      "expected" : 16,
+      "traceVars" : [ ]
+    }, {
+      "name" : null,
+      "args" : [ 8 ],
+      "expected" : 256,
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "isMultiple",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função que permita verificar se um número inteiro positivo \né múltiplo de um outro número positivo, \nsem recorrer ao operador do resto da divisão (<code>%</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isMultiple(25, 5) &rarr; true</li>\n    <li>isMultiple(27, 5) &rarr; true</li>\n  </ul>\n</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "boolean isMultiple(int a, int b) {\n     int n = a;\n     while(n >= b) {\n         n = n - b;\n     }\n     return n == 0;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ "MOD" ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 25, 5 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 26, 5 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 29, 5 ],
       "expected" : false,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 30, 6 ],
       "expected" : true,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "intDivision",
     "type" : "JFUNCTION",
     "description" : "<div>Defina uma função para obter o quociente da divisão inteira, \nsem recorrer ao operador de divisão (<code>/</code>). \nO valor pode ser obtido com uma contagem de subtrações sucessivas \ndo divisor ao dividendo. Para 19 / 6: ((19 <b>- 6</b> = 13) <b>- 6</b>) = 7) <b>- 6</b>\n(as 3 subtrações correspondem ao resultado da divisão inteira).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>intDivision(15, 3) &rarr; 5</li>\n    <li>intDivision(19, 6) &rarr; 3</li>\n  </ul>\n</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int intDivision(int a, int b) {\n     int n = a;\n     int d = 0;\n     while(n >= b) {\n         n = n - b;\n         d = d + 1;\n     }\n     return d;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ "DIV" ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 25, 5 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 26, 5 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 10, 3 ],
       "expected" : 3,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 30, 7 ],
       "expected" : 4,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
-    "id" : "powerOfTwo",
-    "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe o expoente <code>e</code> como argumento \ne devolve a potência 2<sup>e</sup>. Assuma que o valor passado é número maior ou igual a zero.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>powerOfTwo(4) &rarr; 16</li>\n    <li>powerOfTwo(8) &rarr; 256</li>\n  </ul>\n</div>\n",
+    "id" : "iterationStepTwo",
+    "type" : "JSCRIPT",
+    "description" : "<div>Escreva instruções declarando uma variável <code>p</code> que efetua uma\niteração por números pares, com os seguintes valores: 2, 4, 6, 8, 10. </div>\n",
     "required" : true,
-    "startCode" : "",
-    "solutions" : [ "int powerOfTwo(int e) {\n     int p = 1;\n     int n = e;\n     while(n > 0) {\n         p = p * 2;\n         n = n - 1;\n     }\n     return p;\n}" ],
-    "freezeTop" : 0,
-    "freezeBottom" : 0,
-    "exclude" : [ ],
-    "include" : [ ],
-    "tests" : [ {
-      "name" : null,
-      "args" : [ 0 ],
-      "expected" : 1,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 1 ],
-      "expected" : 2,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 4 ],
-      "expected" : 16,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 8 ],
-      "expected" : 256,
-      "traceVar" : [ ]
-    } ]
-  }, {
-    "id" : "sumNaturals",
-    "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um número natural <code>max</code> \ne devolve a soma dos números naturais até <code>max</code>, utilizando um ciclo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>sumNaturals(5) &rarr; 15</li>\n  </ul>\n</div>\n",
-    "required" : true,
-    "startCode" : "",
-    "solutions" : [ "int sumNaturals(int max) {\n     int s = 0;\n     int n = 1;\n     while(n <= max) {\n         s = s + n;\n         n = n + 1;\n     }\n     return s;\n}" ],
+    "startCode" : null,
+    "solutions" : [ "int p = 2;\nwhile(p < 10) {\n    p = p + 2;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ "WHILE" ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
-      "args" : [ 0 ],
-      "expected" : 0,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 1 ],
-      "expected" : 1,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 4 ],
-      "expected" : 10,
-      "traceVar" : [ ]
-    }, {
-      "name" : null,
-      "args" : [ 6 ],
-      "expected" : 21,
-      "traceVar" : [ ]
+      "args" : [ ],
+      "expected" : null,
+      "traceVars" : [ {
+        "name" : "p",
+        "values" : [ "2", "4", "6", "8", "10" ]
+      } ]
     } ]
   }, {
     "id" : "sumEvenBetween",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento dois números naturais <code>min</code> e <code>max</code> e \ndevolve a soma dos números naturais pares compreendidos nesse intervalo (fechado).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>sumEvenBetween(2, 8) &rarr; 20 (2 + 4 + 6 + 8)</li>\n    <li>sumEvenBetween(3, 9) &rarr; 18 (4 + 6 + 8)</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento dois números naturais <code>min</code> e <code>max</code> e \ndevolve a soma dos números naturais pares compreendidos no intervalo [<code>min</code>, <code>max</code>].</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>sumEvenBetween(2, 8) &rarr; 20 (2 + 4 + 6 + 8)</li>\n    <li>sumEvenBetween(3, 9) &rarr; 18 (4 + 6 + 8)</li>\n  </ul>\n</div>\n",
     "required" : true,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int sumEvenBetween(int min, int max) {\n     int s = 0;\n     int n = min;\n     if(n % 2 != 0) {\n         n = n + 1;\n     }\n     while(n <= max) {\n         s = s + n;\n         n = n + 2;\n     }\n     return s;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 3, 3 ],
       "expected" : 0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 4 ],
       "expected" : 4,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 8 ],
       "expected" : 18,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 4, 8 ],
       "expected" : 18,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 4, 9 ],
       "expected" : 18,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "nextLetter",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>nextLetter('c') &rarr; d</li>\n    <li>nextLetter('z') &rarr; a</li>\n  </ul>\n</div>\n",
     "required" : false,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "char nextLetter(char l) {\n     if(l == 'z') {\n         return 'a';\n     }\n     else {\n         return (char) (l + 1);\n     }\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ "a" ],
       "expected" : "b",
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ "i" ],
       "expected" : "j",
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ "z" ],
       "expected" : "a",
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "gcd",
     "type" : "JFUNCTION",
     "description" : "<div>Escreva uma função que recebe como argumento dois números naturais <code>a</code> e <code>b</code> e\n que calcula o máximo divisor comum desses dois números, usando o algoritmo de Euclides.<br>\n \n O algoritmo consiste em iterativamente substituir <code>a</code> por <code>b</code>, e <code>b</code> pelo resto da divisão de <code>a</code> por <code>b</code>.\n Quando <code>b</code> é zero, a resposta está em <code>a</code>.\n  <table class='table table-striped' style='width:150px'><tbody>\n  <thead><td>a</td><td>b</td></thead>\n   <tr><td>25</td><td>30</td></tr>\n   <tr><td>30</td><td>25</td></tr>\n   <tr><td>25</td><td>5</td></tr>\n   <tr><td>5</td><td>0</td></tr>\n   </tbody></table></div>\n",
     "required" : false,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int gcd(int a, int b) {\n     while(b != 0) {\n         int r = a % b;\n         a = b;\n         b = r;\n     }\n     return a;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 25, 30 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 30, 25 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 7 ],
       "expected" : 1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 348, 156 ],
       "expected" : 12,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
+    } ]
+  }, {
+    "id" : "invertInt",
+    "type" : "JFUNCTION",
+    "description" : "<div>    </div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>invert(1234) &rarr; 4321</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "int invert(int n) {\n    int inv = 0;\n    int d = n;\n    while(d > 0) {\n        inv = inv * 10;\n        inv = inv + d % 10;\n        d = d / 10;\n    }\n    return inv;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
+    "tests" : [ {
+      "name" : null,
+      "args" : [ 1234 ],
+      "expected" : 4321,
+      "traceVars" : [ ]
     } ]
   }, {
     "id" : "fibonacci",
     "type" : "JFUNCTION",
     "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>fib(7) &rarr; 13</li>\n  </ul>\n</div>\n",
     "required" : false,
-    "startCode" : "",
+    "startCode" : null,
     "solutions" : [ "int fib(int n) {\n     if(n <= 1) {\n         return n;\n     }\n     int a = 0;\n     int b = 1;\n     int i = 2;\n     while(i != n) {\n         int t = a + b;\n         a = b;\n         b = t;\n         i = i + 1;\n     }\n     return a + b;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
     "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
     "tests" : [ {
       "name" : null,
       "args" : [ 0 ],
       "expected" : 0,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 1 ],
       "expected" : 1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 2 ],
       "expected" : 1,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3 ],
       "expected" : 2,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 5 ],
       "expected" : 5,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 7 ],
       "expected" : 13,
-      "traceVar" : [ ]
+      "traceVars" : [ ]
     } ]
   } ]
 }

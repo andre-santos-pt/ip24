@@ -1,72 +1,183 @@
 {
-  "title": "Funções Dependentes",
-  "description": "",
-  "exercises": [
-    {
-      "id": "oddIsNotEven",
-      "description" : "Escreva a função <code>isOdd</code> recorrendo à função <code>isEven</code> dada.",
-      "type": "JCLASS",
-      "startCode": "class EvenOdd {\n    static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n\n}",
-      "freezeTop": 4,
-      "freezeBottom": 1,
-      "tests": [
-        {"name": "isOdd", "args": [7], "expected": true},
-        {"name": "isOdd", "args": [8], "expected": false}
-      ]
+  "title" : "Funções Dependentes",
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a invocação de funções e a decomposição\nfuncional de um problema.\n\nSerá também praticada a utilização de números aleatórios.</p>\n</div>\n",
+  "links" : [ ],
+  "exercises" : [ {
+    "id" : "oddIsNotEven",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva a função <code>isOdd</code> recorrendo à função <code>isEven</code> dada.</div>\n",
+    "required" : true,
+    "startCode" : "class EvenOdd {\n    static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n\n}",
+    "solutions" : [ "class EvenOdd {\n    static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n    static boolean isOdd(int n) {\n        return !isEven(n);\n    }\n}" ],
+    "freezeTop" : 4,
+    "freezeBottom" : 1,
+    "exclude" : [ "EQUAL", "DIFFERENT" ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
+    "tests" : [ {
+      "name" : "isOdd",
+      "args" : [ 7 ],
+      "expected" : true,
+      "traceVars" : [ ]
+    }, {
+      "name" : "isOdd",
+      "args" : [ 10 ],
+      "expected" : false,
+      "traceVars" : [ ]
+    }, {
+      "name" : "isOdd",
+      "args" : [ 13 ],
+      "expected" : true,
+      "traceVars" : [ ]
+    } ]
+  }, {
+    "id" : "divisorsModule",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com três funções relacionadas com divisores:<br><code>countDivisors</code>: conta quantos divisores tem um número inteiro;<br><code>sumProperDivisors</code>: soma os divisores <em>próprios</em> de um número inteiro (exclui o próprio);<br><code>isPrime</code>: verifica se um número é primo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>countDivisors(8) &rarr; 4   (1, 2, 4, 8)</li>\n    <li>sumProperDivisors(6) &rarr; 6   (1, 2, 3)</li>\n    <li>isPrime(7) &rarr; false</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "class Divisors {\n\n}",
+    "solutions" : [ "class Divisors {\n    static int countDivisors(int n) {\n        int d = 1;\n        int i = 1;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                d = d + 1;\n            }\n            i = i + 1;\n        }\n        return d;\n    }\n    static int sumProperDivisors(int n) {\n        int s = 0;\n        int i = 1;\n        while(i < n) {\n            if(n % i == 0) {\n                s = s + i;\n            }\n            i = i + 1;\n        }\n        return s;\n    }\n    static boolean isPrime(int n) {\n        if(n == 1) {\n            return false;\n        }\n        int i = 2;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                return false;\n            }\n            i = i + 1;\n        }\n        return true;\n    }\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
+    "tests" : [ {
+      "name" : "countDivisors",
+      "args" : [ 1 ],
+      "expected" : 1,
+      "traceVars" : [ ]
+    }, {
+      "name" : "countDivisors",
+      "args" : [ 7 ],
+      "expected" : 2,
+      "traceVars" : [ ]
+    }, {
+      "name" : "countDivisors",
+      "args" : [ 12 ],
+      "expected" : 6,
+      "traceVars" : [ ]
+    }, {
+      "name" : "sumProperDivisors",
+      "args" : [ 8 ],
+      "expected" : 7,
+      "traceVars" : [ ]
+    }, {
+      "name" : "sumProperDivisors",
+      "args" : [ 12 ],
+      "expected" : 16,
+      "traceVars" : [ ]
+    }, {
+      "name" : "isPrime",
+      "args" : [ 8 ],
+      "expected" : false,
+      "traceVars" : [ ]
+    }, {
+      "name" : "isPrime",
+      "args" : [ 13 ],
+      "expected" : true,
+      "traceVars" : [ ]
+    }, {
+      "name" : "isPrime",
+      "args" : [ 21 ],
+      "expected" : false,
+      "traceVars" : [ ]
+    } ]
+  }, {
+    "id" : "perfectNumbers",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com duas funções relacionadas com números perfeitos.\nUm número perfeito é aquele cuja soma dos divisores próprios é igual ao\npróprio número. Por exemplo, 6 é perfeito porque (1 + 2 + 3) é igual a 6.<br><code>isPerfect</code>: verifica se um número é perfeito;<br><code>countPerfectNumbers</code>: conta quantos números perfeitos existem até um limite máximo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isPerfect(6) &rarr; true</li>\n    <li>countPerfectNumbers(30) &rarr; 2</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "class PerfectNumbers {\n    static boolean isPerfect(int n) {\n        return Divisors.sumProperDivisors(n) == n;\n    }\n    static int countPerfectNumbers(int max) {\n        int c = 0;\n        int i = 1;\n        while(i <= max) {\n            if(isPerfect(i)) {\n                c = c + 1;\n            }\n            i = i + 1;\n        }\n        return c;\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercise" : {
+      "module" : null,
+      "exercise" : "divisorsModule"
     },
-    {
-      "id": "primes",
-      "description": "Escreva duas funções:<ul><li><code>divisors</code>: para contar quantos divisores tem um número inteiro;</li><li><code>isPrime</code>: para determinar se um número é primo.</ul><br>A segunda pode ser facilmente implementada recorrendo à primeira (embora não seja a implementação mais eficaz).",
-      "type": "JCLASS",
-      "startCode": "class Primes {\n\n}",
-      "freezeTop": 1,
-      "freezeBottom": 1,
-      "tests":[
-        {"name": "divisors", "args":[1], "expected":1},
-        {"name": "divisors", "args":[2], "expected":2},
-        {"name": "divisors", "args":[3], "expected":2},
-        {"name": "divisors", "args":[4], "expected":3},
-        {"name": "divisors", "args":[7], "expected":2},
-        {"name": "divisors", "args":[9], "expected":3},
-        {"name": "divisors", "args":[12], "expected":6},
-
-        {"name": "isPrime", "args":[1], "expected":false},
-        {"name": "isPrime", "args":[1], "expected":true},
-        {"name": "isPrime", "args":[2], "expected":true},
-        {"name": "isPrime", "args":[3], "expected":true},
-        {"name": "isPrime", "args":[4], "expected":false},
-        {"name": "isPrime", "args":[7], "expected":true},
-        {"name": "isPrime", "args":[9], "expected":false}
-      ]
+    "tests" : [ {
+      "name" : "isPerfect",
+      "args" : [ 28 ],
+      "expected" : true,
+      "traceVars" : [ ]
+    }, {
+      "name" : "isPerfect",
+      "args" : [ 12 ],
+      "expected" : false,
+      "traceVars" : [ ]
+    }, {
+      "name" : "isPerfect",
+      "args" : [ 8 ],
+      "expected" : false,
+      "traceVars" : [ ]
+    }, {
+      "name" : "countPerfectNumbers",
+      "args" : [ 30 ],
+      "expected" : 2,
+      "traceVars" : [ ]
+    }, {
+      "name" : "countPerfectNumbers",
+      "args" : [ 8 ],
+      "expected" : 1,
+      "traceVars" : [ ]
+    }, {
+      "name" : "countPerfectNumbers",
+      "args" : [ 500 ],
+      "expected" : 3,
+      "traceVars" : [ ]
+    } ]
+  }, {
+    "id" : "primeNumbers",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com duas funções relacionadas com números primos:<br><code>countPrimes</code>: conta quantos números primos existem até um determinado número natural (inclusivé);<br><code>existsPrimeBetween</code>: verifica se existe algum primo entre dois números naturais (intervalo aberto).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>countPrimes(7) &rarr; 4</li>\n    <li>existsPrimeBetween(5, 9) &rarr; true</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "class Primes {\n    static int countPrimes(int max) {\n        int i = 1;\n        int c = 0;\n        while(i <= max) {\n            if(Divisors.isPrime(i)) {\n                c = c + 1;\n            }\n            i = i + 1;\n        }\n        return c;\n    }\n    static boolean existsPrimeBetween(int min, int max) {\n        int i = min + 1;\n        while(i < max) {\n            if(Divisors.isPrime(i)) {\n                return true;\n            }\n            i = i + 1;\n        }\n        return false;\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercise" : {
+      "module" : null,
+      "exercise" : "divisorsModule"
     },
-    {
-      "id": "perfectNumbers",
-      "description": "Escreva três funções:<ul><li><code>sumProperDivisors</code>: para calcular a soma dos divisores próprios de um número inteiro (não incluem o próprio número);",
-      "type": "JCLASS"
-    },
-    {
-      "id": "countPrimes",
-      "description": "Escreva uma função <code>countPrimes</code> para contar quantos números primos existem até um valor máximo dado, utilizando a função <code>isPrime</code> dada.",
-      "type": "JCLASS",
-      "startCode": "class CountPrimes {\n    static boolean isPrime(int n) {\n        int i = 2;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                return false;\n            }\n            i++;\n        }\n        return true;\n    }\n\n}\n",
-      "freezeTop": 11,
-      "freezeBottom": 1,
-      "tests":[
-        {"name": "countPrimes", "args": [10], "expected": 4},
-        {"name": "countPrimes", "args": [13], "expected": 6}
-        ]
-    },
-    {
-      "id": "existsPrime",
-      "description": "Escreva uma função <code>existsPrime</code> para saber se existe algum número primo entre um dado intervalo (aberto), utilizando a função <code>isPrime</code> dada.",
-      "type": "JCLASS",
-      "startCode": "class CountPrimes {\n    static boolean isPrime(int n) {\n        int i = 2;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                return false;\n            }\n            i++;\n        }\n        return true;\n    }\n\n}\n",
-      "freezeTop": 11,
-      "freezeBottom": 1,
-      "tests":[
-        {"name": "existsPrime", "args": [5,9], "expected": true},
-        {"name": "existsPrime", "args": [7,11], "expected": false}
-      ]
-    }
-  ]
+    "tests" : [ {
+      "name" : "countPrimes",
+      "args" : [ 7 ],
+      "expected" : 4,
+      "traceVars" : [ ]
+    }, {
+      "name" : "countPrimes",
+      "args" : [ 15 ],
+      "expected" : 6,
+      "traceVars" : [ ]
+    }, {
+      "name" : "countPrimes",
+      "args" : [ 21 ],
+      "expected" : 8,
+      "traceVars" : [ ]
+    }, {
+      "name" : "existsPrimeBetween",
+      "args" : [ 5, 9 ],
+      "expected" : true,
+      "traceVars" : [ ]
+    }, {
+      "name" : "existsPrimeBetween",
+      "args" : [ 31, 37 ],
+      "expected" : false,
+      "traceVars" : [ ]
+    }, {
+      "name" : "existsPrimeBetween",
+      "args" : [ 12, 15 ],
+      "expected" : true,
+      "traceVars" : [ ]
+    } ]
+  } ]
 }
