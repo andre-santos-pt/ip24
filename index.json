@@ -6,7 +6,7 @@
     "requires" : [ ]
   }, {
     "id" : "week2",
-    "visible" : false,
+    "visible" : true,
     "requires" : [ "week1" ]
   }, {
     "id" : "week3",
