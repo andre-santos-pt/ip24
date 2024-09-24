@@ -95,7 +95,7 @@
   }, {
     "id" : "irsGroup",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função para obter qual o escalão de IRS (1 a 4, de um país hipotético) \ndado o rendimento anual (número inteiro), segundo a seguinte tabela.<br><table class='table table-striped' style='width:250px'><tbody>\n<tr><td>1</td><td>até 10.000</td></tr>\n<tr><td>2</td><td>10.000 - 25.500</td></tr>\n<tr><td>3</td><td>25.500 - 48.500</td></tr>\n<tr><td>4</td><td>mais de 48.500</td></tr></tbody></table><br>Após uma execução, experimente verificar as instruções que foram \nexecutadas (<i class=\"fas fa-route\"></i>). As marcações indicam quais as\ninstruções executadas (e quantas vezes).</div>\n",
+    "description" : "<div>Defina uma função para obter qual o escalão de IRS (1 a 4, de um país hipotético) \ndado o rendimento anual (número inteiro), segundo a seguinte tabela.<br><table class='table table-striped' style='width:250px'><tbody>\n<tr><td>1</td><td>[0, 10000[</td></tr>\n<tr><td>2</td><td>[10000, 25500]</td></tr>\n<tr><td>3</td><td>]25500, 48500]</td></tr>\n<tr><td>4</td><td>]48500, ...]</td></tr></tbody></table><br>Após uma execução, experimente verificar as instruções que foram \nexecutadas (<i class=\"fas fa-route\"></i>). As marcações indicam quais as\ninstruções executadas (e quantas vezes).</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int irsGroup(int income) {\n     if(income < 10000) {\n         return 1;\n     }\n     else {\n         if(income <= 25500) {\n             return 2;\n         }\n         else {\n             if(income <= 48500) {\n                 return 3;\n             }\n             else {\n                 return 4;\n             }\n         }\n     }   \n}" ],
@@ -137,7 +137,7 @@
     "description" : "<div>Defina uma função para obter qual a taxa de IRS (percentagem em número real no intervalo [0.0, 1.0]) \ndado o número do escalão (inteiro). Se o escalão for inválido deve ser retornado <code>0.0</code>.<br><br>\n<table class='table table-striped' style='width:150px'><tbody>\n<tr><td>1</td><td>12%</td></tr>\n<tr><td>2</td><td>18%</td></tr>\n<tr><td>3</td><td>23%</td></tr>\n<tr><td>4</td><td>29%</td></tr>\n</tbody></table></div>\n",
     "required" : true,
     "startCode" : null,
-    "solutions" : [ "double irsTax(int group) {\n     if(group < 1 || group > 4) {\n         return 0.0;\n     }\n     if(group == 1) {\n         return .12;\n     }\n     else {\n         if(group == 2) {\n             return .18;\n         }\n         else {\n             if(group == 3) {\n                 return .23;\n             }\n             else { \n                 return .29;\n             }\n         }\n     }   \n}" ],
+    "solutions" : [ "double irsTax(int group) {\n     if(group == 1) {\n         return .12;\n     }\n     else {\n         if(group == 2) {\n             return .18;\n         }\n         else {\n             if(group == 3) {\n                 return .23;\n             }\n             else { \n                 if(group == 4) {\n                     return .29;\n                 }\n                 else {\n                     return 0.0;\n                 }\n             }\n         }\n     }   \n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
@@ -397,7 +397,7 @@
   }, {
     "id" : "isMultiple",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que permita verificar se um número inteiro positivo \né múltiplo de um outro número positivo, \nsem recorrer ao operador do resto da divisão (<code>%</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isMultiple(25, 5) &rarr; true</li>\n    <li>isMultiple(27, 5) &rarr; true</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que permita verificar se um número inteiro positivo \né múltiplo de um outro número positivo, \nsem recorrer ao operador do resto da divisão (<code>%</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isMultiple(25, 5) &rarr; true</li>\n    <li>isMultiple(27, 5) &rarr; false</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "boolean isMultiple(int a, int b) {\n     int n = a;\n     while(n >= b) {\n         n = n - b;\n     }\n     return n == 0;\n}" ],
