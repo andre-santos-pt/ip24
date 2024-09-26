@@ -18,17 +18,130 @@
     "tests" : [ {
       "name" : "isOdd",
       "args" : [ 7 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ 10 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ 13 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "traceVars" : [ ]
+    } ]
+  }, {
+    "id" : "randomInts",
+    "type" : "JCLASS",
+    "description" : "<div>...</div>\n",
+    "required" : true,
+    "startCode" : "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n}",
+    "solutions" : [ "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n    static int randomUntil(int max) {\n        return (int) (Math.random() * max);\n    }\n\n    static int randomWithin(int min, int max) {\n        return min + randomUntil(max - min + 1);\n    }\n}" ],
+    "freezeTop" : 4,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercise" : null,
+    "tests" : [ {
+      "name" : "randomUntil",
+      "args" : [ 5 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 4
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomUntil",
+      "args" : [ 5 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 4
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomUntil",
+      "args" : [ 5 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 4
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomUntil",
+      "args" : [ 5 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 4
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomUntil",
+      "args" : [ 5 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 4
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomWithin",
+      "args" : [ 5, 10 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 5,
+        "max" : 10
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomWithin",
+      "args" : [ 5, 10 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 5,
+        "max" : 10
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomWithin",
+      "args" : [ 5, 10 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 5,
+        "max" : 10
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomWithin",
+      "args" : [ 5, 10 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 5,
+        "max" : 10
+      },
+      "traceVars" : [ ]
+    }, {
+      "name" : "randomWithin",
+      "args" : [ 5, 10 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 5,
+        "max" : 10
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -47,42 +160,66 @@
     "tests" : [ {
       "name" : "countDivisors",
       "args" : [ 1 ],
-      "expected" : 1,
+      "expected" : {
+        "type" : "result",
+        "value" : 1
+      },
       "traceVars" : [ ]
     }, {
       "name" : "countDivisors",
       "args" : [ 7 ],
-      "expected" : 2,
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
       "traceVars" : [ ]
     }, {
       "name" : "countDivisors",
       "args" : [ 12 ],
-      "expected" : 6,
+      "expected" : {
+        "type" : "result",
+        "value" : 6
+      },
       "traceVars" : [ ]
     }, {
       "name" : "sumProperDivisors",
       "args" : [ 8 ],
-      "expected" : 7,
+      "expected" : {
+        "type" : "result",
+        "value" : 7
+      },
       "traceVars" : [ ]
     }, {
       "name" : "sumProperDivisors",
       "args" : [ 12 ],
-      "expected" : 16,
+      "expected" : {
+        "type" : "result",
+        "value" : 16
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isPrime",
       "args" : [ 8 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isPrime",
       "args" : [ 13 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isPrime",
       "args" : [ 21 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -104,32 +241,50 @@
     "tests" : [ {
       "name" : "isPerfect",
       "args" : [ 28 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isPerfect",
       "args" : [ 12 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isPerfect",
       "args" : [ 8 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "countPerfectNumbers",
       "args" : [ 30 ],
-      "expected" : 2,
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
       "traceVars" : [ ]
     }, {
       "name" : "countPerfectNumbers",
       "args" : [ 8 ],
-      "expected" : 1,
+      "expected" : {
+        "type" : "result",
+        "value" : 1
+      },
       "traceVars" : [ ]
     }, {
       "name" : "countPerfectNumbers",
       "args" : [ 500 ],
-      "expected" : 3,
+      "expected" : {
+        "type" : "result",
+        "value" : 3
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -151,32 +306,50 @@
     "tests" : [ {
       "name" : "countPrimes",
       "args" : [ 7 ],
-      "expected" : 4,
+      "expected" : {
+        "type" : "result",
+        "value" : 4
+      },
       "traceVars" : [ ]
     }, {
       "name" : "countPrimes",
       "args" : [ 15 ],
-      "expected" : 6,
+      "expected" : {
+        "type" : "result",
+        "value" : 6
+      },
       "traceVars" : [ ]
     }, {
       "name" : "countPrimes",
       "args" : [ 21 ],
-      "expected" : 8,
+      "expected" : {
+        "type" : "result",
+        "value" : 8
+      },
       "traceVars" : [ ]
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 5, 9 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 31, 37 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 12, 15 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     } ]
   } ]

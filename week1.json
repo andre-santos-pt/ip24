@@ -21,17 +21,26 @@
     "tests" : [ {
       "name" : "next",
       "args" : [ 4 ],
-      "expected" : 5,
+      "expected" : {
+        "type" : "result",
+        "value" : 5
+      },
       "traceVars" : [ ]
     }, {
       "name" : "next",
       "args" : [ 6 ],
-      "expected" : 7,
+      "expected" : {
+        "type" : "result",
+        "value" : 7
+      },
       "traceVars" : [ ]
     }, {
       "name" : "next",
       "args" : [ -1 ],
-      "expected" : 0,
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -50,17 +59,26 @@
     "tests" : [ {
       "name" : "previous",
       "args" : [ 4 ],
-      "expected" : 3,
+      "expected" : {
+        "type" : "result",
+        "value" : 3
+      },
       "traceVars" : [ ]
     }, {
       "name" : "previous",
       "args" : [ 10 ],
-      "expected" : 9,
+      "expected" : {
+        "type" : "result",
+        "value" : 9
+      },
       "traceVars" : [ ]
     }, {
       "name" : "previous",
       "args" : [ 0 ],
-      "expected" : -1,
+      "expected" : {
+        "type" : "result",
+        "value" : -1
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -79,12 +97,18 @@
     "tests" : [ {
       "name" : "doubleOf",
       "args" : [ 2.3 ],
-      "expected" : 4.6,
+      "expected" : {
+        "type" : "result",
+        "value" : 4.6
+      },
       "traceVars" : [ ]
     }, {
       "name" : "doubleOf",
       "args" : [ 110.5 ],
-      "expected" : 221.0,
+      "expected" : {
+        "type" : "result",
+        "value" : 221.0
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -103,22 +127,34 @@
     "tests" : [ {
       "name" : "square",
       "args" : [ 2 ],
-      "expected" : 4,
+      "expected" : {
+        "type" : "result",
+        "value" : 4
+      },
       "traceVars" : [ ]
     }, {
       "name" : "square",
       "args" : [ 3 ],
-      "expected" : 9,
+      "expected" : {
+        "type" : "result",
+        "value" : 9
+      },
       "traceVars" : [ ]
     }, {
       "name" : "square",
       "args" : [ 6 ],
-      "expected" : 36,
+      "expected" : {
+        "type" : "result",
+        "value" : 36
+      },
       "traceVars" : [ ]
     }, {
       "name" : "square",
       "args" : [ -2 ],
-      "expected" : 4,
+      "expected" : {
+        "type" : "result",
+        "value" : 4
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -137,12 +173,18 @@
     "tests" : [ {
       "name" : "difference",
       "args" : [ 10, 4 ],
-      "expected" : 6,
+      "expected" : {
+        "type" : "result",
+        "value" : 6
+      },
       "traceVars" : [ ]
     }, {
       "name" : "difference",
       "args" : [ 3, 6 ],
-      "expected" : -3,
+      "expected" : {
+        "type" : "result",
+        "value" : -3
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -161,12 +203,18 @@
     "tests" : [ {
       "name" : null,
       "args" : [ 10.6, 11.0 ],
-      "expected" : 10.8,
+      "expected" : {
+        "type" : "result",
+        "value" : 10.8
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 12.3, 13.5 ],
-      "expected" : 12.9,
+      "expected" : {
+        "type" : "result",
+        "value" : 12.9
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -185,12 +233,18 @@
     "tests" : [ {
       "name" : "average",
       "args" : [ 10, 11 ],
-      "expected" : 10.5,
+      "expected" : {
+        "type" : "result",
+        "value" : 10.5
+      },
       "traceVars" : [ ]
     }, {
       "name" : "average",
       "args" : [ 12, 16 ],
-      "expected" : 14.0,
+      "expected" : {
+        "type" : "result",
+        "value" : 14.0
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -209,12 +263,18 @@
     "tests" : [ {
       "name" : "round",
       "args" : [ 5.4 ],
-      "expected" : 5,
+      "expected" : {
+        "type" : "result",
+        "value" : 5
+      },
       "traceVars" : [ ]
     }, {
       "name" : "round",
       "args" : [ 5.6 ],
-      "expected" : 6,
+      "expected" : {
+        "type" : "result",
+        "value" : 6
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -233,17 +293,26 @@
     "tests" : [ {
       "name" : "isNegative",
       "args" : [ -4 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isNegative",
       "args" : [ 0 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isNegative",
       "args" : [ 2 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -262,37 +331,58 @@
     "tests" : [ {
       "name" : null,
       "args" : [ 2 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 0 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 9 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 10 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -1 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 50 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -100 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -311,22 +401,34 @@
     "tests" : [ {
       "name" : "isEven",
       "args" : [ 5 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isEven",
       "args" : [ -3 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isEven",
       "args" : [ 0 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isEven",
       "args" : [ 4 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -345,22 +447,34 @@
     "tests" : [ {
       "name" : "isOdd",
       "args" : [ 5 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ -3 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ 0 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isOdd",
       "args" : [ 4 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -379,17 +493,26 @@
     "tests" : [ {
       "name" : "abs",
       "args" : [ -2.5 ],
-      "expected" : 2.5,
+      "expected" : {
+        "type" : "result",
+        "value" : 2.5
+      },
       "traceVars" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 1.3 ],
-      "expected" : 1.3,
+      "expected" : {
+        "type" : "result",
+        "value" : 1.3
+      },
       "traceVars" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 0.0 ],
-      "expected" : 0.0,
+      "expected" : {
+        "type" : "result",
+        "value" : 0.0
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -408,22 +531,34 @@
     "tests" : [ {
       "name" : "min",
       "args" : [ -2.0, 4.3 ],
-      "expected" : -2.0,
+      "expected" : {
+        "type" : "result",
+        "value" : -2.0
+      },
       "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ 3.1, 4.4 ],
-      "expected" : 3.1,
+      "expected" : {
+        "type" : "result",
+        "value" : 3.1
+      },
       "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ 6.6, -1.0 ],
-      "expected" : -1.0,
+      "expected" : {
+        "type" : "result",
+        "value" : -1.0
+      },
       "traceVars" : [ ]
     }, {
       "name" : "min",
       "args" : [ -2.2, -1.5 ],
-      "expected" : -2.2,
+      "expected" : {
+        "type" : "result",
+        "value" : -2.2
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -442,27 +577,42 @@
     "tests" : [ {
       "name" : null,
       "args" : [ 1 ],
-      "expected" : 1,
+      "expected" : {
+        "type" : "result",
+        "value" : 1
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 2 ],
-      "expected" : 3,
+      "expected" : {
+        "type" : "result",
+        "value" : 3
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3 ],
-      "expected" : 6,
+      "expected" : {
+        "type" : "result",
+        "value" : 6
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 5 ],
-      "expected" : 15,
+      "expected" : {
+        "type" : "result",
+        "value" : 15
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 7 ],
-      "expected" : 28,
+      "expected" : {
+        "type" : "result",
+        "value" : 28
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -481,42 +631,66 @@
     "tests" : [ {
       "name" : "isVowel",
       "args" : [ "a" ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "e" ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "i" ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "o" ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "u" ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "A" ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "c" ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isVowel",
       "args" : [ "7" ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -535,27 +709,42 @@
     "tests" : [ {
       "name" : "inOrder",
       "args" : [ 1, 2, 3 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 2, 2, 4 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 0, 2, 4 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 1, 0, 3 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 1, 2, 0 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -574,27 +763,42 @@
     "tests" : [ {
       "name" : "isIncluded",
       "args" : [ 1, 2, 3 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ 2, 2, 4 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ 6, 2, 6 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ -1, 0, 3 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "isIncluded",
       "args" : [ 1, 10, 0 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -613,27 +817,42 @@
     "tests" : [ {
       "name" : null,
       "args" : [ 4, 4, 9 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 4, 9 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 6, 2, 6 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -1, 0, 3 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 1, 10, 0 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -652,22 +871,34 @@
     "tests" : [ {
       "name" : "xor",
       "args" : [ true, true ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : "xor",
       "args" : [ true, false ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "xor",
       "args" : [ false, true ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : "xor",
       "args" : [ false, false ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -686,32 +917,50 @@
     "tests" : [ {
       "name" : null,
       "args" : [ 1, 3 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 3 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 0, 3 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 0 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -1, -5 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -2, 5 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -730,22 +979,34 @@
     "tests" : [ {
       "name" : null,
       "args" : [ -2, 4 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 4 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ 6, -1 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     }, {
       "name" : null,
       "args" : [ -2, -1 ],
-      "expected" : false,
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
       "traceVars" : [ ]
     } ]
   }, {
@@ -764,12 +1025,18 @@
     "tests" : [ {
       "name" : "min",
       "args" : [ 2.1, 4.2 ],
-      "expected" : 2.1,
+      "expected" : {
+        "type" : "result",
+        "value" : 2.1
+      },
       "traceVars" : [ ]
     }, {
       "name" : "inOrder",
       "args" : [ 1, 2, 3 ],
-      "expected" : true,
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
       "traceVars" : [ ]
     } ]
   } ]
