@@ -17,7 +17,7 @@
     "exclude" : [ ],
     "include" : [ "IF" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : "abs",
       "args" : [ -2.5 ],
@@ -25,7 +25,8 @@
         "type" : "result",
         "value" : 2.5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 1.3 ],
@@ -33,7 +34,8 @@
         "type" : "result",
         "value" : 1.3
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "abs",
       "args" : [ 0.0 ],
@@ -41,7 +43,8 @@
         "type" : "result",
         "value" : 0.0
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "max",
@@ -55,7 +58,7 @@
     "exclude" : [ ],
     "include" : [ "IF" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : "max",
       "args" : [ 4, 7 ],
@@ -63,7 +66,8 @@
         "type" : "result",
         "value" : 7
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "max",
       "args" : [ 7, 7 ],
@@ -71,7 +75,8 @@
         "type" : "result",
         "value" : 7
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "max",
       "args" : [ 10, 5 ],
@@ -79,7 +84,8 @@
         "type" : "result",
         "value" : 10
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "min",
@@ -93,7 +99,7 @@
     "exclude" : [ ],
     "include" : [ "IF" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : "min",
       "args" : [ 4, 7 ],
@@ -101,7 +107,8 @@
         "type" : "result",
         "value" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "min",
       "args" : [ 7, 7 ],
@@ -109,7 +116,8 @@
         "type" : "result",
         "value" : 7
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "min",
       "args" : [ 10, 5 ],
@@ -117,7 +125,8 @@
         "type" : "result",
         "value" : 5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "irsGroup",
@@ -131,7 +140,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 5000 ],
@@ -139,7 +148,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 10000 ],
@@ -147,7 +157,8 @@
         "type" : "result",
         "value" : 2
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 10001 ],
@@ -155,7 +166,8 @@
         "type" : "result",
         "value" : 2
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 48500 ],
@@ -163,7 +175,8 @@
         "type" : "result",
         "value" : 3
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 49000 ],
@@ -171,7 +184,8 @@
         "type" : "result",
         "value" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "irsTax",
@@ -185,7 +199,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 0 ],
@@ -193,7 +207,8 @@
         "type" : "result",
         "value" : 0.0
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ -3 ],
@@ -201,7 +216,8 @@
         "type" : "result",
         "value" : 0.0
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 5 ],
@@ -209,7 +225,8 @@
         "type" : "result",
         "value" : 0.0
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -217,7 +234,8 @@
         "type" : "result",
         "value" : 0.12
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 2 ],
@@ -225,7 +243,8 @@
         "type" : "result",
         "value" : 0.18
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 3 ],
@@ -233,7 +252,8 @@
         "type" : "result",
         "value" : 0.23
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 4 ],
@@ -241,7 +261,8 @@
         "type" : "result",
         "value" : 0.29
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "irsModule",
@@ -255,7 +276,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : "irsGroup",
       "args" : [ 15000 ],
@@ -263,7 +284,8 @@
         "type" : "result",
         "value" : 2
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "irsTax",
       "args" : [ 3 ],
@@ -271,7 +293,8 @@
         "type" : "result",
         "value" : 0.23
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "varAssign",
@@ -285,7 +308,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ ],
@@ -296,7 +319,8 @@
       "traceVars" : [ {
         "name" : "n",
         "values" : [ "1", "2", "3", "4", "5" ]
-      } ]
+      } ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "varAssignDiv",
@@ -310,7 +334,7 @@
     "exclude" : [ "WHILE" ],
     "include" : [ "DIV" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ ],
@@ -321,7 +345,8 @@
       "traceVars" : [ {
         "name" : "v",
         "values" : [ "2024", "202", "20", "2" ]
-      } ]
+      } ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "firstDigit",
@@ -335,7 +360,7 @@
     "exclude" : [ ],
     "include" : [ "WHILE" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 2024 ],
@@ -343,7 +368,8 @@
         "type" : "result",
         "value" : 2
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 5 ],
@@ -351,7 +377,8 @@
         "type" : "result",
         "value" : 5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 123 ],
@@ -359,7 +386,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 300000 ],
@@ -367,7 +395,8 @@
         "type" : "result",
         "value" : 3
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "naturalsIterator",
@@ -381,7 +410,7 @@
     "exclude" : [ ],
     "include" : [ "WHILE" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ ],
@@ -392,7 +421,8 @@
       "traceVars" : [ {
         "name" : "i",
         "values" : [ "1", "2", "3", "4", "5" ]
-      } ]
+      } ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "sumNaturals",
@@ -406,7 +436,7 @@
     "exclude" : [ ],
     "include" : [ "WHILE" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 0 ],
@@ -414,7 +444,8 @@
         "type" : "result",
         "value" : 0
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -422,7 +453,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 4 ],
@@ -430,7 +462,8 @@
         "type" : "result",
         "value" : 10
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 6 ],
@@ -438,7 +471,8 @@
         "type" : "result",
         "value" : 21
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "reverseIteration",
@@ -452,7 +486,7 @@
     "exclude" : [ ],
     "include" : [ "WHILE" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ ],
@@ -463,7 +497,8 @@
       "traceVars" : [ {
         "name" : "x",
         "values" : [ "5", "4", "3", "2", "1", "0" ]
-      } ]
+      } ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "powerOfTwo",
@@ -477,7 +512,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 0 ],
@@ -485,7 +520,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -493,7 +529,8 @@
         "type" : "result",
         "value" : 2
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 4 ],
@@ -501,7 +538,8 @@
         "type" : "result",
         "value" : 16
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 8 ],
@@ -509,7 +547,8 @@
         "type" : "result",
         "value" : 256
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "isMultiple",
@@ -523,7 +562,7 @@
     "exclude" : [ "MOD" ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 25, 5 ],
@@ -531,7 +570,8 @@
         "type" : "result",
         "value" : true
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 26, 5 ],
@@ -539,7 +579,8 @@
         "type" : "result",
         "value" : false
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 29, 5 ],
@@ -547,7 +588,8 @@
         "type" : "result",
         "value" : false
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 30, 6 ],
@@ -555,7 +597,8 @@
         "type" : "result",
         "value" : true
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "intDivision",
@@ -569,7 +612,7 @@
     "exclude" : [ "DIV" ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 25, 5 ],
@@ -577,7 +620,8 @@
         "type" : "result",
         "value" : 5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 26, 5 ],
@@ -585,7 +629,8 @@
         "type" : "result",
         "value" : 5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 10, 3 ],
@@ -593,7 +638,8 @@
         "type" : "result",
         "value" : 3
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 30, 7 ],
@@ -601,7 +647,8 @@
         "type" : "result",
         "value" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "iterationStepTwo",
@@ -615,7 +662,7 @@
     "exclude" : [ ],
     "include" : [ "WHILE" ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ ],
@@ -626,7 +673,8 @@
       "traceVars" : [ {
         "name" : "p",
         "values" : [ "2", "4", "6", "8", "10" ]
-      } ]
+      } ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "sumEvenBetween",
@@ -640,7 +688,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 3, 3 ],
@@ -648,7 +696,8 @@
         "type" : "result",
         "value" : 0
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 4 ],
@@ -656,7 +705,8 @@
         "type" : "result",
         "value" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 8 ],
@@ -664,7 +714,8 @@
         "type" : "result",
         "value" : 18
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 4, 8 ],
@@ -672,7 +723,8 @@
         "type" : "result",
         "value" : 18
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 4, 9 ],
@@ -680,7 +732,8 @@
         "type" : "result",
         "value" : 18
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "nextLetter",
@@ -694,7 +747,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ "a" ],
@@ -702,7 +755,8 @@
         "type" : "result",
         "value" : "b"
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ "i" ],
@@ -710,7 +764,8 @@
         "type" : "result",
         "value" : "j"
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ "z" ],
@@ -718,7 +773,8 @@
         "type" : "result",
         "value" : "a"
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "gcd",
@@ -732,7 +788,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 25, 30 ],
@@ -740,7 +796,8 @@
         "type" : "result",
         "value" : 5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 30, 25 ],
@@ -748,7 +805,8 @@
         "type" : "result",
         "value" : 5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 3, 7 ],
@@ -756,7 +814,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 348, 156 ],
@@ -764,7 +823,8 @@
         "type" : "result",
         "value" : 12
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "invertInt",
@@ -778,7 +838,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 1234 ],
@@ -786,12 +846,13 @@
         "type" : "result",
         "value" : 4321
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "fibonacci",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>fib(7) &rarr; 13</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>fib(0) &rarr; 0</li>\n    <li>fib(7) &rarr; 13</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "int fib(int n) {\n     if(n <= 1) {\n         return n;\n     }\n     int a = 0;\n     int b = 1;\n     int i = 2;\n     while(i != n) {\n         int t = a + b;\n         a = b;\n         b = t;\n         i = i + 1;\n     }\n     return a + b;\n}" ],
@@ -800,7 +861,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
       "args" : [ 0 ],
@@ -808,7 +869,8 @@
         "type" : "result",
         "value" : 0
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -816,7 +878,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 2 ],
@@ -824,7 +887,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 3 ],
@@ -832,7 +896,8 @@
         "type" : "result",
         "value" : 2
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 5 ],
@@ -840,7 +905,8 @@
         "type" : "result",
         "value" : 5
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : null,
       "args" : [ 7 ],
@@ -848,7 +914,8 @@
         "type" : "result",
         "value" : 13
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   } ]
 }

@@ -5,16 +5,16 @@
   "exercises" : [ {
     "id" : "oddIsNotEven",
     "type" : "JCLASS",
-    "description" : "<div>Escreva a função <code>isOdd</code> recorrendo à função <code>isEven</code> dada.</div>\n",
+    "description" : "<div>Escreva uma função <code>isOdd</code> para verificar se um número é ímpar, invocando a função <code>isEven</code> dada.</div>\n",
     "required" : true,
     "startCode" : "class EvenOdd {\n    static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n\n}",
     "solutions" : [ "class EvenOdd {\n    static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n    static boolean isOdd(int n) {\n        return !isEven(n);\n    }\n}" ],
     "freezeTop" : 4,
     "freezeBottom" : 1,
-    "exclude" : [ "EQUAL", "DIFFERENT" ],
+    "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : "isOdd",
       "args" : [ 7 ],
@@ -22,7 +22,11 @@
         "type" : "result",
         "value" : true
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "procedure" : "isEven",
+        "count" : 1
+      } ]
     }, {
       "name" : "isOdd",
       "args" : [ 10 ],
@@ -30,7 +34,11 @@
         "type" : "result",
         "value" : false
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "procedure" : "isEven",
+        "count" : 1
+      } ]
     }, {
       "name" : "isOdd",
       "args" : [ 13 ],
@@ -38,12 +46,16 @@
         "type" : "result",
         "value" : true
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "procedure" : "isEven",
+        "count" : 1
+      } ]
     } ]
   }, {
     "id" : "randomInts",
     "type" : "JCLASS",
-    "description" : "<div>...</div>\n",
+    "description" : "<div>A seguinte função gera um número inteiro aleatório no intervalo [0, 1000000[,\nutilizando a função <code>random</code> do módulo <code>Math</code> (a qual devolve um número aleatório no intervalo [0.0, 1.0[).<br>Escreva duas funções para gerar números aleatórios:\n<code>randomUntil</code>: fornece um número entre zero e menor que um número máximo dado no parâmetro\n<code>randomWithin</code>: fornece um número entre um mínimo e um máximo (intervalo fechado) dados nos parâmetros</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>randomUntil(10) &rarr; 9</li>\n    <li>randomWithin(0, 5) &rarr; 0</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n}",
     "solutions" : [ "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n    static int randomUntil(int max) {\n        return (int) (Math.random() * max);\n    }\n\n    static int randomWithin(int min, int max) {\n        return min + randomUntil(max - min + 1);\n    }\n}" ],
@@ -52,7 +64,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : "randomUntil",
       "args" : [ 5 ],
@@ -61,7 +73,8 @@
         "min" : 0,
         "max" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomUntil",
       "args" : [ 5 ],
@@ -70,7 +83,8 @@
         "min" : 0,
         "max" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomUntil",
       "args" : [ 5 ],
@@ -79,7 +93,8 @@
         "min" : 0,
         "max" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomUntil",
       "args" : [ 5 ],
@@ -88,7 +103,8 @@
         "min" : 0,
         "max" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomUntil",
       "args" : [ 5 ],
@@ -97,7 +113,8 @@
         "min" : 0,
         "max" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomWithin",
       "args" : [ 5, 10 ],
@@ -106,7 +123,8 @@
         "min" : 5,
         "max" : 10
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomWithin",
       "args" : [ 5, 10 ],
@@ -115,7 +133,8 @@
         "min" : 5,
         "max" : 10
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomWithin",
       "args" : [ 5, 10 ],
@@ -124,7 +143,8 @@
         "min" : 5,
         "max" : 10
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomWithin",
       "args" : [ 5, 10 ],
@@ -133,7 +153,8 @@
         "min" : 5,
         "max" : 10
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "randomWithin",
       "args" : [ 5, 10 ],
@@ -142,7 +163,250 @@
         "min" : 5,
         "max" : 10
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    } ]
+  }, {
+    "id" : "evenOddRandom",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva duas funções para gerar números aleatórios, utilizando funções dos módulos anteriores.<br><code>randomEven</code>: fornece um número par até um dado máximo (inclusivé)<br><code>randomOdd</code>:  fornece um número ímpar até um dado máximo (inclusivé)</div>\n",
+    "required" : false,
+    "startCode" : "class EvenOddRandom {\n\n}",
+    "solutions" : [ "class EvenOddRandom {\n    static int randomEven(int max) {\n        int n = RandomInts.randomUntil(max);\n        return EvenOdd.isEven(n) ? n : n + 1;\n    }\n    static int randomOdd(int max) {\n        int n = RandomInts.randomUntil(max);\n        return EvenOdd.isOdd(n) ? n : n + 1;\n    }\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ {
+      "module" : null,
+      "exercise" : "randomInts"
+    }, {
+      "module" : null,
+      "exercise" : "oddIsNotEven"
+    } ],
+    "tests" : [ {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomEven",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "EvenCheck",
+        "even" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "randomOdd",
+      "args" : [ 100 ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 100
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    } ]
+  }, {
+    "id" : "perfectSquare",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para verificar se um número inteiro é um quadrado perfeito\n(i.e. a sua raiz quadrada é um número inteiro). Para tal, podem ser utilizadas\nas funções <code>sqrt</code> e <code>floor</code> do módulo <code>Math</code>, para calcular a raiz quadrada e\no piso de um número real.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>Math.sqrt(9) &rarr; 3.0</li>\n    <li>Math.floor(3.2) &rarr; 3.0</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "boolean perfectSquare(int n) {\n\n}",
+    "solutions" : [ "boolean perfectSquare(int n) {\n     double sqrt = Math.sqrt(n);\n     return sqrt == Math.floor(sqrt);\n }" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "perfectSquare",
+      "args" : [ 9 ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "perfectSquare",
+      "args" : [ 12 ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "divisorsModule",
@@ -156,7 +420,7 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : null,
+    "importExercises" : [ ],
     "tests" : [ {
       "name" : "countDivisors",
       "args" : [ 1 ],
@@ -164,7 +428,8 @@
         "type" : "result",
         "value" : 1
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "countDivisors",
       "args" : [ 7 ],
@@ -172,7 +437,8 @@
         "type" : "result",
         "value" : 2
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "countDivisors",
       "args" : [ 12 ],
@@ -180,7 +446,8 @@
         "type" : "result",
         "value" : 6
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "sumProperDivisors",
       "args" : [ 8 ],
@@ -188,7 +455,8 @@
         "type" : "result",
         "value" : 7
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "sumProperDivisors",
       "args" : [ 12 ],
@@ -196,7 +464,8 @@
         "type" : "result",
         "value" : 16
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "isPrime",
       "args" : [ 8 ],
@@ -204,7 +473,8 @@
         "type" : "result",
         "value" : false
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "isPrime",
       "args" : [ 13 ],
@@ -212,7 +482,8 @@
         "type" : "result",
         "value" : true
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "isPrime",
       "args" : [ 21 ],
@@ -220,72 +491,8 @@
         "type" : "result",
         "value" : false
       },
-      "traceVars" : [ ]
-    } ]
-  }, {
-    "id" : "perfectNumbers",
-    "type" : "JCLASS",
-    "description" : "<div>Escreva um módulo com duas funções relacionadas com números perfeitos.\nUm número perfeito é aquele cuja soma dos divisores próprios é igual ao\npróprio número. Por exemplo, 6 é perfeito porque (1 + 2 + 3) é igual a 6.<br><code>isPerfect</code>: verifica se um número é perfeito;<br><code>countPerfectNumbers</code>: conta quantos números perfeitos existem até um limite máximo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isPerfect(6) &rarr; true</li>\n    <li>countPerfectNumbers(30) &rarr; 2</li>\n  </ul>\n</div>\n",
-    "required" : true,
-    "startCode" : null,
-    "solutions" : [ "class PerfectNumbers {\n    static boolean isPerfect(int n) {\n        return Divisors.sumProperDivisors(n) == n;\n    }\n    static int countPerfectNumbers(int max) {\n        int c = 0;\n        int i = 1;\n        while(i <= max) {\n            if(isPerfect(i)) {\n                c = c + 1;\n            }\n            i = i + 1;\n        }\n        return c;\n    }\n}" ],
-    "freezeTop" : 0,
-    "freezeBottom" : 0,
-    "exclude" : [ ],
-    "include" : [ ],
-    "importCode" : null,
-    "importExercise" : {
-      "module" : null,
-      "exercise" : "divisorsModule"
-    },
-    "tests" : [ {
-      "name" : "isPerfect",
-      "args" : [ 28 ],
-      "expected" : {
-        "type" : "result",
-        "value" : true
-      },
-      "traceVars" : [ ]
-    }, {
-      "name" : "isPerfect",
-      "args" : [ 12 ],
-      "expected" : {
-        "type" : "result",
-        "value" : false
-      },
-      "traceVars" : [ ]
-    }, {
-      "name" : "isPerfect",
-      "args" : [ 8 ],
-      "expected" : {
-        "type" : "result",
-        "value" : false
-      },
-      "traceVars" : [ ]
-    }, {
-      "name" : "countPerfectNumbers",
-      "args" : [ 30 ],
-      "expected" : {
-        "type" : "result",
-        "value" : 2
-      },
-      "traceVars" : [ ]
-    }, {
-      "name" : "countPerfectNumbers",
-      "args" : [ 8 ],
-      "expected" : {
-        "type" : "result",
-        "value" : 1
-      },
-      "traceVars" : [ ]
-    }, {
-      "name" : "countPerfectNumbers",
-      "args" : [ 500 ],
-      "expected" : {
-        "type" : "result",
-        "value" : 3
-      },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "primeNumbers",
@@ -299,10 +506,10 @@
     "exclude" : [ ],
     "include" : [ ],
     "importCode" : null,
-    "importExercise" : {
+    "importExercises" : [ {
       "module" : null,
       "exercise" : "divisorsModule"
-    },
+    } ],
     "tests" : [ {
       "name" : "countPrimes",
       "args" : [ 7 ],
@@ -310,7 +517,8 @@
         "type" : "result",
         "value" : 4
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "countPrimes",
       "args" : [ 15 ],
@@ -318,7 +526,8 @@
         "type" : "result",
         "value" : 6
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "countPrimes",
       "args" : [ 21 ],
@@ -326,7 +535,8 @@
         "type" : "result",
         "value" : 8
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 5, 9 ],
@@ -334,7 +544,8 @@
         "type" : "result",
         "value" : true
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 31, 37 ],
@@ -342,7 +553,8 @@
         "type" : "result",
         "value" : false
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 12, 15 ],
@@ -350,7 +562,105 @@
         "type" : "result",
         "value" : true
       },
-      "traceVars" : [ ]
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    } ]
+  }, {
+    "id" : "perfectNumbers",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com duas funções relacionadas com números perfeitos.\nUm número perfeito é aquele cuja soma dos divisores próprios é igual ao\npróprio número. Por exemplo, 6 é perfeito porque (1 + 2 + 3) é igual a 6.<br><code>isPerfect</code>: verifica se um número é perfeito;<br><code>countPerfectNumbers</code>: conta quantos números perfeitos existem até um limite máximo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isPerfect(6) &rarr; true</li>\n    <li>countPerfectNumbers(30) &rarr; 2</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "class PerfectNumbers {\n    static boolean isPerfect(int n) {\n        return Divisors.sumProperDivisors(n) == n;\n    }\n    static int countPerfectNumbers(int max) {\n        int c = 0;\n        int i = 1;\n        while(i <= max) {\n            if(isPerfect(i)) {\n                c = c + 1;\n            }\n            i = i + 1;\n        }\n        return c;\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ {
+      "module" : null,
+      "exercise" : "divisorsModule"
+    } ],
+    "tests" : [ {
+      "name" : "isPerfect",
+      "args" : [ 28 ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "isPerfect",
+      "args" : [ 12 ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "isPerfect",
+      "args" : [ 8 ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "countPerfectNumbers",
+      "args" : [ 30 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "countPerfectNumbers",
+      "args" : [ 8 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 1
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "countPerfectNumbers",
+      "args" : [ 500 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 3
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    } ]
+  }, {
+    "id" : "largestPrimeDiff",
+    "type" : "JCLASS",
+    "description" : "<div>Defina uma função que recebe como argumento um natural <code>max</code> e devolve a maior diferença entre dois números primos consecutivos até <code>max</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>largestPrimeDiff(13) &rarr; 4</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : "class LargerPrimeDiff {\n\n}",
+    "solutions" : [ "class LargerPrimeDiff {\n    static int largestPrimeDiff(int max) {\n        if(max <= 2) {\n            return 0;\n        }\n        int i = 3; // segundo primo\n        int last = 2; // primeiro primo\n        int largestDiff = i - last;\n        while(i <= max) {\n            if(Divisors.isPrime(i)) {\n                int d = i - last;\n                if(d > largestDiff) {\n                    largestDiff = d;\n                }\n                last = i;\n            }\n            i = i + 1;\n        }\n        return largestDiff;\n    }\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ {
+      "module" : null,
+      "exercise" : "divisorsModule"
+    } ],
+    "tests" : [ {
+      "name" : "largestPrimeDiff",
+      "args" : [ 13 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 4
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
     } ]
   } ]
 }
