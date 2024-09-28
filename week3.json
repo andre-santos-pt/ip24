@@ -1,7 +1,10 @@
 {
   "title" : "Funções Dependentes",
-  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a invocação de funções e a decomposição\nfuncional de um problema.\n\nSerá também praticada a utilização de números aleatórios.</p>\n</div>\n",
-  "links" : [ ],
+  "description" : "<div>\n  <p>O objectivo deste módulo é dominar a invocação de funções e a decomposição\nfuncional de um problema.\n\nSerá também praticada a utilização de funções do módulo @Math (@java.util).</p>\n</div>\n",
+  "links" : [ {
+    "label" : "Slides",
+    "url" : "https://docs.google.com/presentation/d/1hgzeI8cQ2dkW2_SjnMTs8jYsjk42xmav5Dqh6utsit4/pub?start=false&loop=false&delayms=3000"
+  } ],
   "exercises" : [ {
     "id" : "oddIsNotEven",
     "type" : "JCLASS",
