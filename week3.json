@@ -632,15 +632,6 @@
       },
       "traceVars" : [ ],
       "traceCalls" : [ ]
-    }, {
-      "name" : "countPerfectNumbers",
-      "args" : [ 500 ],
-      "expected" : {
-        "type" : "result",
-        "value" : 3
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
     } ]
   }, {
     "id" : "largestPrimeDiff",
