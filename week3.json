@@ -474,6 +474,24 @@
       "traceCalls" : [ ]
     }, {
       "name" : "isPrime",
+      "args" : [ 1 ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "isPrime",
+      "args" : [ 2 ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "traceVars" : [ ],
+      "traceCalls" : [ ]
+    }, {
+      "name" : "isPrime",
       "args" : [ 8 ],
       "expected" : {
         "type" : "result",
