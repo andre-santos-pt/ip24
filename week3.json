@@ -28,6 +28,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
         "procedure" : "isEven",
@@ -40,6 +41,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
         "procedure" : "isEven",
@@ -52,6 +54,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
         "procedure" : "isEven",
@@ -79,46 +82,7 @@
         "min" : 0,
         "max" : 4
       },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomUntil",
-      "args" : [ 5 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 4
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomUntil",
-      "args" : [ 5 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 4
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomUntil",
-      "args" : [ 5 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 4
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomUntil",
-      "args" : [ 5 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 4
-      },
+      "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -129,46 +93,7 @@
         "min" : 5,
         "max" : 10
       },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomWithin",
-      "args" : [ 5, 10 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 5,
-        "max" : 10
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomWithin",
-      "args" : [ 5, 10 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 5,
-        "max" : 10
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomWithin",
-      "args" : [ 5, 10 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 5,
-        "max" : 10
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomWithin",
-      "args" : [ 5, 10 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 5,
-        "max" : 10
-      },
+      "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     } ]
@@ -198,42 +123,7 @@
         "type" : "EvenCheck",
         "even" : true
       },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : true
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : true
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : true
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : true
-      },
+      "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -244,46 +134,7 @@
         "min" : 0,
         "max" : 100
       },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomEven",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
+      "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -293,42 +144,7 @@
         "type" : "EvenCheck",
         "even" : false
       },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : false
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : false
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : false
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "EvenCheck",
-        "even" : false
-      },
+      "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -339,46 +155,7 @@
         "min" : 0,
         "max" : 100
       },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
-      "traceVars" : [ ],
-      "traceCalls" : [ ]
-    }, {
-      "name" : "randomOdd",
-      "args" : [ 100 ],
-      "expected" : {
-        "type" : "rangecheck",
-        "min" : 0,
-        "max" : 100
-      },
+      "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     } ]
@@ -402,6 +179,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -411,6 +189,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     } ]
@@ -434,6 +213,7 @@
         "type" : "result",
         "value" : 1
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -443,6 +223,7 @@
         "type" : "result",
         "value" : 2
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -452,6 +233,7 @@
         "type" : "result",
         "value" : 6
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -461,6 +243,7 @@
         "type" : "result",
         "value" : 7
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -470,6 +253,7 @@
         "type" : "result",
         "value" : 16
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -479,6 +263,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -488,6 +273,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -497,6 +283,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -506,6 +293,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -515,6 +303,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     } ]
@@ -541,6 +330,7 @@
         "type" : "result",
         "value" : 4
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -550,6 +340,7 @@
         "type" : "result",
         "value" : 6
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -559,6 +350,7 @@
         "type" : "result",
         "value" : 8
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -568,6 +360,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -577,6 +370,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -586,6 +380,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     } ]
@@ -612,6 +407,7 @@
         "type" : "result",
         "value" : true
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -621,6 +417,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -630,6 +427,7 @@
         "type" : "result",
         "value" : false
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -639,6 +437,7 @@
         "type" : "result",
         "value" : 2
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     }, {
@@ -648,6 +447,7 @@
         "type" : "result",
         "value" : 1
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     } ]
@@ -674,6 +474,7 @@
         "type" : "result",
         "value" : 4
       },
+      "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ]
     } ]
