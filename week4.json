@@ -1,0 +1,1023 @@
+{
+  "title" : "Vetores",
+  "description" : "<div>\n  <p>\n            O objectivo deste módulo é dominar a alocação e leitura de vetores,\n            adquirindo noções de:\n            </p>\n  <ul>\n    <li>alocação de vetores (<code>new</code>)</li>\n    <li>iteração sobre vetores</li>\n    <li>pesquisa em vetores</li>\n  </ul>\n  <p>Será também praticada a utilização asserções (<code>assert</code>).</p>\n</div>\n",
+  "links" : [ {
+    "label" : "Sildes",
+    "url" : "https://docs.google.com/presentation/d/e/2PACX-1vRtvmnFn5vzD1gjoFBpDrjNzt2nEMZA5JnsLeQHpKf5F1mUnK4_p3wyrLaY7H-ZlboOPzaPgKTLVoex/pub?start=false&loop=false&delayms=3000"
+  } ],
+  "exercises" : [ {
+    "id" : "arrayRead",
+    "type" : "JSCRIPT",
+    "description" : "<div>Nas instruções em baixo é alocado um vetor de inteiros com os valores [4, 3, 2, 1],\ne declarada uma variável <code>sum</code> com valor inicial igual a 4 (valor da primeira posição do vetor).<br>Sem utilizar um ciclo, acrescente instruções  por forma a que a variável <code>sum</code> acumule os \nrestantes valores do vetor, ficando com a sequência de valores: 4, 7, 9, 10. </div>\n",
+    "required" : true,
+    "startCode" : "int[] numbers = {4, 3, 2, 1}; \nint sum = numbers[0];\n",
+    "solutions" : [ "int[] numbers = {4, 3, 2, 1}; \nint sum = numbers[0];\nsum = sum + numbers[1];\nsum = sum + numbers[2];\nsum = sum + numbers[3];" ],
+    "freezeTop" : 2,
+    "freezeBottom" : 0,
+    "exclude" : [ "WHILE" ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "repeat" : 1,
+      "traceVars" : [ {
+        "name" : "sum",
+        "values" : [ "4", "7", "9", "10" ]
+      } ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "sum",
+    "type" : "JFUNCTION",
+    "description" : "<div>Defina uma função que calcula o somatório dos valores de um vetor de inteiros.<br>Para passar um vetor como argumento pode utilizar uma sequência de números,\nexemplo [1, 2, 3]. Porém, atenção que esta não é sintaxe válida no Java,\né utilizada aqui para efeitos de conveniência.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"sum([5, 10, 15])\"'>sum</a>([5, 10, 15]) &rarr; 30</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "int sum(int[] array) {\n     \n}",
+    "solutions" : [ "int sum(int[] array) {\n    int sum = 0;\n    int i = 0;\n    while(i < array.length) {\n        sum = sum + array[i];\n        i = i + 1;\n    }\n    return sum;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "sum",
+      "args" : [ [ ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "sum",
+      "args" : [ [ 1, 2, 3, 4, 5 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 15
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "arrayOfDigits",
+    "type" : "JSCRIPT",
+    "description" : "<div>A instrução em baixo aloca um vetor de inteiros com comprimento 10.\nEscreva instruções para preencher o mesmo com os dígitos de 0 a 9,\nutilizando um ciclo <code>while.</code></div>\n",
+    "required" : true,
+    "startCode" : "int[] digits = new int[10];\n",
+    "solutions" : [ "int[] digits = new int[10];\nint i = 1;\nwhile(i < 10) {\n    digits[i] = i;\n    i = i + 1;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ "WHILE" ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ {
+        "name" : "digits",
+        "value" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+      } ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "naturals",
+    "type" : "JFUNCTION",
+    "description" : "<div>Complete a função <code>naturals</code> por forma a que seja devolvido um vetor \ncom os números naturais até um <code>n</code> (parâmetro).<br>A instrução <code>assert</code> certifica que o valor de <code>n</code> não é negativo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"naturals(5)\"'>naturals</a>(5) &rarr; [1, 2, 3, 4, 5]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "int[] naturals(int n) {\n    assert n >= 0 : \"argumento não pode ser negativo\";\n    int[] nats = new int[n];\n            \n    return nats;\n}",
+    "solutions" : [ "int[] naturals(int n) {\n    int[] nats = new int[n];\n    int i = 0;\n    while(i < n) {\n        nats[i] = i + 1;\n        i = i + 1;\n    }\n    return nats;\n}" ],
+    "freezeTop" : 3,
+    "freezeBottom" : 2,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "naturals",
+      "args" : [ 0 ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "naturals",
+      "args" : [ 10 ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "isOrdered",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>isOrdered</code> para verificar se um vetor está ordenado\npor ordem crescente.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isOrdered([1, 3, 4])\"'>isOrdered</a>([1, 3, 4]) &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isOrdered([1, 3, 2, 3])\"'>isOrdered</a>([1, 3, 2, 3]) &rarr; false</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "boolean isOrdered(int[] array) {\n    int i = 0;\n    while(i < array.length - 1) {\n        if(array[i] > array[i+1]) {\n            return false;\n        }\n        i = i + 1;\n    }\n    return true;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "isOrdered",
+      "args" : [ [ 4, 5, 6, 6, 7 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isOrdered",
+      "args" : [ [ 3, 1, 2, 3, 4 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "inverted",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>inverted</code> para criar um vetor com os valores de\noutro vetor de inteiros invertidos. </div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"inverted([1, 2, 3, 4])\"'>inverted</a>([1, 2, 3, 4]) &rarr; [4, 3, 2, 1]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "int[] inverted(int[] array) {\n    int[] inv = new int[array.length];\n    int i = 0;\n    while(i < array.length) {\n        inv[i] = array[array.length - 1 - i];\n        i = i + 1;\n    }\n    return inv;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "inverted",
+      "args" : [ [ 4, 5, 6, 7 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 7, 6, 5, 4 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "arrayUtil",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com funções auxiliares para consultar vetores de inteiros:<br><code>isEmpty</code>: devolve verdadeiro se o vetor for vazio (comprimento zero);<br><code>first</code>: devolve o primeiro valor do vetor, verificando que não está vazio;<br><code>last</code>: devolve o último valor do vetor, verificando que o mesmo não está vazio;<br><code>nextIndex</code>: dado um vetor e um índice (válido), devolve o próximo índice (fazendo uma \"rotação\" do último para o primeiro).<br><code>prevIndex</code>: dado um vetor e um índice (válido), devolve o índice anterior (fazendo uma \"rotação\" do primeiro para o último).<br><code>element</code>: devolve o valor no índice dado no intervalo [-comprimento, comprimento[, \nonde os índices negativos acedem ao vetor a contar do fim.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isEmpty([])\"'>isEmpty</a>([]) &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isEmpty([10, 15])\"'>isEmpty</a>([10, 15]) &rarr; false</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"first([9, 8, 7])\"'>first</a>([9, 8, 7]) &rarr; 9</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"last([9, 8, 7])\"'>last</a>([9, 8, 7]) &rarr; 7</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextIndex([1, 2, 3, 4], 2)\"'>nextIndex</a>([1, 2, 3, 4], 2) &rarr; 3</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextIndex([1, 2, 3, 4], 3)\"'>nextIndex</a>([1, 2, 3, 4], 3) &rarr; 0</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"prevIndex([1, 2, 3, 4], 0)\"'>prevIndex</a>([1, 2, 3, 4], 0) &rarr; 3</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"element([2, 3, 4, 5], 2)\"'>element</a>([2, 3, 4, 5], 2) &rarr; 4</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"element([2, 3, 4, 5], -1)\"'>element</a>([2, 3, 4, 5], -1) &rarr; 5</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "class ArrayUtil {\n    static boolean isEmpty(int[] array) {\n        return array.length == 0;\n    }\n    \n    static int first(int[] array) {\n        assert !isEmpty(array) : \"vetor não pode ser vazio\";\n        return array[0];\n    }\n    \n    static int last(int[] array) {\n        assert !isEmpty(array) : \"vetor não pode ser vazio\";\n        return array[array.length-1];\n    }\n    \n    static int nextIndex(int[] array, int index) {\n        assert index >= 0 && index < array.length : \"índice invalido: \" + index;\n        return (index + 1) % array.length;\n    }\n    \n    static int prevIndex(int[] array, int index) {\n        assert index >= 0 && index < array.length : \"índice invalido: \" + index;\n        return index == 0 ? array.length - 1 : index - 1;\n    }\n    \n    static int element(int[] array, int index) {\n        assert index >= -array.length && index < array.length : \"índice invalido: \" + index;\n        return index >= 0 ? array[index] : array[array.length + index];\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "isEmpty",
+      "args" : [ [ ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isEmpty",
+      "args" : [ [ 1, 2, 3 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "first",
+      "args" : [ [ 5, 6, 7 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 5
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "first",
+      "args" : [ [ 7, 8, 9 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 7
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "last",
+      "args" : [ [ 3, 6, 7, 1 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 1
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "last",
+      "args" : [ [ 1, 7, 8, 9 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 9
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "nextIndex",
+      "args" : [ [ 5, 6, 7 ], 0 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 1
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "nextIndex",
+      "args" : [ [ 5, 6, 7, 8 ], 3 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "prevIndex",
+      "args" : [ [ 5, 6, 7 ], 0 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "prevIndex",
+      "args" : [ [ 5, 6, 7, 8 ], 3 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "element",
+      "args" : [ [ 3, 4, 5, 6, 7 ], -2 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 6
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "element",
+      "args" : [ [ 5, 6, 7, 8, 1 ], 2 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 7
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "arrayCopy",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com duas funções para copiar (replicar) vetores:<br><code>copyNewSize</code>: replica um vetor tendo em conta um novo comprimento.\npor ordem crescente;<br><code>copy</code> replica um vetor (implementar utilizando <code>copyNewSize</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"copyNewSize([1, 3, 4], 5)\"'>copyNewSize</a>([1, 3, 4], 5) &rarr; [1, 3, 4, 0, 0]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"copyNewSize([1, 3, 4, 5], 2)\"'>copyNewSize</a>([1, 3, 4, 5], 2) &rarr; [1, 3]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"copyNewSize([1, 2, 3], 3)\"'>copyNewSize</a>([1, 2, 3], 3) &rarr; [1, 2, 3]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"copy([1, 2, 3])\"'>copy</a>([1, 2, 3]) &rarr; [1, 2, 3]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "class ArrayCopy {\n\n\n\n}",
+    "solutions" : [ "class ArrayCopy {\n    static int[] copyNewSize(int[] array, int newSize) {\n        assert newSize >= 0 : \"novo comprimento não pode ser negativo\";\n        int[] copy = new int[newSize];\n        int i = 0;\n        while(i < array.length && i < newSize) {\n            copy[i] = array[i];\n            i = i + 1;\n        }\n        return copy;\n    }\n    \n    static int[] copy(int[] array) {\n        return copyNewSize(array, array.length);\n    }\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "copyNewSize",
+      "args" : [ [ 1, 2 ], 4 ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 1, 2, 0, 0 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "copyNewSize",
+      "args" : [ [ 1, 5, 10, 15 ], 2 ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 1, 5 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "copyNewSize",
+      "args" : [ [ ], 0 ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "copy",
+      "args" : [ [ 5, 6, 7, 8 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 5, 6, 7, 8 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "procedure" : "copyNewSize",
+        "count" : 1
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "randomArray",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com três funções relacionadas com aleatoriedade em vetores.<br><code>randomArray</code>: para construir um vetor com dígitos aleatórios [0, 9], dado um comprimento;<br><code>randomIndex</code>: para sortear um índice válido para um vetor;<br><code>randomElement</code>: para sortear um valor contido num vetor.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomArray(5)\"'>randomArray</a>(5) &rarr; [3, 1, 0, 9, 5]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomIndex([5, 6, 7, 8])\"'>randomIndex</a>([5, 6, 7, 8]) &rarr; 2</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomElement([5, 6, 7, 8])\"'>randomElement</a>([5, 6, 7, 8]) &rarr; 8</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "class RandomArrays {\n    static int[] randomArray(int size) {\n        assert size >= 0 : \"comprimento não pode ser negativo\";\n        int[] array = new int[size];\n        int i = 0;\n        while(i < size) {\n            array[i] = RandomInts.randomUntil(10);\n            i = i + 1;\n        }\n        return array;\n    }\n    \n    static int randomIndex(int[] array) {\n        return RandomInts.randomUntil(array.length);\n    }\n    \n    static int randomElement(int[] array) {\n        return array[randomIndex(array)];\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ {
+      "module" : "week3",
+      "exercise" : "randomInts"
+    } ],
+    "tests" : [ {
+      "name" : "randomArray",
+      "args" : [ 0 ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "randomArray",
+      "args" : [ 5 ],
+      "expected" : {
+        "type" : "ListRangeCheck",
+        "min" : 0,
+        "max" : 9
+      },
+      "repeat" : 5,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "randomIndex",
+      "args" : [ [ 1, 3, 5, 7, 9 ] ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 0,
+        "max" : 4
+      },
+      "repeat" : 5,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "randomElement",
+      "args" : [ [ 1, 2, 3, 4, 5 ] ],
+      "expected" : {
+        "type" : "rangecheck",
+        "min" : 1,
+        "max" : 5
+      },
+      "repeat" : 5,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "contains",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>contains</code> para verificar se um número está \ncontido num vetor de inteiros.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"contains([1, 3, 4, 2], 5)\"'>contains</a>([1, 3, 4, 2], 5) &rarr; false</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"contains([1, 3, 2, 1], 3)\"'>contains</a>([1, 3, 2, 1], 3) &rarr; true</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "boolean contains(int[] array, int n) {\n    int i = 0;\n    while(i < array.length) {\n        if(array[i] == n) {\n            return true;\n        }\n        i = i + 1;\n    }\n    return false;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "contains",
+      "args" : [ [ 4, 5, 6, 8, 9 ], 9 ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "contains",
+      "args" : [ [ 1, 2, 3, 6, 7, 8 ], 4 ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "contains",
+      "args" : [ [ ], 4 ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "count",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para contar o número de ocorrências de um inteiro num vetor.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"count([2, 3, 4, 2, 2], 2)\"'>count</a>([2, 3, 4, 2, 2], 2) &rarr; 3</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"count([1, 3, 2, 1], 7)\"'>count</a>([1, 3, 2, 1], 7) &rarr; 0</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "int count(int[] array, int n) {\n    int c = 0;\n    int i = 0;\n    while(i < array.length) {\n        if(array[i] == n) {\n            c = c + 1;\n        }\n        i = i + 1;\n    }\n    return c;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "count",
+      "args" : [ [ 4, 9, 6, 8, 9 ], 9 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "count",
+      "args" : [ [ 1, 1, 1, 3, 7, 8 ], 1 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 3
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "count",
+      "args" : [ [ 1, 2, 3 ], 4 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "isPalindrome",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para verificar se um vetor de carateres é palíndromo (a leitura é igual nos dois sentidos).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isPalindrome(['s','o','p','a','p','o','s'])\"'>isPalindrome</a>(['s','o','p','a','p','o','s']) &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isPalindrome(['s','o','p','a'])\"'>isPalindrome</a>(['s','o','p','a']) &rarr; false</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "boolean isPalindrome(char[] word) {\n    int i = 0;\n    while(i < word.length / 2) {\n        if(word[i] != word[word.length - 1 - i]) {\n            return false;\n        }\n        i = i + 1;\n    }\n    return true;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ "o", "s", "s", "o" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "z" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "r", "o", "e", "r" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "doubleStats",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um módulo com funções auxiliares para ober informações sobre os \nvalores contidos num vetor de números reais (<code>double</code>):<br><code>min</code>: devolve o valor mínimo;<br><code>max</code>: devolve o valor máximo;<br><code>sum</code>: devolve o somatório;<br><code>average</code>: devolve a média (utilizando <code>sum</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"min([4.2, 2.1, 3.3, 5.0])\"'>min</a>([4.2, 2.1, 3.3, 5.0]) &rarr; 2.1</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"max([4.2, 2.1, 3.3, 5.0])\"'>max</a>([4.2, 2.1, 3.3, 5.0]) &rarr; 5.0</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"sum([4.2, 2.1, 3.3, 5.0])\"'>sum</a>([4.2, 2.1, 3.3, 5.0]) &rarr; 14.6</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"avarage([4.2, 2.1, 3.3, 5.0])\"'>avarage</a>([4.2, 2.1, 3.3, 5.0]) &rarr; 3.65</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "class DoubleStats {\n    static double min(double[] array) {\n        assert array.length > 0 : \"vetor não pode ser vazio\";\n        double min = array[0];\n        int i = 1;\n        while(i < array.length) {\n            if(array[i] < min) {\n                min = array[i];\n            }\n            i = i + 1;\n        }\n        return min;\n    }\n    \n     static double max(double[] array) {\n        assert array.length > 0 : \"vetor não pode ser vazio\";\n        double max = array[0];\n        int i = 1;\n        while(i < array.length) {\n            if(array[i] > max) {\n                max = array[i];\n            }\n            i = i + 1;\n        }\n        return max;\n    }\n    \n     static double sum(double[] array) {\n        double sum = 0;\n        int i = 0;\n        while(i < array.length) {\n            sum = sum + array[i];\n            i = i + 1;\n        }\n        return sum;\n    }\n    \n     static double average(double[] array) {\n        assert array.length > 0 : \"vetor não pode ser vazio\";\n        return sum(array) / array.length;\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "min",
+      "args" : [ [ 4.2, 2.1, 3.3, 5.0 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2.1
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "min",
+      "args" : [ [ 4.2 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 4.2
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "min",
+      "args" : [ [ 4.2, 2.1, 3.3, 5.0, 1.2 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 1.2
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "max",
+      "args" : [ [ 4.2, 2.1, 3.3, 5.0 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 5.0
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "max",
+      "args" : [ [ 9.2, 2.1, 4.3, 5.0 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 9.2
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "max",
+      "args" : [ [ 3.3 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 3.3
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "sum",
+      "args" : [ [ 4.2, 2.1, 3.3, 5.0 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 14.6
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "sum",
+      "args" : [ [ ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0.0
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "sum",
+      "args" : [ [ 5.0 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 5.0
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "average",
+      "args" : [ [ 4.2, 2.1, 3.3, 5.0 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 3.65
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "procedure" : "sum",
+        "count" : 1
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "areEqual",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para verificar se dois vetores de inteiros são iguais.</div>\n",
+    "required" : true,
+    "startCode" : "boolean areEqual(int[] a, int[] b) {\n\n}",
+    "solutions" : [ "boolean areEqual(int[] a, int[] b) {\n    if(a.length != b.length) {\n        return false;\n    }\n    int i = 0;\n    while(i < a.length) {\n        if(a[i] != b[i]) {\n            return false;\n        }\n        i = i + 1;\n    }\n    return true;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "areEqual",
+      "args" : [ [ 1, 2, 3 ], [ 1, 2, 3 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "areEqual",
+      "args" : [ [ 1, 2, 3 ], [ 1, 2, 3, 4 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "areEqual",
+      "args" : [ [ 1, 2 ], [ 1, 2, 3 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "merge",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função que dados dois vetores de inteiros (<code>left</code> e <code>right</code>), \ndevolve um novo que resulta da junção de <code>left</code> e <code>right.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"merge([1, 2], [3, 4, 5])\"'>merge</a>([1, 2], [3, 4, 5]) &rarr; [1, 2, 3, 4, 5]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "int[] merge(int[] left, int[] right) {\n\n}",
+    "solutions" : [ "int[] merge(int[] left, int[] right) {\n    int[] merge = new int[left.length + right.length];\n    int i = 0;\n    while(i < left.length) {\n        merge[i] = left[i];\n        i = i + 1;\n    }\n    int j = 0;\n    while(j < right.length) {\n        merge[j + left.length] = right[j];\n        j = j + 1;\n    }\n    return merge;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "merge",
+      "args" : [ [ ], [ 1, 2 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 1, 2 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "merge",
+      "args" : [ [ 1, 2 ], [ ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 1, 2 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "merge",
+      "args" : [ [ 1, 2 ], [ 3, 4, 5 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 1, 2, 3, 4, 5 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "subArray",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva três funções para obter sub-vetores de um vetor de inteiros.<br><code>subArray</code>: dados um índice de início e um de fim, é devolvido o sub-vetor nesse intervalo de índices;<br><code>leftSide</code>: é devolvido o sub-vetor da metade esquerda; (invocar <code>subArray</code>)<br><code>rightSide</code>: é devolvido o sub-vetor da metade esquerda; (invocar <code>subArray</code>)<br>(<code>leftSide</code> e <code>rightSide</code> têm um parâmetro booleano para incluir o elemento do meio,\n caso o comprimento do vetor seja ímpar)</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"subArray([5, 6, 7, 8, 9], 1, 3)\"'>subArray</a>([5, 6, 7, 8, 9], 1, 3) &rarr; [6, 7, 8]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"leftSide([5, 6, 7, 8], false)\"'>leftSide</a>([5, 6, 7, 8], false) &rarr; [5, 6]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"rightSide([5, 6, 7, 8, 9], true)\"'>rightSide</a>([5, 6, 7, 8, 9], true) &rarr; [7, 8, 9]</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "class SubArray {\n    static int[] subArray(int[] array, int begin, int end) {\n        assert begin >= 0 && begin < array.length : \"Índice de começo inválido: \" + begin;\n        assert end >= 0 && end < array.length : \"Índice de fim inválido: \" + end;\n        \n        int[] sub = new int[end - begin + 1];\n        int i = begin;\n        while(i <= end) {\n            sub[i - begin] = array[i];\n            i = i + 1;\n        }\n        return sub;\n    }\n    \n    static int[] leftSide(int[] array, boolean withMiddle) {\n        if(array.length % 2 == 0 || !withMiddle) {\n            return subArray(array, 0, array.length / 2 - 1);\n        }\n        else {\n            return subArray(array, 0, array.length / 2);\n        }\n    }\n    \n    static int[] rightSide(int[] array, boolean withMiddle) {\n        if(array.length % 2 == 0 || withMiddle) {\n            return subArray(array, array.length / 2, array.length - 1);\n        }\n        else {\n            return subArray(array, array.length / 2 - 1, array.length - 1);\n        }\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "subArray",
+      "args" : [ [ 5, 6, 7, 8, 9 ], 1, 3 ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 6, 7, 8 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "leftSide",
+      "args" : [ [ 5, 6, 7, 8 ], false ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 5, 6 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "rightSide",
+      "args" : [ [ 5, 6, 7, 8, 9 ], true ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ 7, 8, 9 ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "alternatedBooleans",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para verificar se um vetor de booleanos tem valores alternados.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"alternatedBooleans([true, false, true, false])\"'>alternatedBooleans</a>([true, false, true, false]) &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"alternatedBooleans([true, true, true, false])\"'>alternatedBooleans</a>([true, true, true, false]) &rarr; false</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "boolean alternatedBooleans(boolean[] array) {\n    int i = 0;\n    while(i < array.length - 1) {\n        if(array[i] == array[i+1]) {\n            return false;\n        }\n        i = i + 1;\n    }\n    return true;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ true, false, true, false, true ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ true, false, false, true ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "invertedBooleans",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para obter um vetor de booleanos invertendo os valores de outro vetor de booleanos.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invertedBooleans([true, false, true])\"'>invertedBooleans</a>([true, false, true]) &rarr; [false, true, false]</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "boolean[] invertedBooleans(boolean[] array) {\n    boolean[] inverted = new boolean[array.length];\n    int i = 0;\n    while(i < array.length) {\n        inverted[i] = !array[i];\n        i = i + 1;\n    }\n    return inverted;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ true ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ false ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ true, false, true, false, true ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ false, true, false, true, false ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : [ ]
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  } ]
+}
