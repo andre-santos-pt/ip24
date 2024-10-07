@@ -8,7 +8,7 @@
   "exercises" : [ {
     "id" : "abs",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função <code>abs</code> para obter o valor absoluto de um número real,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>abs(2.8) &rarr; 2.8</li>\n    <li>abs(-1.3) &rarr; 1.3</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função <code>abs</code> para obter o valor absoluto de um número real,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"abs(2.8)\"'>abs</a>(2.8) &rarr; 2.8</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"abs(-1.3)\"'>abs</a>(-1.3) &rarr; 1.3</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "double abs(double n) {\n\n}",
     "solutions" : [ "double abs(double n) {\n     if(n < 0) {\n         return -n;\n     }\n     else {\n         return n;\n     }\n }" ],
@@ -27,7 +27,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "abs",
       "args" : [ 1.3 ],
@@ -37,7 +39,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "abs",
       "args" : [ 0.0 ],
@@ -47,12 +51,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "max",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que devolve o maior valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>max(2, 8) &rarr; 8</li>\n    <li>max(5, 1) &rarr; 5</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que devolve o maior valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"max(2, 8)\"'>max</a>(2, 8) &rarr; 8</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"max(5, 1)\"'>max</a>(5, 1) &rarr; 5</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "int max(int a, int b) {\n    \n}",
     "solutions" : [ "int max(int a, int b) {\n   if(a > b) {\n       return a;\n   }\n   else {\n       return b;\n   }\n}" ],
@@ -71,7 +77,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "max",
       "args" : [ 7, 7 ],
@@ -81,7 +89,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "max",
       "args" : [ 10, 5 ],
@@ -91,12 +101,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "min",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que devolve o menor valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>min(2, 8) &rarr; 2</li>\n    <li>min(3, 1) &rarr; 1</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que devolve o menor valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"min(2, 8)\"'>min</a>(2, 8) &rarr; 2</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"min(3, 1)\"'>min</a>(3, 1) &rarr; 1</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int min(int a, int b) {\n   if(a < b) {\n       return a;\n   }\n   else {\n       return b;\n   }\n}" ],
@@ -115,7 +127,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "min",
       "args" : [ 7, 7 ],
@@ -125,7 +139,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "min",
       "args" : [ 10, 5 ],
@@ -135,7 +151,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "irsGroup",
@@ -159,7 +177,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 10000 ],
@@ -169,7 +189,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 10001 ],
@@ -179,7 +201,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 48500 ],
@@ -189,7 +213,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 49000 ],
@@ -199,7 +225,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "irsTax",
@@ -223,7 +251,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ -3 ],
@@ -233,7 +263,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 5 ],
@@ -243,7 +275,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -253,7 +287,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 2 ],
@@ -263,7 +299,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 3 ],
@@ -273,7 +311,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 4 ],
@@ -283,7 +323,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "irsModule",
@@ -307,7 +349,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "irsTax",
       "args" : [ 3 ],
@@ -317,7 +361,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "varAssign",
@@ -344,7 +390,9 @@
         "name" : "n",
         "values" : [ "1", "2", "3", "4", "5" ]
       } ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
     } ]
   }, {
     "id" : "varAssignDiv",
@@ -371,12 +419,14 @@
         "name" : "v",
         "values" : [ "2024", "202", "20", "2" ]
       } ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
     } ]
   }, {
     "id" : "firstDigit",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um número natural e devolve \no primeiro algarismo do mesmo. O valor pode ser obtido \ndividindo sucessivamente por 10 (divisão inteira): ((2024 / 10 = 202) / 10 = 20) / 10 = <b>2</b>.\nUtilize um ciclo para efetuar o cálculo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>firstDigit(2024) &rarr; 2 (2024 / 10 / 10 / 10)</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um número natural e devolve \no primeiro algarismo do mesmo. O valor pode ser obtido \ndividindo sucessivamente por 10 (divisão inteira): ((2024 / 10 = 202) / 10 = 20) / 10 = <b>2</b>.\nUtilize um ciclo para efetuar o cálculo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"firstDigit(2024)\"'>firstDigit</a>(2024) &rarr; 2 (2024 / 10 / 10 / 10)</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int firstDigit(int n) {\n     int d = n;\n     while(d >= 10) {\n         d = d / 10;\n     }\n     return d;\n}" ],
@@ -395,7 +445,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 5 ],
@@ -405,7 +457,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 123 ],
@@ -415,7 +469,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 300000 ],
@@ -425,7 +481,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "naturalsIterator",
@@ -452,12 +510,14 @@
         "name" : "i",
         "values" : [ "1", "2", "3", "4", "5" ]
       } ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
     } ]
   }, {
     "id" : "sumNaturals",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um número natural <code>max</code> \ne devolve a soma dos números naturais [1, <code>max</code>], utilizando um ciclo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>sumNaturals(5) &rarr; 15</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um número natural <code>max</code> \ne devolve a soma dos números naturais [1, <code>max</code>], utilizando um ciclo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumNaturals(5)\"'>sumNaturals</a>(5) &rarr; 15</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int sumNaturals(int max) {\n     int s = 0;\n     int n = 1;\n     while(n <= max) {\n         s = s + n;\n         n = n + 1;\n     }\n     return s;\n}" ],
@@ -476,7 +536,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -486,7 +548,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 4 ],
@@ -496,7 +560,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 6 ],
@@ -506,7 +572,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "reverseIteration",
@@ -533,12 +601,14 @@
         "name" : "x",
         "values" : [ "5", "4", "3", "2", "1", "0" ]
       } ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
     } ]
   }, {
     "id" : "powerOfTwo",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe o expoente <code>e</code> como argumento \ne devolve a potência 2<sup><code>e</code></sup>. Assuma que o valor passado é número maior ou igual a zero.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>powerOfTwo(4) &rarr; 16</li>\n    <li>powerOfTwo(8) &rarr; 256</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe o expoente <code>e</code> como argumento \ne devolve a potência 2<sup><code>e</code></sup>. Assuma que o valor passado é número maior ou igual a zero.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"powerOfTwo(4)\"'>powerOfTwo</a>(4) &rarr; 16</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"powerOfTwo(8)\"'>powerOfTwo</a>(8) &rarr; 256</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int powerOfTwo(int e) {\n     int p = 1;\n     int n = e;\n     while(n > 0) {\n         p = p * 2;\n         n = n - 1;\n     }\n     return p;\n}" ],
@@ -557,7 +627,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -567,7 +639,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 4 ],
@@ -577,7 +651,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 8 ],
@@ -587,12 +663,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "isMultiple",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que permita verificar se um número inteiro positivo \né múltiplo de um outro número positivo, \nsem recorrer ao operador do resto da divisão (<code>%</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isMultiple(25, 5) &rarr; true</li>\n    <li>isMultiple(27, 5) &rarr; false</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que permita verificar se um número inteiro positivo \né múltiplo de um outro número positivo, \nsem recorrer ao operador do resto da divisão (<code>%</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isMultiple(25, 5)\"'>isMultiple</a>(25, 5) &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isMultiple(27, 5)\"'>isMultiple</a>(27, 5) &rarr; false</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "boolean isMultiple(int a, int b) {\n     int n = a;\n     while(n >= b) {\n         n = n - b;\n     }\n     return n == 0;\n}" ],
@@ -611,7 +689,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 26, 5 ],
@@ -621,7 +701,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 29, 5 ],
@@ -631,7 +713,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 30, 6 ],
@@ -641,12 +725,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "intDivision",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função para obter o quociente da divisão inteira, \nsem recorrer ao operador de divisão (<code>/</code>). \nO valor pode ser obtido com uma contagem de subtrações sucessivas \ndo divisor ao dividendo. Para 19 / 6: ((19 <b>- 6</b> = 13) <b>- 6</b>) = 7) <b>- 6</b>\n(as 3 subtrações correspondem ao resultado da divisão inteira).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>intDivision(15, 3) &rarr; 5</li>\n    <li>intDivision(19, 6) &rarr; 3</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função para obter o quociente da divisão inteira, \nsem recorrer ao operador de divisão (<code>/</code>). \nO valor pode ser obtido com uma contagem de subtrações sucessivas \ndo divisor ao dividendo. Para 19 / 6: ((19 <b>- 6</b> = 13) <b>- 6</b>) = 7) <b>- 6</b>\n(as 3 subtrações correspondem ao resultado da divisão inteira).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"intDivision(15, 3)\"'>intDivision</a>(15, 3) &rarr; 5</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"intDivision(19, 6)\"'>intDivision</a>(19, 6) &rarr; 3</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int intDivision(int a, int b) {\n     int n = a;\n     int d = 0;\n     while(n >= b) {\n         n = n - b;\n         d = d + 1;\n     }\n     return d;\n}" ],
@@ -665,7 +751,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 26, 5 ],
@@ -675,7 +763,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 10, 3 ],
@@ -685,7 +775,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 30, 7 ],
@@ -695,7 +787,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "iterationStepTwo",
@@ -722,12 +816,14 @@
         "name" : "p",
         "values" : [ "2", "4", "6", "8", "10" ]
       } ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
     } ]
   }, {
     "id" : "sumEvenBetween",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento dois números naturais <code>min</code> e <code>max</code> e \ndevolve a soma dos números naturais pares compreendidos no intervalo [<code>min</code>, <code>max</code>].</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>sumEvenBetween(2, 8) &rarr; 20 (2 + 4 + 6 + 8)</li>\n    <li>sumEvenBetween(3, 9) &rarr; 18 (4 + 6 + 8)</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento dois números naturais <code>min</code> e <code>max</code> e \ndevolve a soma dos números naturais pares compreendidos no intervalo [<code>min</code>, <code>max</code>].</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumEvenBetween(2, 8)\"'>sumEvenBetween</a>(2, 8) &rarr; 20 (2 + 4 + 6 + 8)</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumEvenBetween(3, 9)\"'>sumEvenBetween</a>(3, 9) &rarr; 18 (4 + 6 + 8)</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int sumEvenBetween(int min, int max) {\n     int s = 0;\n     int n = min;\n     if(n % 2 != 0) {\n         n = n + 1;\n     }\n     while(n <= max) {\n         s = s + n;\n         n = n + 2;\n     }\n     return s;\n}" ],
@@ -746,7 +842,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 3, 4 ],
@@ -756,7 +854,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 3, 8 ],
@@ -766,7 +866,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 4, 8 ],
@@ -776,7 +878,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 4, 9 ],
@@ -786,12 +890,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "nextLetter",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>nextLetter('c') &rarr; d</li>\n    <li>nextLetter('z') &rarr; a</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('c')\"'>nextLetter</a>('c') &rarr; d</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('z')\"'>nextLetter</a>('z') &rarr; a</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "char nextLetter(char l) {\n     if(l == 'z') {\n         return 'a';\n     }\n     else {\n         return (char) (l + 1);\n     }\n}" ],
@@ -810,7 +916,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ "i" ],
@@ -820,7 +928,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ "z" ],
@@ -830,7 +940,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "gcd",
@@ -854,7 +966,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 30, 25 ],
@@ -864,7 +978,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 3, 7 ],
@@ -874,7 +990,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 348, 156 ],
@@ -884,12 +1002,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "invertInt",
     "type" : "JFUNCTION",
-    "description" : "<div>    </div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>invert(1234) &rarr; 4321</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função para inverter um número inteiro.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invert(1234)\"'>invert</a>(1234) &rarr; 4321</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "int invert(int n) {\n    int inv = 0;\n    int d = n;\n    while(d > 0) {\n        inv = inv * 10;\n        inv = inv + d % 10;\n        d = d / 10;\n    }\n    return inv;\n}" ],
@@ -901,6 +1021,18 @@
     "importExercises" : [ ],
     "tests" : [ {
       "name" : null,
+      "args" : [ 512 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 215
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
       "args" : [ 1234 ],
       "expected" : {
         "type" : "result",
@@ -908,12 +1040,26 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ 220182 ],
+      "expected" : {
+        "type" : "result",
+        "value" : 281022
+      },
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "fibonacci",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>fib(0) &rarr; 0</li>\n    <li>fib(7) &rarr; 13</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"fib(0)\"'>fib</a>(0) &rarr; 0</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"fib(7)\"'>fib</a>(7) &rarr; 13</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "int fib(int n) {\n     if(n <= 1) {\n         return n;\n     }\n     int a = 0;\n     int b = 1;\n     int i = 2;\n     while(i != n) {\n         int t = a + b;\n         a = b;\n         b = t;\n         i = i + 1;\n     }\n     return a + b;\n}" ],
@@ -932,7 +1078,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 1 ],
@@ -942,7 +1090,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 2 ],
@@ -952,7 +1102,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 3 ],
@@ -962,7 +1114,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 5 ],
@@ -972,7 +1126,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : null,
       "args" : [ 7 ],
@@ -982,7 +1138,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   } ]
 }

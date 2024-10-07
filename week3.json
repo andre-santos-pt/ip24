@@ -33,7 +33,9 @@
       "traceCalls" : [ {
         "procedure" : "isEven",
         "count" : 1
-      } ]
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
     }, {
       "name" : "isOdd",
       "args" : [ 10 ],
@@ -46,7 +48,9 @@
       "traceCalls" : [ {
         "procedure" : "isEven",
         "count" : 1
-      } ]
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
     }, {
       "name" : "isOdd",
       "args" : [ 13 ],
@@ -59,12 +63,14 @@
       "traceCalls" : [ {
         "procedure" : "isEven",
         "count" : 1
-      } ]
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
     } ]
   }, {
     "id" : "randomInts",
     "type" : "JCLASS",
-    "description" : "<div>A seguinte função gera um número inteiro aleatório no intervalo [0, 1000000[,\nutilizando a função <code>random</code> do módulo <code>Math</code> (a qual devolve um número aleatório no intervalo [0.0, 1.0[).<br>Escreva duas funções para gerar números aleatórios:<br><code>randomUntil</code>: fornece um número entre zero e menor que um número máximo dado no parâmetro<br><code>randomWithin</code>: fornece um número entre um mínimo e um máximo (intervalo fechado) dados nos parâmetros</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>randomUntil(10) &rarr; 9</li>\n    <li>randomWithin(0, 5) &rarr; 2</li>\n  </ul>\n</div>\n",
+    "description" : "<div>A seguinte função gera um número inteiro aleatório no intervalo [0, 1000000[,\nutilizando a função <code>random</code> do módulo <code>Math</code> (a qual devolve um número aleatório no intervalo [0.0, 1.0[).<br>Escreva duas funções para gerar números aleatórios:<br><code>randomUntil</code>: fornece um número entre zero e menor que um número máximo dado no parâmetro<br><code>randomWithin</code>: fornece um número entre um mínimo e um máximo (intervalo fechado) dados nos parâmetros</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomUntil(10)\"'>randomUntil</a>(10) &rarr; 9</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomWithin(0, 5)\"'>randomWithin</a>(0, 5) &rarr; 2</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n    static int randomUntil(int max) {\n        return 0; // TODO\n    }\n\n    static int randomWithin(int min, int max) {\n        return 0; // TODO\n    }\n}",
     "solutions" : [ "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n    static int randomUntil(int max) {\n        return (int) (Math.random() * max);\n    }\n\n    static int randomWithin(int min, int max) {\n        return min + randomUntil(max - min + 1);\n    }\n}" ],
@@ -84,7 +90,9 @@
       },
       "repeat" : 5,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "randomWithin",
       "args" : [ 5, 10 ],
@@ -95,7 +103,9 @@
       },
       "repeat" : 5,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "evenOddRandom",
@@ -125,7 +135,9 @@
       },
       "repeat" : 5,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "randomEven",
       "args" : [ 100 ],
@@ -136,7 +148,9 @@
       },
       "repeat" : 5,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "randomOdd",
       "args" : [ 100 ],
@@ -146,7 +160,9 @@
       },
       "repeat" : 5,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "randomOdd",
       "args" : [ 100 ],
@@ -157,12 +173,14 @@
       },
       "repeat" : 5,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "isPerfectSquare",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para verificar se um número inteiro é um quadrado perfeito\n(i.e. a sua raiz quadrada é um número inteiro). Para tal, podem ser utilizadas\nas funções <code>sqrt</code> e <code>floor</code> do módulo <code>Math</code>, para calcular a raiz quadrada e\no piso de um número real.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>Math.sqrt(9) &rarr; 3.0</li>\n    <li>Math.floor(3.2) &rarr; 3.0</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função para verificar se um número inteiro é um quadrado perfeito\n(i.e. a sua raiz quadrada é um número inteiro). Para tal, podem ser utilizadas\nas funções <code>sqrt</code> e <code>floor</code> do módulo <code>Math</code>, para calcular a raiz quadrada e\no piso de um número real.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"Math.sqrt(9)\"'>Math.sqrt</a>(9) &rarr; 3.0</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"Math.floor(3.2)\"'>Math.floor</a>(3.2) &rarr; 3.0</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "boolean isPerfectSquare(int n) {\n\n}",
     "solutions" : [ "boolean isPerfectSquare(int n) {\n     double sqrt = Math.sqrt(n);\n     return sqrt == Math.floor(sqrt);\n }" ],
@@ -181,7 +199,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPerfectSquare",
       "args" : [ 12 ],
@@ -191,12 +211,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "divisorsModule",
     "type" : "JCLASS",
-    "description" : "<div>Escreva um módulo com três funções relacionadas com divisores:<br><code>countDivisors</code>: conta quantos divisores tem um número inteiro;<br><code>sumProperDivisors</code>: soma os divisores <em>próprios</em> de um número inteiro (exclui o próprio);<br><code>isPrime</code>: verifica se um número é primo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>countDivisors(8) &rarr; 4   (1, 2, 4, 8)</li>\n    <li>sumProperDivisors(6) &rarr; 6   (1 + 2 + 3)</li>\n    <li>isPrime(7) &rarr; true</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um módulo com três funções relacionadas com divisores:<br><code>countDivisors</code>: conta quantos divisores tem um número inteiro;<br><code>sumProperDivisors</code>: soma os divisores <em>próprios</em> de um número inteiro (exclui o próprio);<br><code>isPrime</code>: verifica se um número é primo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"countDivisors(8)\"'>countDivisors</a>(8) &rarr; 4   (1, 2, 4, 8)</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumProperDivisors(6)\"'>sumProperDivisors</a>(6) &rarr; 6   (1 + 2 + 3)</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isPrime(7)\"'>isPrime</a>(7) &rarr; true</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "class Divisors {\n\n}",
     "solutions" : [ "class Divisors {\n    static int countDivisors(int n) {\n        int d = 1;\n        int i = 1;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                d = d + 1;\n            }\n            i = i + 1;\n        }\n        return d;\n    }\n    static int sumProperDivisors(int n) {\n        int s = 0;\n        int i = 1;\n        while(i < n) {\n            if(n % i == 0) {\n                s = s + i;\n            }\n            i = i + 1;\n        }\n        return s;\n    }\n    static boolean isPrime(int n) {\n        if(n == 1) {\n            return false;\n        }\n        int i = 2;\n        while(i <= n / 2) {\n            if(n % i == 0) {\n                return false;\n            }\n            i = i + 1;\n        }\n        return true;\n    }\n}" ],
@@ -215,7 +237,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "countDivisors",
       "args" : [ 7 ],
@@ -225,7 +249,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "countDivisors",
       "args" : [ 12 ],
@@ -235,7 +261,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "sumProperDivisors",
       "args" : [ 8 ],
@@ -245,7 +273,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "sumProperDivisors",
       "args" : [ 12 ],
@@ -255,7 +285,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPrime",
       "args" : [ 1 ],
@@ -265,7 +297,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPrime",
       "args" : [ 2 ],
@@ -275,7 +309,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPrime",
       "args" : [ 8 ],
@@ -285,7 +321,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPrime",
       "args" : [ 13 ],
@@ -295,7 +333,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPrime",
       "args" : [ 21 ],
@@ -305,12 +345,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "primeNumbers",
     "type" : "JCLASS",
-    "description" : "<div>Escreva um módulo com duas funções relacionadas com números primos:<br><code>countPrimes</code>: conta quantos números primos existem até um determinado número natural (inclusivé);<br><code>existsPrimeBetween</code>: verifica se existe algum primo entre dois números naturais (intervalo aberto).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>countPrimes(7) &rarr; 4</li>\n    <li>existsPrimeBetween(5, 9) &rarr; true</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um módulo com duas funções relacionadas com números primos:<br><code>countPrimes</code>: conta quantos números primos existem até um determinado número natural (inclusivé);<br><code>existsPrimeBetween</code>: verifica se existe algum primo entre dois números naturais (intervalo aberto).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"countPrimes(7)\"'>countPrimes</a>(7) &rarr; 4</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"existsPrimeBetween(5, 9)\"'>existsPrimeBetween</a>(5, 9) &rarr; true</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "class Primes {\n    static int countPrimes(int max) {\n        int i = 1;\n        int c = 0;\n        while(i <= max) {\n            if(Divisors.isPrime(i)) {\n                c = c + 1;\n            }\n            i = i + 1;\n        }\n        return c;\n    }\n    static boolean existsPrimeBetween(int min, int max) {\n        int i = min + 1;\n        while(i < max) {\n            if(Divisors.isPrime(i)) {\n                return true;\n            }\n            i = i + 1;\n        }\n        return false;\n    }\n}" ],
@@ -332,7 +374,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "countPrimes",
       "args" : [ 15 ],
@@ -342,7 +386,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "countPrimes",
       "args" : [ 21 ],
@@ -352,7 +398,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 5, 9 ],
@@ -362,7 +410,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 31, 37 ],
@@ -372,7 +422,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "existsPrimeBetween",
       "args" : [ 12, 15 ],
@@ -382,12 +434,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "perfectNumbers",
     "type" : "JCLASS",
-    "description" : "<div>Escreva um módulo com duas funções relacionadas com números perfeitos.\nUm número perfeito é aquele cuja soma dos divisores próprios é igual ao\npróprio número. Por exemplo, 6 é perfeito porque (1 + 2 + 3) é igual a 6.<br><code>isPerfect</code>: verifica se um número é perfeito;<br><code>countPerfectNumbers</code>: conta quantos números perfeitos existem até um limite máximo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>isPerfect(6) &rarr; true</li>\n    <li>countPerfectNumbers(30) &rarr; 2 (6, 28)</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um módulo com duas funções relacionadas com números perfeitos.\nUm número perfeito é aquele cuja soma dos divisores próprios é igual ao\npróprio número. Por exemplo, 6 é perfeito porque (1 + 2 + 3) é igual a 6.<br><code>isPerfect</code>: verifica se um número é perfeito;<br><code>countPerfectNumbers</code>: conta quantos números perfeitos existem até um limite máximo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isPerfect(6)\"'>isPerfect</a>(6) &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"countPerfectNumbers(30)\"'>countPerfectNumbers</a>(30) &rarr; 2 (6, 28)</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "class PerfectNumbers {\n    static boolean isPerfect(int n) {\n        return Divisors.sumProperDivisors(n) == n;\n    }\n    static int countPerfectNumbers(int max) {\n        int c = 0;\n        int i = 1;\n        while(i <= max) {\n            if(isPerfect(i)) {\n                c = c + 1;\n            }\n            i = i + 1;\n        }\n        return c;\n    }\n}" ],
@@ -409,7 +463,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPerfect",
       "args" : [ 12 ],
@@ -419,7 +475,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "isPerfect",
       "args" : [ 8 ],
@@ -429,7 +487,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "countPerfectNumbers",
       "args" : [ 30 ],
@@ -439,7 +499,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     }, {
       "name" : "countPerfectNumbers",
       "args" : [ 8 ],
@@ -449,12 +511,14 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   }, {
     "id" : "largestPrimeDiff",
     "type" : "JCLASS",
-    "description" : "<div>Defina uma função que recebe como argumento um natural <code>max</code> e devolve a maior diferença entre dois números primos consecutivos até <code>max.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>largestPrimeDiff(13) &rarr; 4</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um natural <code>max</code> e devolve a maior diferença entre dois números primos consecutivos até <code>max.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"largestPrimeDiff(13)\"'>largestPrimeDiff</a>(13) &rarr; 4</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : "class LargerPrimeDiff {\n\n}",
     "solutions" : [ "class LargerPrimeDiff {\n    static int largestPrimeDiff(int max) {\n        if(max <= 2) {\n            return 0;\n        }\n        int i = 3; // segundo primo\n        int last = 2; // primeiro primo\n        int largestDiff = i - last;\n        while(i <= max) {\n            if(Divisors.isPrime(i)) {\n                int d = i - last;\n                if(d > largestDiff) {\n                    largestDiff = d;\n                }\n                last = i;\n            }\n            i = i + 1;\n        }\n        return largestDiff;\n    }\n}" ],
@@ -476,7 +540,9 @@
       },
       "repeat" : 1,
       "traceVars" : [ ],
-      "traceCalls" : [ ]
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
     } ]
   } ]
 }
