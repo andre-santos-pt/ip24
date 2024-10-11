@@ -2,7 +2,7 @@
   "title" : "Vetores",
   "description" : "<div>\n  <p>\n            O objectivo deste módulo é dominar a alocação e leitura de vetores,\n            adquirindo noções de:\n            </p>\n  <ul>\n    <li>alocação de vetores (<code>new</code>)</li>\n    <li>iteração sobre vetores</li>\n    <li>pesquisa em vetores</li>\n  </ul>\n  <p>Será também praticada a utilização asserções (<code>assert</code>).</p>\n</div>\n",
   "links" : [ {
-    "label" : "Sildes",
+    "label" : "Slides",
     "url" : "https://docs.google.com/presentation/d/e/2PACX-1vRtvmnFn5vzD1gjoFBpDrjNzt2nEMZA5JnsLeQHpKf5F1mUnK4_p3wyrLaY7H-ZlboOPzaPgKTLVoex/pub?start=false&loop=false&delayms=3000"
   } ],
   "exercises" : [ {
@@ -14,7 +14,7 @@
     "solutions" : [ "int[] numbers = {4, 3, 2, 1}; \nint sum = numbers[0];\nsum = sum + numbers[1];\nsum = sum + numbers[2];\nsum = sum + numbers[3];" ],
     "freezeTop" : 2,
     "freezeBottom" : 0,
-    "exclude" : [ "WHILE" ],
+    "exclude" : [ "LOOP" ],
     "include" : [ ],
     "importCode" : null,
     "importExercises" : [ ],
@@ -25,6 +25,7 @@
         "type" : "noreturn",
         "type" : "noreturn"
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ {
         "name" : "sum",
@@ -54,6 +55,7 @@
         "type" : "result",
         "value" : 0
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -66,6 +68,7 @@
         "type" : "result",
         "value" : 15
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -82,7 +85,7 @@
     "freezeTop" : 1,
     "freezeBottom" : 0,
     "exclude" : [ ],
-    "include" : [ "WHILE" ],
+    "include" : [ "LOOP" ],
     "importCode" : null,
     "importExercises" : [ ],
     "tests" : [ {
@@ -92,6 +95,7 @@
         "type" : "noreturn",
         "type" : "noreturn"
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -121,6 +125,7 @@
         "type" : "result",
         "value" : [ ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -133,6 +138,7 @@
         "type" : "result",
         "value" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -159,6 +165,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -171,6 +178,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -197,6 +205,7 @@
         "type" : "result",
         "value" : [ 7, 6, 5, 4 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -223,6 +232,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -235,6 +245,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -247,6 +258,7 @@
         "type" : "result",
         "value" : 5
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -259,6 +271,7 @@
         "type" : "result",
         "value" : 7
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -271,6 +284,7 @@
         "type" : "result",
         "value" : 1
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -283,6 +297,7 @@
         "type" : "result",
         "value" : 9
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -295,6 +310,7 @@
         "type" : "result",
         "value" : 1
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -307,6 +323,7 @@
         "type" : "result",
         "value" : 0
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -319,6 +336,7 @@
         "type" : "result",
         "value" : 2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -331,6 +349,7 @@
         "type" : "result",
         "value" : 2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -343,6 +362,7 @@
         "type" : "result",
         "value" : 6
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -355,6 +375,7 @@
         "type" : "result",
         "value" : 7
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -381,6 +402,7 @@
         "type" : "result",
         "value" : [ 1, 2, 0, 0 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -393,6 +415,7 @@
         "type" : "result",
         "value" : [ 1, 5 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -405,6 +428,7 @@
         "type" : "result",
         "value" : [ ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -417,9 +441,11 @@
         "type" : "result",
         "value" : [ 5, 6, 7, 8 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
+        "module" : null,
         "procedure" : "copyNewSize",
         "count" : 1
       } ],
@@ -449,6 +475,7 @@
         "type" : "result",
         "value" : [ ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -458,10 +485,11 @@
       "name" : "randomArray",
       "args" : [ 5 ],
       "expected" : {
-        "type" : "ListRangeCheck",
+        "type" : "listrangecheck",
         "min" : 0,
         "max" : 9
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -475,6 +503,7 @@
         "min" : 0,
         "max" : 4
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -488,6 +517,7 @@
         "min" : 1,
         "max" : 5
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -514,6 +544,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -526,6 +557,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -538,6 +570,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -564,6 +597,7 @@
         "type" : "result",
         "value" : 2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -576,6 +610,7 @@
         "type" : "result",
         "value" : 3
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -588,6 +623,7 @@
         "type" : "result",
         "value" : 0
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -614,6 +650,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -626,6 +663,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -638,6 +676,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -664,6 +703,7 @@
         "type" : "result",
         "value" : 2.1
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -676,6 +716,7 @@
         "type" : "result",
         "value" : 4.2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -688,6 +729,7 @@
         "type" : "result",
         "value" : 1.2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -700,6 +742,7 @@
         "type" : "result",
         "value" : 5.0
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -712,6 +755,7 @@
         "type" : "result",
         "value" : 9.2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -724,6 +768,7 @@
         "type" : "result",
         "value" : 3.3
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -736,6 +781,7 @@
         "type" : "result",
         "value" : 14.6
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -748,6 +794,7 @@
         "type" : "result",
         "value" : 0.0
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -760,6 +807,7 @@
         "type" : "result",
         "value" : 5.0
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -772,9 +820,11 @@
         "type" : "result",
         "value" : 3.65
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
+        "module" : null,
         "procedure" : "sum",
         "count" : 1
       } ],
@@ -801,6 +851,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -813,6 +864,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -825,6 +877,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -851,6 +904,7 @@
         "type" : "result",
         "value" : [ 1, 2 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -863,6 +917,7 @@
         "type" : "result",
         "value" : [ 1, 2 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -875,6 +930,7 @@
         "type" : "result",
         "value" : [ 1, 2, 3, 4, 5 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -901,6 +957,7 @@
         "type" : "result",
         "value" : [ 6, 7, 8 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -913,6 +970,7 @@
         "type" : "result",
         "value" : [ 5, 6 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -925,6 +983,7 @@
         "type" : "result",
         "value" : [ 7, 8, 9 ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -951,6 +1010,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -963,6 +1023,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -989,6 +1050,7 @@
         "type" : "result",
         "value" : [ false ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -1001,6 +1063,7 @@
         "type" : "result",
         "value" : [ false, true, false, true, false ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -1013,6 +1076,7 @@
         "type" : "result",
         "value" : [ ]
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],

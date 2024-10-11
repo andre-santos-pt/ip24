@@ -28,9 +28,11 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
+        "module" : null,
         "procedure" : "isEven",
         "count" : 1
       } ],
@@ -43,9 +45,11 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
+        "module" : null,
         "procedure" : "isEven",
         "count" : 1
       } ],
@@ -58,9 +62,11 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ {
+        "module" : null,
         "procedure" : "isEven",
         "count" : 1
       } ],
@@ -73,7 +79,7 @@
     "description" : "<div>A seguinte função gera um número inteiro aleatório no intervalo [0, 1000000[,\nutilizando a função <code>random</code> do módulo <code>Math</code> (a qual devolve um número aleatório no intervalo [0.0, 1.0[).<br>Escreva duas funções para gerar números aleatórios:<br><code>randomUntil</code>: fornece um número entre zero e menor que um número máximo dado no parâmetro<br><code>randomWithin</code>: fornece um número entre um mínimo e um máximo (intervalo fechado) dados nos parâmetros</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomUntil(10)\"'>randomUntil</a>(10) &rarr; 9</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomWithin(0, 5)\"'>randomWithin</a>(0, 5) &rarr; 2</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n    static int randomUntil(int max) {\n        return 0; // TODO\n    }\n\n    static int randomWithin(int min, int max) {\n        return 0; // TODO\n    }\n}",
-    "solutions" : [ "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n    static int randomUntil(int max) {\n        return (int) (Math.random() * max);\n    }\n\n    static int randomWithin(int min, int max) {\n        return min + randomUntil(max - min + 1);\n    }\n}" ],
+    "solutions" : [ "class RandomInts {\n    static int random() {\n        return (int) (Math.random() * 1000000);\n    }\n\n    static int randomUntil(int max) {\n        assert max > 0;\n        return (int) (Math.random() * max);\n    }\n\n    static int randomWithin(int min, int max) {\n        assert min < max;\n        return min + randomUntil(max - min + 1);\n    }\n}" ],
     "freezeTop" : 4,
     "freezeBottom" : 1,
     "exclude" : [ ],
@@ -88,6 +94,7 @@
         "min" : 0,
         "max" : 4
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -101,6 +108,7 @@
         "min" : 5,
         "max" : 10
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -130,9 +138,10 @@
       "name" : "randomEven",
       "args" : [ 100 ],
       "expected" : {
-        "type" : "EvenCheck",
+        "type" : "evencheck",
         "even" : true
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -146,6 +155,7 @@
         "min" : 0,
         "max" : 100
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -155,9 +165,10 @@
       "name" : "randomOdd",
       "args" : [ 100 ],
       "expected" : {
-        "type" : "EvenCheck",
+        "type" : "evencheck",
         "even" : false
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -171,6 +182,7 @@
         "min" : 0,
         "max" : 100
       },
+      "sideEffects" : null,
       "repeat" : 5,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -197,6 +209,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -209,6 +222,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -235,6 +249,7 @@
         "type" : "result",
         "value" : 1
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -247,6 +262,7 @@
         "type" : "result",
         "value" : 2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -259,6 +275,7 @@
         "type" : "result",
         "value" : 6
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -271,6 +288,7 @@
         "type" : "result",
         "value" : 7
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -283,6 +301,7 @@
         "type" : "result",
         "value" : 16
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -295,6 +314,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -307,6 +327,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -319,6 +340,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -331,6 +353,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -343,6 +366,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -372,6 +396,7 @@
         "type" : "result",
         "value" : 4
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -384,6 +409,7 @@
         "type" : "result",
         "value" : 6
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -396,6 +422,7 @@
         "type" : "result",
         "value" : 8
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -408,6 +435,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -420,6 +448,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -432,6 +461,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -461,6 +491,7 @@
         "type" : "result",
         "value" : true
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -473,6 +504,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -485,6 +517,7 @@
         "type" : "result",
         "value" : false
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -497,6 +530,7 @@
         "type" : "result",
         "value" : 2
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -509,6 +543,7 @@
         "type" : "result",
         "value" : 1
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],
@@ -538,6 +573,7 @@
         "type" : "result",
         "value" : 4
       },
+      "sideEffects" : null,
       "repeat" : 1,
       "traceVars" : [ ],
       "traceCalls" : [ ],

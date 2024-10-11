@@ -16,5 +16,9 @@
     "id" : "week4",
     "visible" : true,
     "requires" : [ "week3" ]
+  }, {
+    "id" : "week5",
+    "visible" : false,
+    "requires" : [ "week4", "week3" ]
   } ]
 }
