@@ -1,0 +1,755 @@
+{
+  "title" : "Referências e Procedimentos",
+  "description" : "<div>\n  <p>\n            O objectivo deste módulo é praticar a escrita de procedimentos,\n            adquirindo noções de:\n            </p>\n  <ul>\n    <li>referências</li>\n    <li>ausência de retorno (<code>void</code>)</li>\n  </ul>\n</div>\n",
+  "links" : [ {
+    "label" : "Simplificações sintáticas",
+    "url" : "https://docs.google.com/presentation/d/e/2PACX-1vRyL7kY1maM_TnT_6gTV7GkfgXmneuaxPOlEKZs7186-ZgJ44ZmB7KBZCQ4a1tt0BMtU2zrd1CCkDFZ/pub?start=false&loop=false&delayms=3000"
+  }, {
+    "label" : "Slides",
+    "url" : "https://docs.google.com/presentation/d/e/2PACX-1vRvsIHQAtv96fhEDT2B4R2aFa0j2fkDxHbm8SYjZfxT4OadYsdhgpAxNPuVfHyJDZroRzc165FQtUMa/pub?start=false&loop=false&delayms=3000"
+  } ],
+  "exercises" : [ {
+    "id" : "incrementation",
+    "type" : "JSCRIPT",
+    "description" : "<div>A seguinte sequência de instruções faz com que a variável <code>i</code>\ntome os valores 1, 2, 3, 4. Altere o código por forma a manter este\ncomportamento utilizando a instrução de incrementação (<code>++</code>).</div>\n",
+    "required" : true,
+    "startCode" : "int i = 1;\ni = i + 1;\ni = i + 1;\ni = i + 1;",
+    "solutions" : [ "int i = 1;\ni++;\ni++;\ni++;" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ "RAW_ASSIGN", "PLUSEQ" ],
+    "include" : [ "INC" ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ {
+        "name" : "i",
+        "values" : [ "1", "2", "3", "4" ]
+      } ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "cumulativeAssign",
+    "type" : "JSCRIPT",
+    "description" : "<div>A seguinte sequência de instruções faz com que a variável <code>n</code>\ntome os valores 1, 3, 6, 10. Altere o código por forma a manter este\ncomportamento utilizando a instrução de atribuição cumulativa (<code>+=</code>).</div>\n",
+    "required" : true,
+    "startCode" : "int n = 1;\nn = n + 2;\nn = n + 3;\nn = n + 4;",
+    "solutions" : [ "int n = 1;\nn += 2;\nn += 3;\nn += 4; " ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ "RAW_ASSIGN", "INC" ],
+    "include" : [ "PLUSEQ" ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ {
+        "name" : "n",
+        "values" : [ "1", "3", "6", "10" ]
+      } ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "whileToFor",
+    "type" : "JSCRIPT",
+    "description" : "<div>O seguinte ciclo faz com que a variável <code>i</code>\ntome os valores 1, 2, 3, 4, 5, acumulando os mesmos na variável <code>s.</code>\nAltere o código por forma a manter este comportamento utilizando o ciclo <code>for.</code></div>\n",
+    "required" : true,
+    "startCode" : "int i = 1;\nint s = 0;\nwhile(i <= 5) {\n    s += i;\n    i++;\n}",
+    "solutions" : [ "int s = 0;\nfor(int i = 1; i <= 5; i++) {\n    s += i;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ "WHILE" ],
+    "include" : [ "FOR" ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ {
+        "name" : "s",
+        "values" : [ "0", "1", "3", "6", "10", "15" ]
+      } ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "sumArrayAbs",
+    "type" : "JCLASS",
+    "description" : "<div>Experimente o procedimento <code>arrayToAbs</code> com a invocação do exemplo. Note que é feita\numa transtormação no vetor, nomeadamente, os valores negativos são\nsubstituídos pelo valor absoluto. A função <code>sum</code> calcula o somatório.<br><br>Complete a função <code>sumAbs</code> para que esta devolva o somatório dos valores\nabsolutos do vetor passado, sem o alterar. Deverá ser feita\numa cópia (<code>copy</code> do exercício dependente), a qual será transformada\npara números absolutos (<code>arrayToAbs</code>), e por fim calculado o somatório (<code>sum</code>)\npara devolver.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"arrayToAbs([-1, 2, 3, -5, 4])\"'>arrayToAbs</a>([-1, 2, 3, -5, 4]) &rarr; [1, 2, 3, 5, 4]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"sum([1, 2, 3, 5, 4])\"'>sum</a>([1, 2, 3, 5, 4]) &rarr; 15</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumAbs([-1, 2, 3, -5, 4])\"'>sumAbs</a>([-1, 2, 3, -5, 4]) &rarr; 15</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "class SumArrayAbs {\n     static void arrayToAbs(int[] array) {\n         for(int i = 0; i < array.length; i++)\n             if(array[i] < 0)\n                 array[i] = -array[i];\n     }\n     \n     static int sum(int[] array) {\n         int s = 0;\n         for(int i = 0; i < array.length; i++)\n             s += array[i];\n         return s;\n     }\n     \n     static int sumAbs(int[] array) {\n         return 0; // TODO\n     }\n }",
+    "solutions" : [ "class SumArrayAbs {\n    static void arrayToAbs(int[] array) {\n        for(int i = 0; i < array.length; i++)\n            if(array[i] < 0)\n                array[i] = -array[i];\n    }\n    \n    static int sum(int[] array) {\n        int s = 0;\n        for(int i = 0; i < array.length; i++)\n            s += array[i];\n        return s;\n    }\n    \n    static int sumAbs(int[] array) {\n        int[] copy = ArrayCopy.copy(array);\n        arrayToAbs(copy);\n        return sum(copy);\n    }\n}" ],
+    "freezeTop" : 15,
+    "freezeBottom" : 2,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ {
+      "module" : "week4",
+      "exercise" : "arrayCopy"
+    } ],
+    "tests" : [ {
+      "name" : "sumAbs",
+      "args" : [ [ -2, -2, -1, 5 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 10
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "module" : "ArrayCopy",
+        "procedure" : "copy",
+        "count" : 1
+      }, {
+        "module" : null,
+        "procedure" : "arrayToAbs",
+        "count" : 1
+      }, {
+        "module" : null,
+        "procedure" : "sum",
+        "count" : 1
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "invertBooleanValues",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva um procedimento para inverter os valores de um vetor de booleanos.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invertValues([false, true])\"'>invertValues</a>([false, true]) &rarr; [true, false]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "void invertValues(boolean[] array) {\n    for(int i = 0; i < array.length; i++)\n        array[i] = !array[i];\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ true, false, true, true ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ false, true, false, false ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "replace",
+    "type" : "JFUNCTION",
+    "description" : "<div>Complete o seguinte procedimento por forma a que todos os carateres do\nvetor passado na referência <code>letters</code> que sejam iguais a <code>first</code> sejam \nsubstituídos por <code>replace.</code> Utilize um ciclo <code>for.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replace(['A', 'B', 'B', 'A'],'B','C')\"'>replace</a>(['A', 'B', 'B', 'A'],'B','C') &rlarr; ['A', 'C', 'C', 'A']</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "void replace(char[] letters, char find, char replace) {\n \n}",
+    "solutions" : [ "void replace(char[] letters, char find, char replace) {\n    for(int i = 0; i < letters.length; i++)\n        if(letters[i] == find)\n            letters[i] = replace;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ "FOR" ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ "j", "a", "v", "a" ], "a", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ "j", "i", "v", "i" ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ ], "a", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "j", "a", "v", "a" ], "e", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ "j", "a", "v", "a" ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "replaceFirst",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>primeira</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceFirst</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; ['j', 'i', 'v', 'a']</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "void replaceFirst(char[] letters, char find, char replace) {\n    for(int i = 0; i < letters.length; i++)\n        if(letters[i] == find) {\n            letters[i] = replace;\n            return;\n        }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ "j", "a", "v", "a" ], "a", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ "j", "i", "v", "a" ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "j", "a", "v", "a" ], "j", "c" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ "c", "a", "v", "a" ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "j", "a", "v", "a" ], "e", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ "j", "a", "v", "a" ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "replaceLast",
+    "type" : "JFUNCTION",
+    "description" : "<div> Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>última</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceLast</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; ['j', 'a', 'v', 'i']</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "void replaceLast(char[] letters, char find, char replace) {\n    for(int i = letters.length - 1 ; i >= 0; i--)\n        if(letters[i] == find) {\n            letters[i] = replace;\n            return;\n        }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ "j", "a", "v", "a" ], "a", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ "j", "a", "v", "i" ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ ], "a", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "j", "a", "v", "a" ], "e", "i" ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ "j", "a", "v", "a" ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "constrain",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva um procedimento para restringir os valores de um vetor de números reais\na um intervalo dado. Todos os números que não pertençam ao intervalo serão\nsubstituídos pelo mínimo/máximo do intervalo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"constrain([-1.3, 0.4, 1.4, 0.5], 0.0, 1.0)\"'>constrain</a>([-1.3, 0.4, 1.4, 0.5], 0.0, 1.0) &rlarr; [0.0, 0.4, 1.0, 0.5]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "void constrain(double[] array, double min, double max) {\n    for(int i = 0; i < array.length; i++)\n        if(array[i] < min)\n            array[i] = min;\n        else if(array[i] > max)\n            array[i] = max;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ -1.3, 0.4, 1.4, 0.5 ], 0.0, 1.0 ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 0.0, 0.4, 1.0, 0.5 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ 0.3, 0.4, 1.0, 0.5 ], 0.0, 1.0 ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 0.3, 0.4, 1.0, 0.5 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ ], 0.0, 1.0 ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "arrayOrder",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva dois procedimentos que modificam a ordem dos elementos de um vetor\nde inteiros:<br><code>swap</code>: trocar duas posições (<code>i</code>, <code>j</code>) do vetor;<br><code>invert</code>: inverte a ordem dos elementos (obrigatório utilizar <code>swap</code>);</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"swap([5, 6, 7, 8], 0, 3)\"'>swap</a>([5, 6, 7, 8], 0, 3) &rlarr; [8, 6, 7, 5]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"invert([2, 4, 6, 8])\"'>invert</a>([2, 4, 6, 8]) &rlarr; [8, 6, 4, 2]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : " class ArrayOrder {\n    static void swap(int[] array, int i, int j) {\n\n    }\n}",
+    "solutions" : [ "class ArrayOrder {\n    static void swap(int[] array, int i, int j) {\n        assert i >= 0 && i < array.length;\n        assert j >= 0 && j < array.length;\n    \n        if(i != j) {\n            int t = array[i];\n            array[i] = array[j];\n            array[j] = t;\n        }\n    }\n    \n    static void invert(int[] array) {\n        for(int i = 0; i < array.length / 2; i++)\n            swap(array, i, array.length - 1 - i);\n    }\n}" ],
+    "freezeTop" : 2,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "swap",
+      "args" : [ [ 1, 2, 3, 4 ], 1, 3 ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 1, 4, 3, 2 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "swap",
+      "args" : [ [ 1, 2, 3, 4 ], 0, 3 ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 4, 2, 3, 1 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "invert",
+      "args" : [ [ 1, 2, 3, 4 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 4, 3, 2, 1 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "module" : null,
+        "procedure" : "swap",
+        "count" : 2
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    }, {
+      "name" : "invert",
+      "args" : [ [ ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "module" : null,
+        "procedure" : "swap",
+        "count" : 0
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "shuffle",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva dois procedimentos utilizando <code>ArrayOrder.</code><code>swap</code> e funções do módulo <code>RandomInts</code>:<br><code>randomSwap</code>: troca duas posições aleatórias do vetor<br><code>suffle</code>: baralha o vetor utilizando o <a target='_blank' href='https://docs.google.com/presentation/d/e/2PACX-1vRvsIHQAtv96fhEDT2B4R2aFa0j2fkDxHbm8SYjZfxT4OadYsdhgpAxNPuVfHyJDZroRzc165FQtUMa/pub?start=false&loop=false&delayms=3000&slide=20'>algoritmo de Fisher-Yates</a></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"randomSwap([5, 6, 7, 8])\"'>randomSwap</a>([5, 6, 7, 8]) &rarr; [5, 8, 7, 6]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"shuffle([1, 2, 3, 4, 5, 6])\"'>shuffle</a>([1, 2, 3, 4, 5, 6]) &rarr; [5, 1, 2, 4, 6, 3]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "class ArrayShuffle {\n    static void randomSwap(int[] array) {\n        int i = RandomInts.randomUntil(array.length);\n        int j = RandomInts.randomUntil(array.length);\n        ArrayOrder.swap(array, i, j);\n    }\n    \n    static void shuffle(int[] array) {\n        for(int i = array.length - 1; i > 0; i--) {\n            int r = RandomInts.randomWithin(0, i);\n            ArrayOrder.swap(array, r, i);\n        }\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ {
+      "module" : null,
+      "exercise" : "arrayOrder"
+    }, {
+      "module" : "week3",
+      "exercise" : "randomInts"
+    } ],
+    "tests" : [ {
+      "name" : "randomSwap",
+      "args" : [ [ 1, 2, 3, 4, 5 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "samevalues",
+          "list" : [ 1, 2, 3, 4, 5 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "module" : "ArrayOrder",
+        "procedure" : "swap",
+        "count" : 1
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    }, {
+      "name" : "shuffle",
+      "args" : [ [ 1, 2, 3, 4, 5 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "samevalues",
+          "list" : [ 1, 2, 3, 4, 5 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "module" : "ArrayOrder",
+        "procedure" : "swap",
+        "count" : 4
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  }, {
+    "id" : "arrayShift",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva dois procedimentos que modificam a ordem dos elementos de um vetor\nde inteiros:<br><code>shiftLeft</code>: todos os elementos passam uma posição para a esquerda\n(o primeiro vai para a última posição);<br><code>shiftRight</code>: todos os elementos passam uma posição para a direira \n(o último vai para a primeira posição).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"shiftLeft([2, 4, 6, 8])\"'>shiftLeft</a>([2, 4, 6, 8]) &rlarr; [4, 6, 8, 2]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"shiftRight([2, 4, 6, 8])\"'>shiftRight</a>([2, 4, 6, 8]) &rlarr; [8, 2, 4, 6]</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "class ArrayShift {\n    static void shiftLeft(int[] array) {\n        if(array.length == 0)\n            return;\n            \n        int first = array[0];\n        for(int i = 0; i < array.length - 1; i++)\n            array[i] = array[i + 1];\n        \n        array[array.length - 1] = first;\n    }\n    \n    static void shiftRight(int[] array) {\n        if(array.length == 0)\n            return;\n            \n        int last = array[array.length - 1];\n        for(int i = array.length - 1; i > 0; i--)\n            array[i] = array[i - 1];\n        \n        array[0] = last;\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "shiftLeft",
+      "args" : [ [ 1, 2, 3, 4 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 2, 3, 4, 1 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "shiftLeft",
+      "args" : [ [ 5, 6, 7, 8 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 6, 7, 8, 5 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "shiftRight",
+      "args" : [ [ 1, 2, 3, 4 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 4, 1, 2, 3 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "shiftRight",
+      "args" : [ [ 5, 6, 7, 8 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 8, 5, 6, 7 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "bubbleSort",
+    "type" : "JCLASS",
+    "description" : "<div>Escreva um procedimento para ordenar um vetor de inteiros de forma crescente através\ndo <a target='_blank' href='https://docs.google.com/presentation/d/e/2PACX-1vRvsIHQAtv96fhEDT2B4R2aFa0j2fkDxHbm8SYjZfxT4OadYsdhgpAxNPuVfHyJDZroRzc165FQtUMa/pub?start=false&loop=false&delayms=3000&slide=21'>algoritmo Bubble Sort</a>.\nÉ ogrigatório que a implementação utilize <code>ArrayOrder.</code><code>swap.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"shuffle([3, 6, 3, 1, 4])\"'>shuffle</a>([3, 6, 3, 1, 4]) &rarr; [1, 3, 3, 4, 6]</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "class ArraySort {\n    static void bubbleSort(int[] array) {\n        for(int j = array.length - 1; j > 0; j--)\n            for(int i = 0; i < j; i++)\n                if(array[i] > array[i + 1])\n                    ArrayOrder.swap(array, i, i + 1);\n    }\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ {
+      "module" : null,
+      "exercise" : "arrayOrder"
+    } ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ 3, 6, 3, 1, 4 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 1, 3, 3, 4, 6 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ {
+        "module" : "ArrayOrder",
+        "procedure" : "swap",
+        "count" : 5
+      } ],
+      "checkVars" : [ ],
+      "needsListener" : true
+    } ]
+  } ]
+}
