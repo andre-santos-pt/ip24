@@ -71,9 +71,9 @@
   }, {
     "id" : "whileToFor",
     "type" : "JSCRIPT",
-    "description" : "<div>O seguinte ciclo faz com que a variável <code>i</code>\ntome os valores 1, 2, 3, 4, 5, acumulando os mesmos na variável <code>s.</code>\nAltere o código por forma a manter este comportamento utilizando o ciclo <code>for.</code></div>\n",
+    "description" : "<div>O seguinte ciclo faz com que a variável <code>s</code>\nacumule os valores 1, 2, 3, 4, 5, terminando com o valor 15.\nAltere o código por forma a manter este comportamento utilizando o ciclo <code>for.</code></div>\n",
     "required" : true,
-    "startCode" : "int i = 1;\nint s = 0;\nwhile(i <= 5) {\n    s += i;\n    i++;\n}",
+    "startCode" : "int s = 0;\nint i = 1;\nwhile(i <= 5) {\n    s += i;\n    i++;\n}",
     "solutions" : [ "int s = 0;\nfor(int i = 1; i <= 5; i++) {\n    s += i;\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
