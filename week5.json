@@ -143,7 +143,7 @@
   }, {
     "id" : "invertBooleanValues",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva um procedimento para inverter os valores de um vetor de booleanos.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invertValues([false, true])\"'>invertValues</a>([false, true]) &rlarr; [true, false]</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um procedimento para inverter os valores de um vetor de booleanos.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invertValues([false, true, true, true])\"'>invertValues</a>([false, true, true, true]) &rlarr; [true, false, false, false]</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "void invertValues(boolean[] array) {\n    for(int i = 0; i < array.length; i++)\n        array[i] = !array[i];\n}" ],
@@ -673,6 +673,25 @@
       "checkVars" : [ ],
       "needsListener" : false
     }, {
+      "name" : "shiftLeft",
+      "args" : [ [ 5, 6 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 6, 5 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
       "name" : "shiftRight",
       "args" : [ [ 1, 2, 3, 4 ] ],
       "expected" : {
@@ -702,6 +721,25 @@
         "expected" : {
           "type" : "result",
           "value" : [ 8, 5, 6, 7 ]
+        },
+        "paramIndex" : 0
+      } ],
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "shiftRight",
+      "args" : [ [ 5, 6 ] ],
+      "expected" : {
+        "type" : "noreturn",
+        "type" : "noreturn"
+      },
+      "sideEffects" : [ {
+        "expected" : {
+          "type" : "result",
+          "value" : [ 6, 5 ]
         },
         "paramIndex" : 0
       } ],
