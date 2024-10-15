@@ -368,7 +368,7 @@
       "needsListener" : false
     }, {
       "name" : null,
-      "args" : [ [ "j", "a", "v", "a" ], "e", "i" ],
+      "args" : [ [ "j", "a", "v", "a" ], "j", "c" ],
       "expected" : {
         "type" : "noreturn",
         "type" : "noreturn"
@@ -376,7 +376,7 @@
       "sideEffects" : [ {
         "expected" : {
           "type" : "result",
-          "value" : [ "j", "a", "v", "a" ]
+          "value" : [ "c", "a", "v", "a" ]
         },
         "paramIndex" : 0
       } ],
