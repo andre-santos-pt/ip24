@@ -192,7 +192,7 @@
   }, {
     "id" : "isPerfectSquare",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para verificar se um número inteiro é um quadrado perfeito\n(i.e. a sua raiz quadrada é um número inteiro). Para tal, podem ser utilizadas\nas funções <code>sqrt</code> e <code>floor</code> do módulo <code>Math</code>, para calcular a raiz quadrada e\no piso de um número real.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"Math.sqrt(9)\"'>Math.sqrt</a>(9) &rarr; 3.0</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"Math.floor(3.2)\"'>Math.floor</a>(3.2) &rarr; 3.0</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função para verificar se um número inteiro é um quadrado perfeito\n(i.e. a sua raiz quadrada é um número inteiro). Para tal, podem ser utilizadas\nas funções <code>sqrt</code> e <code>floor</code> do módulo <code>Math</code>, para calcular a raiz quadrada e\no piso de um número real.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li>Math.<a href=\"#\" class=\"example\" invocation=\"Math.sqrt(9)\"'>sqrt</a>(9) &rarr; 3.0</li>\n    <li>Math.<a href=\"#\" class=\"example\" invocation=\"Math.floor(3.2)\"'>floor</a>(3.2) &rarr; 3.0</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "boolean isPerfectSquare(int n) {\n\n}",
     "solutions" : [ "boolean isPerfectSquare(int n) {\n     double sqrt = Math.sqrt(n);\n     return sqrt == Math.floor(sqrt);\n }" ],

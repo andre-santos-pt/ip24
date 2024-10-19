@@ -950,7 +950,7 @@
   }, {
     "id" : "nextLetter",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('c')\"'>nextLetter</a>('c') &rarr; d</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('z')\"'>nextLetter</a>('z') &rarr; a</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('c')\"'>nextLetter</a>('<a href=\"#\" class=\"example\" invocation=\"nextLetter('c')\"'>c</a>') &rarr; d</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('z')\"'>nextLetter</a>('<a href=\"#\" class=\"example\" invocation=\"nextLetter('z')\"'>z</a>') &rarr; a</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "char nextLetter(char l) {\n     if(l == 'z') {\n         return 'a';\n     }\n     else {\n         return (char) (l + 1);\n     }\n}" ],
