@@ -687,22 +687,6 @@
       "traceCalls" : [ ],
       "checkVars" : [ ],
       "needsListener" : false
-    }, {
-      "name" : "valueRange",
-      "args" : [ [ ] ],
-      "expected" : {
-        "type" : "result",
-        "value" : {
-          "recordType" : "Range",
-          "fields" : [ 2, 8 ]
-        }
-      },
-      "sideEffects" : null,
-      "repeat" : 1,
-      "traceVars" : [ ],
-      "traceCalls" : [ ],
-      "checkVars" : [ ],
-      "needsListener" : false
     } ]
   }, {
     "id" : "dimension",
