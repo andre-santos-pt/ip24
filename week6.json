@@ -717,7 +717,243 @@
     "include" : [ ],
     "importCode" : null,
     "importExercises" : [ ],
-    "tests" : [ ]
+    "tests" : [ {
+      "name" : "area",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : 200
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "area",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 10, 5 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : 50
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "perimeter",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : 60
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "perimeter",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 5, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : 30
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isSquare",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isSquare",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 10, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isVertical",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isVertical",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 10, 15 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isHorizontal",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isHorizontal",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 10, 15 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "largerThan",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      }, {
+        "recordType" : "Dimension",
+        "fields" : [ 15, 10 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "largerThan",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      }, {
+        "recordType" : "Dimension",
+        "fields" : [ 15, 20 ]
+      } ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "scale",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      }, 3 ],
+      "expected" : {
+        "type" : "result",
+        "value" : {
+          "recordType" : "Dimension",
+          "fields" : [ 60, 30 ]
+        }
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "scale",
+      "args" : [ {
+        "recordType" : "Dimension",
+        "fields" : [ 20, 10 ]
+      }, 1 ],
+      "expected" : {
+        "type" : "result",
+        "value" : {
+          "recordType" : "Dimension",
+          "fields" : [ 20, 10 ]
+        }
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
   }, {
     "id" : "position",
     "type" : "JCLASS",
@@ -939,7 +1175,7 @@
   }, {
     "id" : "positionUtil",
     "type" : "JCLASS",
-    "description" : "<div>Escreva um módulo com três funções envolvendo vetores de <code>Position</code>:<br><code>diagonal</code>: devolve <em>n</em> posições da diagonal de uma grelha,\ncomeçando em (0, 0);<br><code>positions</code>: dada uma dimensão (<code>Dimension</code>) de uma grelha, devolve um vetor com as posições\nválidas linha por linha;<br><code>contains</code>: verifica se uma posição existe num dado vetor de posições (utilizar <code>equals</code> para a verificação de igualdade);</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"diagonal(3)\"'>diagonal</a>(3) &rarr; [Position(0, 0), Position(1, 1), Position(2, 2)]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"positions(new Dimension(3, 2))\"'>positions</a>(new Dimension(3, 2)) &rarr; [Position(0, 0), Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 0), Position(2, 1)]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"contains([new Position(1, 2), new Position(3, 2), new Position(1, 1)], new Position(3, 2))\"'>contains</a>([new Position(1, 2), new Position(3, 2), new Position(1, 1)], new Position(3, 2)) &rarr; true</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um módulo com três funções envolvendo vetores de <code>Position</code>:<br><code>diagonal</code>: devolve <em>n</em> posições da diagonal de uma grelha,\ncomeçando em (0, 0);<br><code>positions</code>: dada uma dimensão (<code>Dimension</code>) de uma grelha, devolve um vetor com as posições\nválidas linha por linha;<br><code>contains</code>: verifica se uma posição existe num dado vetor de posições (utilizar <code>equals</code> para a verificação de igualdade);</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"diagonal(3)\"'>diagonal</a>(3) &rarr; [Position(0, 0), Position(1, 1), Position(2, 2)]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"positions(new Dimension(3, 2))\"'>positions</a>(new Dimension(3, 2)) &rarr; [Position(0, 0), Position(0, 1), Position(0, 2), Position(1, 0), Position(1, 1), Position(1, 2)]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"contains([new Position(1, 2), new Position(3, 2), new Position(1, 1)], new Position(3, 2))\"'>contains</a>([new Position(1, 2), new Position(3, 2), new Position(1, 1)], new Position(3, 2)) &rarr; true</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "class PositionUtil {\n   static Position[] diagonal(int n) {\n       assert n >= 0;\n       Position[] diagonal = new Position[n];\n       for(int i = 0; i < n; i++)\n           diagonal[i] = new Position(i, i);\n       return diagonal;\n   }\n   \n   static Position[] positions(Dimension dimension) {\n       Position[] positions = new Position[dimension.area()];\n       for(int i = 0; i < positions.length; i++)\n           positions[i] = new Position(i / dimension.width(), i % dimension.width());\n       return positions;\n   }\n   \n   static boolean contains(Position[] positions, Position p) {\n       for(int i = 0; i < positions.length; i++)\n           if(positions[i].equals(p))\n               return true;\n       return false;\n   }\n}" ],
