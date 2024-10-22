@@ -191,7 +191,7 @@
         "type" : "result",
         "value" : {
           "recordType" : "Range",
-          "fields" : [ 1, 8 ]
+          "fields" : [ 1, 5 ]
         }
       },
       "sideEffects" : null,
@@ -511,7 +511,7 @@
         "type" : "result",
         "value" : {
           "recordType" : "Range",
-          "fields" : [ 1, 8 ]
+          "fields" : [ 1, 5 ]
         }
       },
       "sideEffects" : null,
@@ -679,6 +679,22 @@
         "value" : {
           "recordType" : "Range",
           "fields" : [ 0, 2 ]
+        }
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "valueRange",
+      "args" : [ [ 1, 2, 7, 5, 5, 9 ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : {
+          "recordType" : "Range",
+          "fields" : [ 1, 9 ]
         }
       },
       "sideEffects" : null,
@@ -926,7 +942,7 @@
     "description" : "<div>Escreva um módulo com três funções envolvendo vetores de <code>Position</code>:<br><code>diagonal</code>: devolve <em>n</em> posições da diagonal de uma grelha,\ncomeçando em (0, 0);<br><code>positions</code>: dada uma dimensão (<code>Dimension</code>) de uma grelha, devolve um vetor com as posições\nválidas linha por linha;<br><code>contains</code>: verifica se uma posição existe num dado vetor de posições (utilizar <code>equals</code> para a verificação de igualdade);</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"diagonal(3)\"'>diagonal</a>(3) &rarr; [Position(0, 0), Position(1, 1), Position(2, 2)]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"positions(new Dimension(3, 2))\"'>positions</a>(new Dimension(3, 2)) &rarr; [Position(0, 0), Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 0), Position(2, 1)]</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"contains([new Position(1, 2), new Position(3, 2), new Position(1, 1)], new Position(3, 2))\"'>contains</a>([new Position(1, 2), new Position(3, 2), new Position(1, 1)], new Position(3, 2)) &rarr; true</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
-    "solutions" : [ "class PositionUtil {\n   static Position[] diagonal(int n) {\n       assert n >= 0;\n       Position[] diagonal = new Position[n];\n       for(int i = 0; i < n; i++)\n           diagonal[i] = new Position(i, i);\n       return diagonal;\n   }\n   \n   static Position[] positions(Dimension dimension) {\n       Position[] positions = new Position[dimension.area()];\n       for(int l = 0; l < dimension.height(); l++)\n           for(int c = 0; c < dimension.width(); c++)\n               positions[l * dimension.width() + c] = new Position(l, c);\n       return positions;\n   }\n   \n   static boolean contains(Position[] positions, Position p) {\n       for(int i = 0; i < positions.length; i++)\n           if(positions[i].equals(p))\n               return true;\n       return false;\n   }\n}" ],
+    "solutions" : [ "class PositionUtil {\n   static Position[] diagonal(int n) {\n       assert n >= 0;\n       Position[] diagonal = new Position[n];\n       for(int i = 0; i < n; i++)\n           diagonal[i] = new Position(i, i);\n       return diagonal;\n   }\n   \n   static Position[] positions(Dimension dimension) {\n       Position[] positions = new Position[dimension.area()];\n       for(int i = 0; i < positions.length; i++)\n           positions[i] = new Position(i / dimension.width(), i % dimension.width());\n       return positions;\n   }\n   \n   static boolean contains(Position[] positions, Position p) {\n       for(int i = 0; i < positions.length; i++)\n           if(positions[i].equals(p))\n               return true;\n       return false;\n   }\n}" ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
     "exclude" : [ ],
@@ -946,13 +962,13 @@
         "type" : "result",
         "value" : [ {
           "recordType" : "Position",
+          "fields" : [ 0, 0 ]
+        }, {
+          "recordType" : "Position",
           "fields" : [ 1, 1 ]
         }, {
           "recordType" : "Position",
           "fields" : [ 2, 2 ]
-        }, {
-          "recordType" : "Position",
-          "fields" : [ 3, 3 ]
         } ]
       },
       "sideEffects" : null,
@@ -968,7 +984,7 @@
         "type" : "result",
         "value" : [ {
           "recordType" : "Position",
-          "fields" : [ 1, 1 ]
+          "fields" : [ 0, 0 ]
         } ]
       },
       "sideEffects" : null,
@@ -1006,16 +1022,16 @@
           "fields" : [ 0, 1 ]
         }, {
           "recordType" : "Position",
-          "fields" : [ 0, 2 ]
-        }, {
-          "recordType" : "Position",
           "fields" : [ 1, 0 ]
         }, {
           "recordType" : "Position",
           "fields" : [ 1, 1 ]
         }, {
           "recordType" : "Position",
-          "fields" : [ 1, 2 ]
+          "fields" : [ 2, 0 ]
+        }, {
+          "recordType" : "Position",
+          "fields" : [ 2, 1 ]
         } ]
       },
       "sideEffects" : null,
@@ -1037,10 +1053,10 @@
           "fields" : [ 0, 0 ]
         }, {
           "recordType" : "Position",
-          "fields" : [ 1, 0 ]
+          "fields" : [ 0, 1 ]
         }, {
           "recordType" : "Position",
-          "fields" : [ 2, 0 ]
+          "fields" : [ 0, 2 ]
         } ]
       },
       "sideEffects" : null,
@@ -1059,10 +1075,10 @@
         "type" : "result",
         "value" : [ {
           "recordType" : "Position",
-          "fields" : [ 0, 1 ]
+          "fields" : [ 0, 0 ]
         }, {
           "recordType" : "Position",
-          "fields" : [ 0, 2 ]
+          "fields" : [ 1, 0 ]
         } ]
       },
       "sideEffects" : null,
