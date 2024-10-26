@@ -8,7 +8,7 @@
   "exercises" : [ {
     "id" : "abs",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função <code>abs</code> para obter o valor absoluto de um número real,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"abs(2.8)\"'>abs</a>(2.8) &rarr; 2.8</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"abs(-1.3)\"'>abs</a>(-1.3) &rarr; 1.3</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função <code>abs</code> para obter o valor absoluto de um número real,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"abs(2.8)\"'>abs</a>(2.8) &rarr; &quot;2.8&quot;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"abs(-1.3)\"'>abs</a>(-1.3) &rarr; &quot;1.3&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "double abs(double n) {\n\n}",
     "solutions" : [ "double abs(double n) {\n     if(n < 0) {\n         return -n;\n     }\n     else {\n         return n;\n     }\n }" ],
@@ -61,7 +61,7 @@
   }, {
     "id" : "max",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que devolve o maior valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"max(2, 8)\"'>max</a>(2, 8) &rarr; 8</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"max(5, 1)\"'>max</a>(5, 1) &rarr; 5</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que devolve o maior valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"max(2, 8)\"'>max</a>(2, 8) &rarr; &apos;8&apos;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"max(5, 1)\"'>max</a>(5, 1) &rarr; &apos;5&apos;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "int max(int a, int b) {\n    \n}",
     "solutions" : [ "int max(int a, int b) {\n   if(a > b) {\n       return a;\n   }\n   else {\n       return b;\n   }\n}" ],
@@ -114,7 +114,7 @@
   }, {
     "id" : "min",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que devolve o menor valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"min(2, 8)\"'>min</a>(2, 8) &rarr; 2</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"min(3, 1)\"'>min</a>(3, 1) &rarr; 1</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que devolve o menor valor entre dois números inteiros,\nutilizando uma estrutura <code>if-else</code>.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"min(2, 8)\"'>min</a>(2, 8) &rarr; &apos;2&apos;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"min(3, 1)\"'>min</a>(3, 1) &rarr; &apos;1&apos;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int min(int a, int b) {\n   if(a < b) {\n       return a;\n   }\n   else {\n       return b;\n   }\n}" ],
@@ -451,7 +451,7 @@
   }, {
     "id" : "firstDigit",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um número natural e devolve \no primeiro algarismo do mesmo. O valor pode ser obtido \ndividindo sucessivamente por 10 (divisão inteira): ((2024 / 10 = 202) / 10 = 20) / 10 = <b>2</b>.\nUtilize um ciclo para efetuar o cálculo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"firstDigit(2024)\"'>firstDigit</a>(2024) &rarr; 2 (2024 / 10 / 10 / 10)</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um número natural e devolve \no primeiro algarismo do mesmo. O valor pode ser obtido \ndividindo sucessivamente por 10 (divisão inteira): ((2024 / 10 = 202) / 10 = 20) / 10 = <b>2</b>.\nUtilize um ciclo para efetuar o cálculo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"firstDigit(2024)\"'>firstDigit</a>(2024) &rarr; &quot;2 (2024 / 10 / 10 / 10)&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int firstDigit(int n) {\n     int d = n;\n     while(d >= 10) {\n         d = d / 10;\n     }\n     return d;\n}" ],
@@ -547,7 +547,7 @@
   }, {
     "id" : "sumNaturals",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um número natural <code>max</code> \ne devolve a soma dos números naturais [1, <code>max</code>], utilizando um ciclo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumNaturals(5)\"'>sumNaturals</a>(5) &rarr; 15</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um número natural <code>max</code> \ne devolve a soma dos números naturais [1, <code>max</code>], utilizando um ciclo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumNaturals(5)\"'>sumNaturals</a>(5) &rarr; &quot;15&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int sumNaturals(int max) {\n     int s = 0;\n     int n = 1;\n     while(n <= max) {\n         s = s + n;\n         n = n + 1;\n     }\n     return s;\n}" ],
@@ -643,7 +643,7 @@
   }, {
     "id" : "powerOfTwo",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe o expoente <code>e</code> como argumento \ne devolve a potência 2<sup><code>e</code></sup>. Assuma que o valor passado é número maior ou igual a zero.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"powerOfTwo(4)\"'>powerOfTwo</a>(4) &rarr; 16</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"powerOfTwo(8)\"'>powerOfTwo</a>(8) &rarr; 256</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe o expoente <code>e</code> como argumento \ne devolve a potência 2<sup><code>e</code></sup>. Assuma que o valor passado é número maior ou igual a zero.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"powerOfTwo(4)\"'>powerOfTwo</a>(4) &rarr; &quot;16&quot;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"powerOfTwo(8)\"'>powerOfTwo</a>(8) &rarr; &quot;256&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int powerOfTwo(int e) {\n     int p = 1;\n     int n = e;\n     while(n > 0) {\n         p = p * 2;\n         n = n - 1;\n     }\n     return p;\n}" ],
@@ -709,7 +709,7 @@
   }, {
     "id" : "isMultiple",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que permita verificar se um número inteiro positivo \né múltiplo de um outro número positivo, \nsem recorrer ao operador do resto da divisão (<code>%</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isMultiple(25, 5)\"'>isMultiple</a>(25, 5) &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isMultiple(27, 5)\"'>isMultiple</a>(27, 5) &rarr; false</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que permita verificar se um número inteiro positivo \né múltiplo de um outro número positivo, \nsem recorrer ao operador do resto da divisão (<code>%</code>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isMultiple(25, 5)\"'>isMultiple</a>(25, 5) &rarr; &quot;true&quot;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isMultiple(27, 5)\"'>isMultiple</a>(27, 5) &rarr; &quot;false&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "boolean isMultiple(int a, int b) {\n     int n = a;\n     while(n >= b) {\n         n = n - b;\n     }\n     return n == 0;\n}" ],
@@ -775,7 +775,7 @@
   }, {
     "id" : "intDivision",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função para obter o quociente da divisão inteira, \nsem recorrer ao operador de divisão (<code>/</code>). \nO valor pode ser obtido com uma contagem de subtrações sucessivas \ndo divisor ao dividendo. Para 19 / 6: ((19 <b>- 6</b> = 13) <b>- 6</b>) = 7) <b>- 6</b>\n(as 3 subtrações correspondem ao resultado da divisão inteira).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"intDivision(15, 3)\"'>intDivision</a>(15, 3) &rarr; 5</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"intDivision(19, 6)\"'>intDivision</a>(19, 6) &rarr; 3</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função para obter o quociente da divisão inteira, \nsem recorrer ao operador de divisão (<code>/</code>). \nO valor pode ser obtido com uma contagem de subtrações sucessivas \ndo divisor ao dividendo. Para 19 / 6: ((19 <b>- 6</b> = 13) <b>- 6</b>) = 7) <b>- 6</b>\n(as 3 subtrações correspondem ao resultado da divisão inteira).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"intDivision(15, 3)\"'>intDivision</a>(15, 3) &rarr; &apos;5&apos;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"intDivision(19, 6)\"'>intDivision</a>(19, 6) &rarr; &apos;3&apos;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int intDivision(int a, int b) {\n     int n = a;\n     int d = 0;\n     while(n >= b) {\n         n = n - b;\n         d = d + 1;\n     }\n     return d;\n}" ],
@@ -871,7 +871,7 @@
   }, {
     "id" : "sumEvenBetween",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento dois números naturais <code>min</code> e <code>max</code> e \ndevolve a soma dos números naturais pares compreendidos no intervalo [<code>min</code>, <code>max</code>].</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumEvenBetween(2, 8)\"'>sumEvenBetween</a>(2, 8) &rarr; 20 (2 + 4 + 6 + 8)</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumEvenBetween(3, 9)\"'>sumEvenBetween</a>(3, 9) &rarr; 18 (4 + 6 + 8)</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento dois números naturais <code>min</code> e <code>max</code> e \ndevolve a soma dos números naturais pares compreendidos no intervalo [<code>min</code>, <code>max</code>].</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumEvenBetween(2, 8)\"'>sumEvenBetween</a>(2, 8) &rarr; &quot;20 (2 + 4 + 6 + 8)&quot;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"sumEvenBetween(3, 9)\"'>sumEvenBetween</a>(3, 9) &rarr; &quot;18 (4 + 6 + 8)&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "int sumEvenBetween(int min, int max) {\n     int s = 0;\n     int n = min;\n     if(n % 2 != 0) {\n         n = n + 1;\n     }\n     while(n <= max) {\n         s = s + n;\n         n = n + 2;\n     }\n     return s;\n}" ],
@@ -950,7 +950,7 @@
   }, {
     "id" : "nextLetter",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('c')\"'>nextLetter</a>('<a href=\"#\" class=\"example\" invocation=\"nextLetter('c')\"'>c</a>') &rarr; d</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('z')\"'>nextLetter</a>('<a href=\"#\" class=\"example\" invocation=\"nextLetter('z')\"'>z</a>') &rarr; a</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função que dada uma letra é devolvida a letra seguinte no alfabeto, \nconsiderando que o alfabeto é circular (depois do <em>z</em> vem o <em>a</em>).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('c')\"'>nextLetter</a>('c') &rarr; &apos;d&apos;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"nextLetter('z')\"'>nextLetter</a>('z') &rarr; &apos;a&apos;</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "char nextLetter(char l) {\n     if(l == 'z') {\n         return 'a';\n     }\n     else {\n         return (char) (l + 1);\n     }\n}" ],
@@ -1069,7 +1069,7 @@
   }, {
     "id" : "invertInt",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para inverter um número inteiro.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invert(1234)\"'>invert</a>(1234) &rarr; 4321</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função para inverter um número inteiro.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invert(1234)\"'>invert</a>(1234) &rarr; &quot;4321&quot;</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "int invert(int n) {\n    int inv = 0;\n    int d = n;\n    while(d > 0) {\n        inv = inv * 10;\n        inv = inv + d % 10;\n        d = d / 10;\n    }\n    return inv;\n}" ],
@@ -1122,7 +1122,7 @@
   }, {
     "id" : "fibonacci",
     "type" : "JFUNCTION",
-    "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"fib(0)\"'>fib</a>(0) &rarr; 0</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"fib(7)\"'>fib</a>(7) &rarr; 13</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Defina uma função que recebe como argumento um índice <code>n</code> e devolve o \nn-ésimo número da sequência de Fibonacci (sendo zero o primeiro índice). \nOs primeiros números da sequência de Fibonacci são: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"fib(0)\"'>fib</a>(0) &rarr; 0</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"fib(7)\"'>fib</a>(7) &rarr; &quot;13&quot;</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "int fib(int n) {\n     if(n <= 1) {\n         return n;\n     }\n     int a = 0;\n     int b = 1;\n     int i = 2;\n     while(i != n) {\n         int t = a + b;\n         a = b;\n         b = t;\n         i = i + 1;\n     }\n     return a + b;\n}" ],

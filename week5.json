@@ -47,8 +47,8 @@
     "solutions" : [ "int n = 1;\nn += 2;\nn += 3;\nn += 4; " ],
     "freezeTop" : 0,
     "freezeBottom" : 0,
-    "exclude" : [ "RAW_ASSIGN", "INC" ],
-    "include" : [ "PLUSEQ" ],
+    "exclude" : [ ],
+    "include" : [ ],
     "importCode" : null,
     "importExercises" : [ ],
     "tests" : [ {
@@ -176,7 +176,7 @@
   }, {
     "id" : "replace",
     "type" : "JFUNCTION",
-    "description" : "<div>Complete o seguinte procedimento por forma a que todos os carateres do\nvetor passado na referência <code>letters</code> que sejam iguais a <code>find</code> sejam \nsubstituídos por <code>replace.</code> Utilize um ciclo <code>for.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replace(['A', 'B', 'B', 'A'],'B','C')\"'>replace</a>(['A', 'B', 'B', 'A'],'B','C') &rlarr; ['A', 'C', 'C', 'A']</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Complete o seguinte procedimento por forma a que todos os carateres do\nvetor passado na referência <code>letters</code> que sejam iguais a <code>find</code> sejam \nsubstituídos por <code>replace.</code> Utilize um ciclo <code>for.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replace(['A', 'B', 'B', 'A'],'B','C')\"'>replace</a>(['A', 'B', 'B', 'A'],'B','C') &rlarr; &quot;['A', 'C', 'C', 'A']&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "void replace(char[] letters, char find, char replace) {\n \n}",
     "solutions" : [ "void replace(char[] letters, char find, char replace) {\n    for(int i = 0; i < letters.length; i++)\n        if(letters[i] == find)\n            letters[i] = replace;\n}" ],
@@ -247,7 +247,7 @@
   }, {
     "id" : "replaceFirst",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>primeira</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceFirst</a>(['<a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>j</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>a</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>v</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>a</a>'], '<a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>a</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>i</a>') &rlarr; ['j', 'i', 'v', 'a']</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>primeira</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceFirst</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; &quot;['j', 'i', 'v', 'a']&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "void replaceFirst(char[] letters, char find, char replace) {\n    for(int i = 0; i < letters.length; i++)\n        if(letters[i] == find) {\n            letters[i] = replace;\n            return;\n        }\n}" ],
@@ -318,7 +318,7 @@
   }, {
     "id" : "replaceLast",
     "type" : "JFUNCTION",
-    "description" : "<div> Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>última</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceLast</a>(['<a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>j</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>a</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>v</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>a</a>'], '<a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>a</a>', '<a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>i</a>') &rlarr; ['j', 'a', 'v', 'i']</li>\n  </ul>\n</div>\n",
+    "description" : "<div> Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>última</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceLast</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; &quot;['j', 'a', 'v', 'i']&quot;</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "void replaceLast(char[] letters, char find, char replace) {\n    for(int i = letters.length - 1 ; i >= 0; i--)\n        if(letters[i] == find) {\n            letters[i] = replace;\n            return;\n        }\n}" ],

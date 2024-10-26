@@ -1,0 +1,525 @@
+{
+  "title" : "Strings",
+  "description" : "<div>\n  <p>\n            O objectivo deste módulo é dominar a utilização de <code>String</code>.\n            </p>\n</div>\n",
+  "links" : [ {
+    "label" : "java.lang.String",
+    "url" : "https://docs.oracle.com/javase/8/docs/api/?java/lang/String.html"
+  } ],
+  "exercises" : [ {
+    "id" : "countChar",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para contar quantas vezes um caracter ocorre numa string.<br>Neste exercício será útil invocar <code>length</code>() para obter o comprimento da string,\ne <code>charAt</code>(<em>index</em>) para obter o carater que está num dado índice (à semelhança dos vetores).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"count('C', &quot;ACDC&quot;)\"'>count</a>('C', \"ACDC\") &rarr; 2</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "int count(char c, String text) {\n\n}",
+    "solutions" : [ "int count(char c, String text) {\n    int counter = 0;\n    for(int i = 0; i < text.length(); i++)\n        if(text.charAt(i) == c)\n            counter++;\n\n    return counter;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "count",
+      "args" : [ "A", "ABBA" ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "count",
+      "args" : [ "C", "ABBA" ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "count",
+      "args" : [ "A", "" ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "allUpperCase",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para verificar se uma string apenas contém letras\nmaiúsculas. Para efeitos de simplificação, considere que uma letra maiúscula\nestá compreendida entre 'A' e 'Z' da tabela ASCII.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"allUpperCase(&quot;ACDC&quot;)\"'>allUpperCase</a>(\"ACDC\") &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"allUpperCase(&quot;Coldplay&quot;)\"'>allUpperCase</a>(\"Coldplay\") &rarr; false</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"allUpperCase(&quot;&quot;)\"'>allUpperCase</a>(\"\") &rarr; true</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "boolean allUpperCase(String text) {\n    for(int i = 0; i < text.length(); i++)\n        if(text.charAt(i) < 'A' || text.charAt(i) > 'Z')\n            return false;\n\n    return true;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "allUpperCase",
+      "args" : [ "ABBA" ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "allUpperCase",
+      "args" : [ "Queen" ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "allUpperCase",
+      "args" : [ "" ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "isWord",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>isWord</code> para verificar se uma string corresponde\na uma palavra (não é vazia, e apenas contém letras minúsculas ou maiúsculas).\nPara efeitos de simplificação, considere que as letras são as consecutivas\nda tabela ASCII ('a' a 'z', e 'A' a 'Z'). Poderá ser útil utilizar a\nfunção <code>isEmpty</code>().</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isWord(&quot;java&quot;)\"'>isWord</a>(\"java\") &rarr; true</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isWord(&quot;C Sharp&quot;)\"'>isWord</a>(\"C Sharp\") &rarr; false</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"isWord(&quot;&quot;)\"'>isWord</a>(\"\") &rarr; false</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "boolean isWord(String text) {\n    for(int i = 0; i < text.length(); i++)\n        if((text.charAt(i) < 'a' || text.charAt(i) > 'z') && (text.charAt(i) < 'A' || text.charAt(i) > 'Z'))\n            return false;\n\n    return !text.isEmpty();\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "isWord",
+      "args" : [ "ABBA" ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isWord",
+      "args" : [ "The Queen" ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isWord",
+      "args" : [ "" ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "isPalindromeString",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>isPalindrome</code> para verificar se uma string é um\npalíndromo.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"isPalindrome(&quot;sopapos&quot;)\"'>isPalindrome</a>(\"sopapos\") &rarr; true</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "boolean isPalindrome(String word) {\n    for(int i = 0; i < word.length() / 2; i++)\n        if(word.charAt(i) != word.charAt(word.length() - 1 - i))\n            return false;\n    return true;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "isPalindrome",
+      "args" : [ "ABBA" ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isPalindrome",
+      "args" : [ "java" ],
+      "expected" : {
+        "type" : "result",
+        "value" : false
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "isPalindrome",
+      "args" : [ "o" ],
+      "expected" : {
+        "type" : "result",
+        "value" : true
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "countWords",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para contar quantas palavras tem uma string,\nconsiderando para simplificação que os espaços em branco são a única \nseparação entre palavras possível.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"countWords(&quot;a introdução à   programação&quot;)\"'>countWords</a>(\"a introdução à   programação\") &rarr; 4</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"countWords(&quot;um   e dois  &quot;)\"'>countWords</a>(\"um   <a href=\"#\" class=\"example\" invocation=\"countWords(&quot;um   e dois  &quot;)\"'>e</a> <a href=\"#\" class=\"example\" invocation=\"countWords(&quot;um   e dois  &quot;)\"'>dois</a>  \") &rarr; 3</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "int countWords(String text) {\n    if(text.isEmpty())\n        return 0;\n    int count = 0;\n    for(int i = 1; i < text.length(); i++)\n        if(text.charAt(i) == ' ' && text.charAt(i-1) != ' ')\n            count++;\n    \n    if(text.charAt(text.length() - 1) != ' ')\n        count++;\n    return count;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ "a introdução à   programação" ],
+      "expected" : {
+        "type" : "result",
+        "value" : 4
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ " um   dois  " ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ "um" ],
+      "expected" : {
+        "type" : "result",
+        "value" : 1
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ "" ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ "    " ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "wrap",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para embrulhar uma string num par de carateres (ver exemplos).\nSe for fornecido um dos três carateres de parênteses, será devolvida a string\nembrulhada com o caracter de abrir e fechar. Se se tratar de outro caracter (quarto exemplo),\no mesmo é repetido na abertura e fecho.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"wrap(&quot;test&quot;, '(')\"'>wrap</a>(\"test\", '(') &rarr; &quot;(test)&quot;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"wrap(&quot;test&quot;, '[')\"'>wrap</a>(\"test\", '[') &rarr; &quot;[test]&quot;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"wrap(&quot;test&quot;, '{')\"'>wrap</a>(\"test\", '{') &rarr; &quot;{test}&quot;</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"wrap(&quot;test&quot;, '|')\"'>wrap</a>(\"test\", '|') &rarr; &quot;|test|&quot;</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "String wrap(String text, char symbol) {\n    if(symbol == '(')\n        return \"(\" + text + \")\";\n    else if(symbol == '[')\n        return \"[\" + text + \"]\";\n    else if(symbol == '{')\n        return \"{\" + text + \"}\";\n    else\n        return symbol + text + symbol;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ "ups", "(" ],
+      "expected" : {
+        "type" : "result",
+        "value" : "(ups)"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ "", "[" ],
+      "expected" : {
+        "type" : "result",
+        "value" : "[]"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ "1, 2, 3", "{" ],
+      "expected" : {
+        "type" : "result",
+        "value" : "{1, 2, 3}"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ "?", "-" ],
+      "expected" : {
+        "type" : "result",
+        "value" : "-?-"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "countString",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>count</code> para contar quantas vezes uma string <code>s</code> ocorre\nnum vetor de strings. A verificação de igualdade deve ser feita \natravés da função <code>equals</code> (à semelhança dos valores compostos).</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"count(&quot;um&quot;, [&quot;um&quot;, &quot;dois&quot;, &quot;um&quot;])\"'>count</a>(\"um\", [\"um\", \"dois\", \"um\"]) &rarr; 2</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : "int count(String s, String[] array) {\n\n}",
+    "solutions" : [ "int count(String s, String[] array) {\n    int c = 0;\n    for(int i = 0; i < array.length; i++)\n        if(array[i].equals(s))\n           c++;\n    return c;\n}" ],
+    "freezeTop" : 1,
+    "freezeBottom" : 1,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "count",
+      "args" : [ "um", [ "um", "dois", "um" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 2
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "count",
+      "args" : [ "três", [ "um", "dois", "um" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "count",
+      "args" : [ "um", [ ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : 0
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "largestString",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função para obter a string com maior comprimento de um\nvetor de strings.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"largest([&quot;java&quot;, &quot;python&quot;, &quot;c&quot;])\"'>largest</a>([\"java\", \"python\", \"c\"]) &rarr; &quot;python&quot;</li>\n  </ul>\n</div>\n",
+    "required" : true,
+    "startCode" : null,
+    "solutions" : [ "String largest(String[] array) {\n    assert array.length > 0;\n    String largest = array[0];\n    for(int i = 1; i < array.length; i++)\n        if(array[i].length() > largest.length())\n            largest = array[i];\n    return largest;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : null,
+      "args" : [ [ "java", "python", "c" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : "python"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "java", "c", "python" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : "python"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : null,
+      "args" : [ [ "java" ] ],
+      "expected" : {
+        "type" : "result",
+        "value" : "java"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  }, {
+    "id" : "join",
+    "type" : "JFUNCTION",
+    "description" : "<div>Escreva uma função <code>join</code> que dado um vetor de strings e uma string\ncomo separador, devolve uma nova string que concatena os elementos do\nvetor utilizando o separador.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"join([&quot;java&quot;, &quot;python&quot;, &quot;kotlin&quot;], &quot;, &quot;)\"'>join</a>([\"java\", \"python\", \"kotlin\"], \", \") &rarr; &quot;java, python, kotlin&quot;</li>\n  </ul>\n</div>\n",
+    "required" : false,
+    "startCode" : null,
+    "solutions" : [ "String join(String[] elements, String separator) {\n    if(elements.length == 0)\n        return \"\";\n   \n    String join = elements[0];\n    for(int i = 1; i < elements.length; i++)\n        join += separator + elements[i]; \n    return join;\n}" ],
+    "freezeTop" : 0,
+    "freezeBottom" : 0,
+    "exclude" : [ ],
+    "include" : [ ],
+    "importCode" : null,
+    "importExercises" : [ ],
+    "tests" : [ {
+      "name" : "join",
+      "args" : [ [ "java", "python", "kotlin" ], ", " ],
+      "expected" : {
+        "type" : "result",
+        "value" : "java, python, kotlin"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "join",
+      "args" : [ [ "java", "python", "kotlin" ], "-" ],
+      "expected" : {
+        "type" : "result",
+        "value" : "java-python-kotlin"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    }, {
+      "name" : "join",
+      "args" : [ [ "java" ], ", " ],
+      "expected" : {
+        "type" : "result",
+        "value" : "java"
+      },
+      "sideEffects" : null,
+      "repeat" : 1,
+      "traceVars" : [ ],
+      "traceCalls" : [ ],
+      "checkVars" : [ ],
+      "needsListener" : false
+    } ]
+  } ]
+}
