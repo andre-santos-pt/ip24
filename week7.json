@@ -220,7 +220,7 @@
   }, {
     "id" : "countWords",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função para contar quantas palavras tem uma string,\nconsiderando para simplificação que os espaços em branco são a única \nseparação entre palavras possível.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"countWords(&quot;a introdução à   programação&quot;)\"'>countWords</a>(\"a introdução à   programação\") &rarr; 4</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"countWords(&quot;um   e dois  &quot;)\"'>countWords</a>(\"um   <a href=\"#\" class=\"example\" invocation=\"countWords(&quot;um   e dois  &quot;)\"'>e</a> <a href=\"#\" class=\"example\" invocation=\"countWords(&quot;um   e dois  &quot;)\"'>dois</a>  \") &rarr; 3</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função para contar quantas palavras tem uma string,\nconsiderando para simplificação que os espaços em branco são a única \nseparação entre palavras possível.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"countWords(&quot;a introdução à   programação&quot;)\"'>countWords</a>(\"a introdução à   programação\") &rarr; 4</li>\n    <li><a href=\"#\" class=\"example\" invocation=\"countWords(&quot;um   e dois  &quot;)\"'>countWords</a>(\"um   e dois  \") &rarr; 3</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "int countWords(String text) {\n    if(text.isEmpty())\n        return 0;\n    int count = 0;\n    for(int i = 1; i < text.length(); i++)\n        if(text.charAt(i) == ' ' && text.charAt(i-1) != ' ')\n            count++;\n    \n    if(text.charAt(text.length() - 1) != ' ')\n        count++;\n    return count;\n}" ],
@@ -471,7 +471,7 @@
   }, {
     "id" : "join",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva uma função <code>join</code> que dado um vetor de strings e uma string\ncomo separador, devolve uma nova string que concatena os elementos do\nvetor utilizando o separador.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"join([&quot;java&quot;, &quot;python&quot;, &quot;kotlin&quot;], &quot;, &quot;)\"'>join</a>([\"java\", \"python\", \"kotlin\"], \", \") &rarr; &quot;java, python, kotlin&quot;</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva uma função <code>join</code> que dado um vetor de strings e uma string\ncomo separador, devolve uma nova string que concatena os elementos do\nvetor utilizando o separador.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"join([&quot;java&quot;, &quot;python&quot;, &quot;kotlin&quot;], &quot;, &quot;)\"'>join</a>([\"java\", \"python\", \"kotlin\"], \", \") &rarr; &quot;java,&nbsp;python,&nbsp;kotlin&quot;</li>\n  </ul>\n</div>\n",
     "required" : false,
     "startCode" : null,
     "solutions" : [ "String join(String[] elements, String separator) {\n    if(elements.length == 0)\n        return \"\";\n   \n    String join = elements[0];\n    for(int i = 1; i < elements.length; i++)\n        join += separator + elements[i]; \n    return join;\n}" ],
