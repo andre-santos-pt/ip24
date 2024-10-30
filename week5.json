@@ -143,7 +143,7 @@
   }, {
     "id" : "invertBooleanValues",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva um procedimento para inverter os valores de um vetor de booleanos.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invertValues([false, true, true, true])\"'>invertValues</a>([<a href=\"#\" class=\"example\" invocation=\"invertValues([false, true, true, true])\"'>false</a>, <a href=\"#\" class=\"example\" invocation=\"invertValues([false, true, true, true])\"'>true</a>, <a href=\"#\" class=\"example\" invocation=\"invertValues([false, true, true, true])\"'>true</a>, <a href=\"#\" class=\"example\" invocation=\"invertValues([false, true, true, true])\"'>true</a>]) &rlarr; [true, false, false, false]</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um procedimento para inverter os valores de um vetor de booleanos.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"invertValues([false, true, true, true])\"'>invertValues</a>([false, true, true, true]) &rlarr; [true, false, false, false]</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "void invertValues(boolean[] array) {\n    for(int i = 0; i < array.length; i++)\n        array[i] = !array[i];\n}" ],
@@ -176,7 +176,7 @@
   }, {
     "id" : "replace",
     "type" : "JFUNCTION",
-    "description" : "<div>Complete o seguinte procedimento por forma a que todos os carateres do\nvetor passado na referência <code>letters</code> que sejam iguais a <code>find</code> sejam \nsubstituídos por <code>replace.</code> Utilize um ciclo <code>for.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replace(['A', 'B', 'B', 'A'],'B','C')\"'>replace</a>(['A', 'B', 'B', 'A'],'B','C') &rlarr; &quot;['A', 'C', 'C', 'A']&quot;</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Complete o seguinte procedimento por forma a que todos os carateres do\nvetor passado na referência <code>letters</code> que sejam iguais a <code>find</code> sejam \nsubstituídos por <code>replace.</code> Utilize um ciclo <code>for.</code></div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replace(['A', 'B', 'B', 'A'],'B','C')\"'>replace</a>(['A', 'B', 'B', 'A'],'B','C') &rlarr; [&apos;A&apos;, &apos;C&apos;, &apos;C&apos;, &apos;A&apos;]</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : "void replace(char[] letters, char find, char replace) {\n \n}",
     "solutions" : [ "void replace(char[] letters, char find, char replace) {\n    for(int i = 0; i < letters.length; i++)\n        if(letters[i] == find)\n            letters[i] = replace;\n}" ],
