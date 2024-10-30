@@ -247,7 +247,7 @@
   }, {
     "id" : "replaceFirst",
     "type" : "JFUNCTION",
-    "description" : "<div>Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>primeira</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceFirst</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; &quot;['j', 'i', 'v', 'a']&quot;</li>\n  </ul>\n</div>\n",
+    "description" : "<div>Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>primeira</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceFirst(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceFirst</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; [&apos;j&apos;, &apos;i&apos;, &apos;v&apos;, &apos;a&apos;]</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "void replaceFirst(char[] letters, char find, char replace) {\n    for(int i = 0; i < letters.length; i++)\n        if(letters[i] == find) {\n            letters[i] = replace;\n            return;\n        }\n}" ],
@@ -318,7 +318,7 @@
   }, {
     "id" : "replaceLast",
     "type" : "JFUNCTION",
-    "description" : "<div> Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>última</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceLast</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; &quot;['j', 'a', 'v', 'i']&quot;</li>\n  </ul>\n</div>\n",
+    "description" : "<div> Escreva um procedimento semelhande a <code>replace</code>,\nmas que substitua apenas a <em>última</em> ocorrência encontrada.</div>\n<div><em>Exemplos:</em>\n  <ul>\n    <li><a href=\"#\" class=\"example\" invocation=\"replaceLast(['j', 'a', 'v', 'a'], 'a', 'i')\"'>replaceLast</a>(['j', 'a', 'v', 'a'], 'a', 'i') &rlarr; [&apos;j&apos;, &apos;a&apos;, &apos;v&apos;, &apos;i&apos;]</li>\n  </ul>\n</div>\n",
     "required" : true,
     "startCode" : null,
     "solutions" : [ "void replaceLast(char[] letters, char find, char replace) {\n    for(int i = letters.length - 1 ; i >= 0; i--)\n        if(letters[i] == find) {\n            letters[i] = replace;\n            return;\n        }\n}" ],
